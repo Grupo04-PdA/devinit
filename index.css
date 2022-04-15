@@ -1,0 +1,53 @@
+.linha {
+    display: flex;
+    align-items: center
+}
+
+* {
+    font-family: 'Fira Code', monospace;
+}
+
+.fundo-nav {
+    background-color: #1F144A;
+    padding: 2%
+}
+
+li a:hover {
+    background-color: #fff;
+    color:#000;
+    border: 1px solid transparent;
+    border-radius: 10px 0px;
+  }
+
+
+li a {
+    padding: 15px;
+    color:#fff;
+    text-decoration: none;
+    border: 1px solid transparent;
+      margin-right: 10%;
+
+}
+
+.categorias {
+    background-color: #3F3E74;
+    padding: 3%
+}
+
+.fundo-bory {
+    background-color: #1F144A;
+    display: flex;
+    justify-content: center;
+    padding-top: 3%;
+}
+
+.titulo{
+    color: #E8A1BB;
+    margin-left: 8%;
+    padding-top:  5%;
+}
+
+.parag {
+    color: #48B15F;
+    margin-left: 8%
+}
