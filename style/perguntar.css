@@ -1,0 +1,29 @@
+* {
+    font-family: 'Fira Code', monospace;
+    margin: 0;
+    padding: 0;
+}
+.fundo-nav {
+    background-color: #1F144A;
+    padding: 2%;
+}
+
+.menu li {
+    display: flex;
+    flex-direction: row;
+}
+
+.menu a:hover {
+    background-color: #fff;
+    color: #000;
+    border: 1px solid transparent;
+    border-radius: 10px 0px;
+}
+
+.menu a {
+    padding: 15px;
+    color: #fff;
+    text-decoration: none;
+    border: 1px solid transparent;
+    list-style: none;
+}
