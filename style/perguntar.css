@@ -27,3 +27,66 @@
     border: 1px solid transparent;
     list-style: none;
 }
+
+body {
+    background-color: #1B1142;
+}
+
+#texto-principal {
+    color: #E8A1BB;
+    display: block;
+    padding: 3% 0% 1% 7%;
+    font-size: 1.7rem;
+    font-weight: bolder;
+}
+
+textarea {
+    background-color: #60558E;
+    color: white;
+    border-radius: 40px;
+    margin-left: 4%;
+    padding: 1% 2%;
+    resize: none;
+    font-size: 1rem;
+    border: none;
+}
+
+::-webkit-input-placeholder {
+    color: white;
+ }
+ 
+ :-moz-placeholder { /* Firefox 18- */
+    color: white;  
+ }
+ 
+ ::-moz-placeholder {  /* Firefox 19+ */
+    color: white;  
+ }
+ 
+ :-ms-input-placeholder {  
+    color: white;  
+ }
+
+select {
+    background-color: #60558E;
+    padding: 1%;
+    border-radius: 40px;
+    display: block;
+    margin: 2% 0% 2% 4%;
+    font-size: 1rem;
+    border: none;
+    color: white;
+}
+
+select:invalid {
+    color: white;
+}
+
+button {
+    background-color: #60558E;
+    color: white;
+    border-radius: 40px;
+    padding: 1%;
+    margin-left: 4%;
+    font-size: 1rem;
+}
