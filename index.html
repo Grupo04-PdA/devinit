@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DevInit</title>
+  <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;600&display=swap" rel="stylesheet">
@@ -23,13 +24,13 @@
     <nav class="linha fundo-nav">
       <div class="col-6">
         <a href="./index.html">
-          <img src="./img/nome.png" alt="" height="35vh">
+          <img src="./img/logo-header.png" alt="" height="35vh">
         </a>
       </div>
-       <section class="col">
+      <section class="col">
         <ul class="row menu">
           <li class="col">
-           <a href="./page/perguntar.html" title="Perguntar">Perguntar</a>
+            <a href="./page/perguntar.html" title="Perguntar">Perguntar</a>
           </li>
           <li class="col">
             <a href="./page/login.html" title="Entrar">Entrar</a>
@@ -38,30 +39,33 @@
             <a href="./page/login.html" title="Cadastrar">Cadastrar</a>
           </li>
         </ul>
-         <button class="navbar-toggler navbar-dark" style=" margin-left: 72%;" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+        <button class="navbar-toggler navbar-dark" style=" margin-left: 72%;" type="button" data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="menu-hamburguer offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="menu-hamburguer offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel">
           <div class="offcanvas-header">
             <h5 class="offcanvas-title" id="offcanvasNavbarLabel" style="color: #fff;">Menu</h5>
-            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"; aria-label="Close" style="background-color: #fff;"></button>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" ; aria-label="Close"
+              style="background-color: #fff;"></button>
           </div>
-        <div class="offcanvas-body">
-           <ul class="menu">
-          <li class="col">
-           <a href="./page/perguntar.html" title="Perguntar">Perguntar</a>
-          </li>
-          <li class="col">
-            <a href="./page/login.html" title="Entrar">Entrar</a>
-          </li>
-          <li class="col">
-            <a href="./page/login.html" title="Cadastrar">Cadastrar</a>
-          </li>
-        </ul>
+          <div class="offcanvas-body">
+            <ul class="menu">
+              <li class="col">
+                <a href="./page/perguntar.html" title="Perguntar">Perguntar</a>
+              </li>
+              <li class="col">
+                <a href="./page/login.html" title="Entrar">Entrar</a>
+              </li>
+              <li class="col">
+                <a href="./page/login.html" title="Cadastrar">Cadastrar</a>
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
-    </section>
-    
+      </section>
+
     </nav>
   </header>
 
@@ -125,7 +129,7 @@
         programação */
       </p>
       <div class="pesquisar">
-        <input type="text" class="txt-pesquisar" placeholder="Qual é a sua pergunta?"/>
+        <input type="text" class="txt-pesquisar" placeholder="Qual é a sua pergunta?" />
         <img src="./img/lupa.png" alt="Buscar" style="width: 5%;">
       </div>
     </div>
@@ -151,7 +155,31 @@
   </script>
 </body>
 <footer>
-  Copyright 2022
+  <div class="container">
+    <div class="row page-footer">
+      <div class="col-8">
+        <img src="./img/logo-rdp.png" width="35%">
+      </div>
+      <div class="col centralizar">
+        <a href="./page/sobre.html">
+          <img src="img/sobre.png" width="35%">
+          <br>
+          Sobre nós
+        </a>
+      </div>
+      <div class="col centralizar">
+        <a href="./page/contato.html">
+          <img src="img/contato.png" width="30%">
+          <br>
+          Contato
+        </a>
+      </div>
+    </div>
+    <div class="centralizar">
+      © 2022 Copyright
+    </div>
+  </div>
+
 </footer>
 
 </html>
