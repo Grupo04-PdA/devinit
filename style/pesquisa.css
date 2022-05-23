@@ -59,3 +59,36 @@
          display: flex;
      }
  }
+
+ #divBusca{
+    background-color: #60558E;
+    border: none;
+    border-radius: 25px 20px;
+    width: 50%;
+    height: 50px;
+    color:#fff;
+    border-top: 1px;  
+    padding: 2px;
+    display:block;
+    resize: none;
+    font-size: 1rem;
+    margin: 2%;
+    margin-left: 25%;
+}
+#txtBusca{
+    float: left;
+    background-color: transparent;
+    padding-left: 30%;
+    font-size: 100%;
+    border: none;
+    height: 100%;
+    width: 90%;
+
+}
+
+#divBusca img{
+float: right;
+}
+::placeholder{
+    color:#fff
+}
