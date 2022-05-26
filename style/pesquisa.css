@@ -1,3 +1,8 @@
+
+body {
+    background: #1F144A;
+}
+
 .linha {
     display: flex;
     flex-direction: row;
@@ -91,4 +96,32 @@ float: right;
 }
 ::placeholder{
     color:#fff
+}
+
+.btn-flex {
+    border: none;
+    background: #E8A1BB;
+    width: 70px;
+    border-radius: 50%;
+    height: 70px;
+    margin: 1rem;
+    z-index: 1;
+    position: fixed;
+    top: 52rem;
+    right: 1rem;
+    transition: 
+    background 350ms, color 350ms;
+}
+
+.btn-flex:hover {
+    color: #080808;
+    background: #60558E;
+    transition: 
+    background 350ms, color 350ms;
+}
+
+.txt-btn-pesquisar {
+    text-align: center;
+    font-size: 16px;
+    font-family: 'Fira Code', monospace;
 }
