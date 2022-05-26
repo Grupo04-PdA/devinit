@@ -83,22 +83,35 @@
 }
 
 .pesquisar {
-    background-color:#eeeeee;
-    border:solid 1px;
-    border-radius: 5px;
-    width:30vw;
-    margin-left: 7%;
+    background-color: #60558E;
+    border: none;
+    border-radius: 25px 20px;
+    width: 50%;
+    height: 50px;
+    color:#fff;
+    border-top: 1px;  
+    padding: 2px;
+    display:block;
+    resize: none;
+    font-size: 1rem;
+    margin: 2%;
+    margin-left: 9%;
 }
 
 .txt-pesquisar {
-    float:left;
-    background-color:transparent;
-    padding-left:5px;
-    font-style:italic;
-    width:28vw;
-    border:none;
+    float: left;
+    background-color: transparent;
+    padding-left: 2%;
+    font-size: 100%;
+    border: none;
+    height: 100%;
+    width: 90%;
 
 }
+::placeholder{
+    color:#fff
+}
+
 footer{
     border-top: 1px solid #3F3E74;
     background-color: #1F144A;
