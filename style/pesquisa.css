@@ -97,6 +97,18 @@ float: right;
 ::placeholder{
     color:#fff
 }
+textarea {
+    background-color: #60558E;
+    color: white;
+    border-radius: 40px;
+    margin-left: 20%;
+    padding: 1% 2%;
+    resize: none;
+    font-size: 1rem;
+    border: none;
+    color: #fff; 
+}
+
 
 .btn-flex {
     border: none;
