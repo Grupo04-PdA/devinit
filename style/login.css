@@ -175,6 +175,28 @@
   -webkit-animation-delay: .1s;
   animation-delay: .1s;
 }
+/* Botão voltar tela de login */
+.botao-voltar :hover {
+    float: left;
+    background-color: transparent;
+    padding-left: 2%;
+    font-size: 100%;
+    border: none;
+    height: 100%;
+    width: 90%;
+}
+
+.botao-voltar {
+  background-color: #60558E;
+  border: none;
+  border-radius: 25px 20px;
+  width: 50%;
+  height: 50px;
+  color:#fff;
+  border-top: 1px;  
+  padding: 80%;
+  padding-top: 20%;
+}
  
 /* Efeito ao clicar no botão ( Cadastre-se ) */
 #registro:target ~ .content #login,
