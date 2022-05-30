@@ -61,6 +61,7 @@
     color: #E8A1BB;
     margin-left: 8%;
     padding-top: 5%;
+    font-weight: bolder;
 }
 
 .parag {
@@ -86,7 +87,7 @@
     background-color: #60558E;
     border: none;
     border-radius: 25px 20px;
-    width: 50%;
+    width: 60%;
     height: 50px;
     color:#fff;
     border-top: 1px;  
@@ -142,6 +143,122 @@ footer{
     text-align: center;
 }
 
+.txt-footer {
+    padding-bottom: 6%;
+}
+
+@media (min-width: 1200px) {
+    .navbar-toggler {
+        display: none;
+    }
+}
+
+@media (min-width: 847px ) and (max-width: 1199px) {
+   .navbar-toggler {
+        display: none;
+    }
+    .fundo-bory {
+        flex-direction: column-reverse;
+    }
+    
+    .img-bory {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 5%;
+    }
+    .sobre-contato {
+        width: 10vw;
+        padding: 3% 0%;
+    }
+    .logo-copy {
+        padding: 10% 0%;
+    }
+    .page-footer {
+        display: block;
+        padding-left: 0%;
+    }
+    footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (max-width: 846px) {
+    section ul.menu li {
+        display: none;
+    }
+    section div ul.menu li {
+        display: flex;
+    }
+    .fundo-bory {
+        flex-direction: column-reverse;
+    }
+    
+    .img-bory {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 5%;
+    }
+    .sobre-contato {
+        width: 10vw;
+        padding: 3% 0%;
+    }
+    .logo-copy {
+        padding: 10% 0%;
+    }
+    .page-footer {
+        display: block;
+        padding-left: 0%;
+    }
+    footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (max-width: 400px) {
+    section ul.menu li {
+        display: none;
+    }
+    section div ul.menu li {
+        display: flex;
+    }
+    .fundo-bory {
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+    .img-bory {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .sobre-contato {
+        width: 10vw;
+        padding: 3% 0%;
+    }
+    .page-footer {
+        display: block;
+        padding-left: 0%;
+        justify-content: center;
+        align-items: center;
+    }
+    .logo-copy {
+        padding: 14% 0%;
+    }
+    .txt-pesquisar {
+        font-size: 88%;
+    }
+}
+
+
+
+
+/*
 @media (min-width: 1020px ) {
    .navbar-toggler {
         display: none;
@@ -164,4 +281,4 @@ footer{
     section div ul.menu li {
         display: flex;
     }
-}
+}*/
