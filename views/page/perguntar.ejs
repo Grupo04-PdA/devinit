@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <%- include("../partials/head") %>
+  <link rel="stylesheet" href="../style/perguntar.css">
+</head>
+
+<body>
+  <header>
+    <nav class="linha fundo-nav">
+      <div class="col-6">
+        <a href="/">
+          <img src="../img/logo-header.png" alt="" height="35vh">
+        </a>
+      </div>
+      <section class="col">
+        <ul class="row menu">
+          <li class="col">
+            <a href="/" title="Home">Home</a>
+          </li>
+          <li class="col">
+            <a href="/login" title="Entrar">Entrar</a>
+          </li>
+          <li class="col">
+            <a href="/login" title="Cadastrar">Cadastrar</a>
+          </li>
+        </ul>
+        <button class="navbar-toggler navbar-dark" style=" margin-left: 72%;" type="button" data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="menu-hamburguer offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel" style="color: #fff;">Menu</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" ; aria-label="Close"
+              style="background-color: #fff;"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="menu">
+              <li class="col">
+                <a href="/perguntar" title="Perguntar">Perguntar</a>
+              </li>
+              <li class="col">
+                <a href="/login" title="Entrar">Entrar</a>
+              </li>
+              <li class="col">
+                <a href="/login" title="Cadastrar">Cadastrar</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+    </nav>
+  </header>
+
+  <form method="post">
+    <label id="texto-principal"> Tire sua dúvida</label>
+    <textarea name="pergunta" rows="9" cols="60"
+      placeholder="Digite sua pergunta aqui. (Para conseguir uma ótima resposta, descreva sua dúvida de forma simples e clara)"
+      required> </textarea>
+    <select name="categorias" required>
+      <option value="" disabled selected hidden>Selecione a categoria</option>
+      <option value="JavaScript">JavaScript</option>
+      <option value="Java">Java</option>
+      <option value="CSS">CSS</option>
+      <option value="HTML">HTML</option>
+      <option value="Angular">Angular</option>
+      <option value="C++">C++</option>
+      <option value="Python">Python</option>
+      <option value="PHP">PHP</option>
+      <option value="TypeScript">TypeScript</option>
+    </select>
+    <button type="submit" title="Enviar"> Enviar</button>
+  </form>
+  <script src="../js/perguntar.js"></script>
+</body>
+<footer>
+  <%- include("../partials/footer") %> 
+</footer>
+
+</html>

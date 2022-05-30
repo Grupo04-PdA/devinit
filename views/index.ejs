@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <%- include("partials/head") %>
+  <link rel="stylesheet" href="./style/splide.min.css">
+  <link rel="stylesheet" href="./style/themes/splide-sea-green.min.css">
+  <link rel="stylesheet" href="./style/splide-core.min.css">
+</head>
+
+<body>
+  <header>
+    <nav class="linha fundo-nav">
+      <div class="col-6">
+        <a href="/">
+          <img src="./img/logo-header.png" alt="" height="35vh">
+        </a>
+      </div>
+
+      <section class="col">
+        <ul class="row menu">
+          <li class="col">
+            <a href="/perguntar" title="Perguntar">Perguntar</a>
+          </li>
+          <li class="col">
+            <a href="/login" title="Entrar">Entrar</a>
+          </li>
+          <li class="col">
+            <a href="/login" title="Cadastrar">Cadastrar</a>
+          </li>
+        </ul>
+        <button class="navbar-toggler navbar-dark" style=" margin-left: 72%;" type="button" data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="menu-hamburguer offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel" style="color: #fff;">Menu</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" ; aria-label="Close"
+              style="background-color: #fff;"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="menu">
+              <li class="col">
+                <a href="/perguntar" title="Perguntar">Perguntar</a>
+              </li>
+              <li class="col">
+                <a href="/login" title="Entrar">Entrar</a>
+              </li>
+              <li class="col">
+                <a href="/login" title="Cadastrar">Cadastrar</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+    </nav>
+  </header>
+
+  <section id="image-carousel" class="splide bg-categorias">
+    <div class="splide__track">
+      <ul class="splide__list alinhar-cat">
+        <li class="splide__slide">
+          <a href="#">
+            <img src="./img/JavaScript.png" alt="" width="50%">
+          </a>
+        </li>
+        <li class="splide__slide">
+          <a href="#">
+            <img src="./img/Java.png" alt="" width="45%">
+          </a>
+        </li>
+        <li class="splide__slide">
+          <a href="#">
+            <img src="./img/CSS.png" alt="" width="50%">
+          </a>
+        </li>
+        <li class="splide__slide">
+          <a href="#">
+            <img src="./img/HTML.png" alt="" width="40%">
+          </a>
+        </li>
+        <li class="splide__slide">
+          <a href="#">
+            <img src="./img/Angular.png" alt="" width="47%">
+          </a>
+        </li>
+        <li class="splide__slide">
+          <a href="#">
+            <img src="./img/C++.png" alt="" width="40%">
+          </a>
+        </li>
+        <li class="splide__slide">
+          <a href="#">
+            <img src="./img/Python.png" alt="" width="47%">
+          </a>
+        </li>
+        <li class="splide__slide">
+          <a href="#">
+            <img src="./img/PHP.png" alt="" width="58%">
+          </a>
+        </li>
+        <li class="splide__slide">
+          <a href="#">
+            <img src="./img/TypeScript.png" alt="" width="45%">
+          </a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="row fundo-bory">
+    <div class="col txt-bory">
+      <h1 class="titulo">Hello, Devs_</h1>
+      <p class="parag">
+        /* Nosso site tem como objetivo ajudar desenvolvedores de todo o Brasil, tirando suas dúvidas no mundo da
+        programação */
+      </p>
+      <div class="pesquisar">
+        <input type="text" class="txt-pesquisar" placeholder="Qual é a sua pergunta?" />
+        <a href="/pesquisa">
+          <img src="./img/lupa.png" alt="Buscar" style="width: 10%;">
+        </a>
+      </div>
+    </div>
+
+    <div class="col">
+      <img class="img-bory" src="./img/imagem-rosa.png" width="55%">
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+
+  <script src="js/splide/splide.min.js"></script>
+  <script src="js/splide/splide-renderer.min.js"></script>
+  <script>
+    var splide = new Splide('.splide', {
+      perPage: 7,
+      rewind: true,
+    });
+
+    splide.mount();
+  </script>
+</body>
+<footer>
+  <%- include("partials/footer") %> 
+</footer>
+
+</html>
