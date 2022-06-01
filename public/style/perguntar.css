@@ -3,6 +3,16 @@
     margin: 0;
     padding: 0;
 }
+.row{
+    max-width: 100%;
+    margin: 0;
+}
+
+.textarea{
+    min-height: 40vh;
+    width: 90%;
+    padding: 4% 6%;
+}
 
 .linha {
     display: flex;
