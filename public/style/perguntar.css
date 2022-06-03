@@ -73,6 +73,18 @@ textarea {
     border: none;
 }
 
+.alerta-text {
+    color: brown;
+    display: none;
+    padding: 1% 0% 1% 4%;
+}
+
+.alerta-select {
+    color: brown;
+    display: none;
+    padding: 0% 0% 1% 4%;
+}
+
 ::-webkit-input-placeholder {
     color: white;
  }
@@ -104,13 +116,14 @@ select:invalid {
     color: white;
 }
 
-button {
+#btn-enviar {
     background-color: #60558E;
     color: white;
     border-radius: 40px;
     padding: 1%;
     margin-left: 4%;
     font-size: 1rem;
+    margin-bottom: 5%;
 }
 
 footer{
