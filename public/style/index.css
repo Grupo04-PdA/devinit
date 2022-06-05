@@ -38,7 +38,26 @@
 
 .bg-categorias {
     background-color: #3F3E74;
+}
+
+.categorias{
+
+}
+
+.item-cat {
+    text-align: center;
+    min-height: 60px;
+    max-height: 300px;
+    height: 150%;
     align-items: center;
+}
+
+.item-cat img {
+    transition: all 0.3s;
+}
+
+.item-cat img:hover {
+    transform: scale(1.2);
 }
 
 .fundo-bory {
@@ -69,11 +88,6 @@
     margin-left: 8%
 }
 
-.alinhar-cat {
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-}
 .menu-hamburguer{
     background-color: #1F144A;
 }
@@ -139,12 +153,13 @@ footer{
     color:#fff;
 }
 
-.centralizar {
+.copy-footer {
+    padding: 2%;
     text-align: center;
 }
 
-.txt-footer {
-    padding-bottom: 6%;
+.sobre-contato{
+    text-align: center;
 }
 
 @media (min-width: 1200px) {
@@ -167,25 +182,9 @@ footer{
         align-items: center;
         margin-right: 5%;
     }
-    .sobre-contato {
-        width: 10vw;
-        padding: 3% 0%;
-    }
-    .logo-copy {
-        padding: 10% 0%;
-    }
-    .page-footer {
-        display: block;
-        padding-left: 0%;
-    }
-    footer {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
 }
 
-@media (max-width: 846px) {
+@media (min-width: 601px ) and (max-width: 846px) {
     section ul.menu li {
         display: none;
     }
@@ -202,25 +201,9 @@ footer{
         align-items: center;
         margin-right: 5%;
     }
-    .sobre-contato {
-        width: 10vw;
-        padding: 3% 0%;
-    }
-    .logo-copy {
-        padding: 10% 0%;
-    }
-    .page-footer {
-        display: block;
-        padding-left: 0%;
-    }
-    footer {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 600px) {
     section ul.menu li {
         display: none;
     }
@@ -238,17 +221,26 @@ footer{
         align-items: center;
     }
     .sobre-contato {
-        width: 10vw;
         padding: 3% 0%;
+        text-align: center;
+    }
+    .sobre-contato img{
+        width: 10vw;
+        padding: 1%;
+    }
+    .logo-footer{
+        text-align: center;
+        width: 100vw;
+        padding: 2%;
     }
     .page-footer {
-        display: block;
-        padding-left: 0%;
-        justify-content: center;
-        align-items: center;
+        display: flex;
+        flex-direction: column;
     }
-    .logo-copy {
-        padding: 14% 0%;
+    footer{
+        text-align: center;
+        align-items: center;
+        justify-content: center;
     }
     .txt-pesquisar {
         font-size: 88%;
