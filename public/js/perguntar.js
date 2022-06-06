@@ -2,8 +2,8 @@ var campo = document.querySelector('textarea')
 campo.value = ''
 
 var form = {
-    textarea: false,
-    select: false
+    textarea: true,
+    select: true
 }
 
 function textareaForm() {
@@ -12,7 +12,7 @@ function textareaForm() {
         var valorTextarea = textareaPerguntar.value.trim()
         var spanAlertaText = textareaPerguntar.nextElementSibling
 
-        form.textarea = true;
+        form.textarea = false;
         btnEnviar()
 
         if (valorTextarea === '') {
@@ -24,7 +24,7 @@ function textareaForm() {
         } else {
             textareaPerguntar.style.borderColor = 'green';
             spanAlertaText.style.display = 'none'
-            form.textarea = false;
+            form.textarea = true;
         }
     })
 }
@@ -42,7 +42,7 @@ function selectForm() {
             form.select = false;
         } else {
             spanAlertaSelect.style.display = 'none';
-            form.select = true;
+            form.select = false;
         }
     }
     var selectPerguntar = document.getElementById('select-perguntar');
@@ -54,7 +54,7 @@ function selectForm() {
 function btnEnviar() {
     var botaoEnviar = document.getElementById('btn-enviar');
 
-    if (!form.textarea && form.select) {
+    if (form.textarea && !form.select) {
         botaoEnviar.removeAttribute('disabled');
     } else {
         botaoEnviar.setAttribute('disabled', true);
