@@ -247,3 +247,29 @@
       transform: translateX(-20px);
     }
   }
+
+  /*Responsividade do site */
+
+  @media (min-width: 1020px ) {
+    .navbar-toggler {
+         display: none;
+     }
+ }
+ 
+ @media (min-width: 769px) and (max-width: 1019px) {
+     section .content{
+         display: none;
+     }
+     section div .content {
+         display: flex;
+     }    
+ }
+ 
+ @media (max-width: 768px) {
+     section .content {
+         display: none;
+     }
+     section div .content {
+         display: flex;
+     }
+ }
