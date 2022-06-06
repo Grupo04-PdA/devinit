@@ -109,18 +109,23 @@ textarea {
     color: #fff; 
 }
 
-
 .btn-flex {
     border: none;
     background: #E8A1BB;
-    width: 70px;
+    padding: 0;
+    width: 5.5rem;
+    height: 5.5rem;
     border-radius: 50%;
-    height: 70px;
-    margin: 1rem;
-    z-index: 1;
+    cursor: poiinter;
+    border: 1px solid rgba(0,0,0 .5);
     position: fixed;
-    top: 52rem;
-    right: 1rem;
+    right: 24px;
+    bottom: 24px;
+    overflow: hidden;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
     transition: 
     background 350ms, color 350ms;
 }

@@ -258,8 +258,8 @@ footer{
   
 .slide-show{
     overflow: hidden;
-    margin-left: 10rem;
-    margin-right: 10rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
    
 }
   
@@ -278,6 +278,7 @@ footer{
     grid-auto-flow: column;
     grid-auto-columns: 25fr;
 }
+
 h2{
     color: #fff;
     font-family: 'Fira Code', monospace;
@@ -309,8 +310,57 @@ h2{
     background-color: rgb(233, 233, 233);
 
 }
- 
 
+@media (min-width: 195px ) and (max-width: 693px) {
+
+    .slide-show{
+        overflow: hidden;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        height: 20rem;
+    }
+
+    .pergunta{
+        text-align: left;
+        background-color: #fff;
+        color: #000;
+        padding: 0.5rem;
+        border-radius: 2rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        margin-bottom: 2rem;
+      }
+
+      .link-usuario{
+        text-decoration: none;
+        color:#000;
+    }
+
+    .resposta{
+        padding: 1rem;
+        border-radius: 2rem;
+        background-color: rgb(233, 233, 233);
+        height: 8rem;
+    }
+
+    .fundo-pergunta{
+        background-color: #1F144A;
+        border-radius: 2rem;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    h6 {
+        font-size: 7px;
+        margin-bottom: 1rem;
+    }
+} 
+
+@media (max-width: 275px) {
+    .div-body {
+        display: none;
+    }
+}
 
 
 
