@@ -2,7 +2,7 @@
 
 <head>
   <%- include("../partials/head") %>
-  <link rel="stylesheet" type="text/css" href="../style/login.css" />
+    <link rel="stylesheet" type="text/css" href="../style/login.css" />
 </head>
 
 <body style="background-color: #190d49 ;">
@@ -23,30 +23,30 @@
       <div class="imagens col-6">
         <img class="logo-login" src="img/logo-login.png">
         <img class="img-login" src="img/img-login.png">
-    </div>
+      </div>
       <!--FORMULÁRIO DE LOGIN-->
       <div id="login" class="form-login col-6">
         <form method="post" action="">
           <fieldset>
-          <h1>Login</h1>
+            <h1>Login</h1>
 
-          <div class="campo">
-            <label for="email_login">E-mail</label><br>
-            <input id="email_login" name="email_login" required type="text" placeholder="E-mail"/>
-          </div>
+            <div class="campo">
+              <label for="email_login">E-mail</label><br>
+              <input id="email_login" name="email_login" required type="text" placeholder="E-mail" />
+            </div>
 
-          <div class="campo">
-            <label for="senha_login">Senha</label><br>
-            <input id="senha_login" name="senha_login" required type="password" placeholder="Senha"/>
-          </div>
+            <div class="campo">
+              <label for="senha_login">Senha</label><br>
+              <input id="senha_login" name="senha_login" required type="password" placeholder="Senha" />
+            </div>
 
-          <div class="check">
-            <input type="checkbox" name="manterlogado" id="manterlogado" value="" />
-            <label for="manterlogado">Manter-me logado</label>
-          </div>
+            <div class="check">
+              <input type="checkbox" name="manterlogado" id="manterlogado" value="" />
+              <label for="manterlogado">Manter-me logado</label>
+            </div>
 
             <button class="btn1" type="submit">Entrar</button>
-        </fieldset>
+          </fieldset>
 
           <div class="conta">
             Ainda não tem conta?
@@ -56,34 +56,41 @@
       </div>
 
       <!--FORMULÁRIO DE CADASTRO-->
-      <div id="cadastro">
-        <!-- <form method="post" action="">
-          <h1>Cadastro</h1>
+      <div class="content" ;>
+        <div class="imagens col-6">
+          <img class="logo-login" src="img/logo-login.png">
+          <img class="img-login" src="img/img-login.png">
+        </div>
 
-          <p>
-            <label for="nome_cad">Seu nome</label>
-            <input id="nome_cad" name="nome_cad" required="required" type="text" placeholder="Nome" />
-          </p>
+        <div id="cadastro" class="form-cadastro col-6">
+          <form method="post" action="">
+            <fieldset>
+              <h1>Cadastro</h1>
 
-          <p>
-            <label for="email_cad">Seu e-mail</label>
-            <input id="email_cad" name="email_cad" required="required" type="email" placeholder="E-mail" />
-          </p>
+              <div class="campo">
+                <label for="nome_login">Nome de usuário</label><br>
+                <input id="nome_login" name="nome_login" required type="text" placeholder="Nome de usuário" />
+              </div>
 
-          <p>
-            <label for="senha_cad">Sua senha</label>
-            <input id="senha_cad" name="senha_cad" required="required" type="password" placeholder="Senha" />
-          </p>
+              <div class="campo">
+                <label for="email_login">E-mail</label><br>
+                <input id="email_login" name="email_login" required type="text" placeholder="E-mail" />
+              </div>
 
-          <p>
-            <input type="submit" value="Cadastrar" />
-          </p>
+              <div class="campo">
+                <label for="senha_login">Senha</label><br>
+                <input id="senha_login" name="senha_login" required type="password" placeholder="Senha" />
+              </div>
 
-          <p class="link">
-            Já tem conta?
-            <a href="#paralogin"> Entrar</a>
-          </p> -->
-        </form>
+              <button class="btn1" type="submit">Cadastrar</button>
+            </fieldset>
+
+            <div class="conta1">
+              Já possui conta?
+              <a class="btn2" href="#paralogin">Entrar</a>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
   </div>

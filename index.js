@@ -30,6 +30,10 @@ app.get("/sobre", (req,res) => {
     res.render("page/sobre")
 });
 
+app.get('/paracadastro', function(req, res){
+     res.render("page/cadastro") 
+})
+
 app.listen(port, () => {
     console.log(`Servidor iniciado: ${port}`);
 });

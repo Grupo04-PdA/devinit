@@ -61,6 +61,20 @@ a.links {
   padding-left: 4%;
 }
 
+.form-cadastro {
+  background-color: #60558E;
+  border-radius: 0 40px 40px 0px;
+  color: #fff;
+  height: 400px;
+  margin-left: 2%;
+}
+
+.form-cadastro h1 {
+  padding-top: 4%;
+  font-weight: bolder;
+  padding-left: 4%;
+}
+
 .campo {
   padding: 3%;
 }
@@ -114,6 +128,10 @@ a.links {
 .conta {
   text-align: center;
   margin-top: 9%;
+}
+
+.conta1 {
+  text-align: center;
 }
 
 /* placeholder */
