@@ -1,180 +1,156 @@
 /* CSS reset */
-*, *:before, *:after { 
+*,
+*:before,
+*:after {
 
-    margin:0;
-    padding:0;
-    font-family: 'Fira Code', monospace;
-    
-  }
-   
-  /* remove a linha dos links */
-  a{
-    text-decoration: none;
-  }
-   
-  /* esconde as ancoras da tela */
-  a.links{
-    display: flex;
-  }
-  .content{
-    width: 500px;
-    min-height: 560px;    
-    margin: 0px auto;
-    position: relative;   
-  }
-  h1{
-    font-size: 50px;
-    color: #00b828;
-    padding: 2% 0 10px 0;
-    font-family: 'Fira Code', monospace;
-    text-align: center;
-    padding-bottom: 1%;
-  }
-  h1:after{
-    content: ' ';
-    display: block;
-    width: 100%;
-    height: 2px;
-    margin-top: 10px;
-    background: -webkit-linear-gradient(left, rgba(0, 225, 255, 0) 0%,rgba(147,184,189,0.8) 20%,rgba(147,184,189,1) 53%,rgba(147,184,189,0.8) 79%,rgba(147,184,189,0) 100%); 
-    background: linear-gradient(left, rgba(147,184,189,0) 0%,rgba(147,184,189,0.8) 20%,rgba(147,184,189,1) 53%,rgba(147,184,189,0.8) 79%,rgba(147,184,189,0) 100%); 
-  }
-  p{
-    margin-bottom:15px;
-  }
-   
-  .content p:first-child{
-    margin: 0px;
-  }
-   
-  label{
-    color: #cd0046;
-    position: relative;
-  }
-  /* placeholder */
-::-webkit-input-placeholder  {
-    color: #0000005d; 
-    font-family: 'Fira Code', monospace;
-  }
-   
-  input:-moz-placeholder,
-  textarea:-moz-placeholder{
-    color: #bebcbc;
-    font-family: 'Fira Code', monospace;
+  margin: 0;
+  padding: 0;
+  font-family: 'Fira Code', monospace;
 
-  }
-  input {
-    outline: none;
-  }
-   
-  /*estilo dos input,  menos o checkbox */
-  input:not([type="checkbox"]){
-    width: 95%;
-    margin-top: 4px;
-    padding: 10px;    
-    border: 1px solid #1F144A;
-   
-    -webkit-border-radius: 3px;
-    border-radius: 3px;
-   
-    -webkit-box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
-    box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
-   
-    -webkit-transition: all 0.2s linear;
-    transition: all 0.2s linear;
-  }
-   
-  
-  input[type="submit"]{
-    width: 100%!important;
-    cursor: pointer;  
-    background: #00b828;
-    border: solid 1 px #0000005d ;
-    padding: 8px 5px;
-    color: #fff;
-    font-size: 20px;  
-    border: 1px solid rgb(0, 0, 0);   
-    margin-bottom: 10px;  
-    text-shadow: 0 1px 1px #333;
-   
-    -webkit-border-radius: 5px;
-    border-radius: 5px;
-   
-    transition: all 0.2s linear;
-  }
-   
-  /*estilo do botão submit no hover */
-  input[type="submit"]:hover{
-    background: #3bff65;
-  }
-  .link{
-    font-family: 'Fira Code', monospace;
-    position: absolute;
-    background: #e0e0e0;
-    color: #7f7c7c;
-    left: 0px;
-    height: 20px;
-    width: 440px;
-    padding: 17px 30px 20px 30px;
-    font-size: 16px;
-    text-align: right;
-    border-top: 1px solid #dbe5e8;
-   
-    -webkit-border-radius: 0 0  5px 5px;
-    border-radius: 0 0  5px 5px;
-  }
-   
-  .link a {
-    font-weight: bold;
-    background: #1F144A;
-    padding: 6px;
-    color: #00b828;
-    margin-left: 10px;
-    border: 1px solid #3F3E74;
-    font-family: 'Fira Code', monospace;
-    -webkit-border-radius: 4px;
-    border-radius: 4px;  
-   
-    -webkit-transition: all 0.4s linear;
-    transition: all 0.4s  linear;
-  }
-   
-  .link a:hover {
-    color: #39bfd7;
-    background: #f7f7f7;
-    border: 1px solid #4ab3c6;
-  }
-  #cadastro, 
-#login{
+}
+
+/* remove a linha dos links */
+a {
+  text-decoration: none;
+}
+
+/* esconde as ancoras da tela */
+a.links {
+  display: flex;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  background-color: #F9F4FF;
+  width: 700px;
+  height: 400px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   position: absolute;
-  top: 0px;
-  width: 88%;   
-  padding: 18px 6% 60px 6%;
-  margin: 0 0 35px 0;
-  background: #f7f7f7;
-  border: 1px solid rgba(255, 255, 255, 0.8);
-   
+  border-radius: 40px;
+}
+
+.imagens {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2%;
+}
+
+.logo-login {
+  width: 8rem;
+  padding: 2%;
+}
+
+.img-login {
+  width: 20rem;
+}
+
+.form-login {
+  background-color: #60558E;
+  border-radius: 0 40px 40px 0px;
+  color: #fff;
+  height: 400px;
+}
+
+.form-login h1 {
+  padding-top: 10%;
+  font-weight: bolder;
+  padding-left: 4%;
+}
+
+.campo {
+  padding: 3%;
+}
+
+.campo input {
+  border-radius: 20px;
+  border: none;
+  padding: 2%;
+  width: 15rem;
+  background-color: #fff;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2)
+}
+
+.campo input:focus {
+  background-color: #F9F4FF;
+}
+
+.check {
+  margin-left: 3%;
+}
+
+.btn1 {
+  border-radius: 20px;
+  border: none;
+  background-color: #1F144A;
+  color: #fff;
+  padding: 2%;
+  margin: 3%;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2)
+}
+
+.btn2 {
+  border-radius: 20px;
+  border: none;
+  background-color: #F9F4FF;
+  color: #1F144A;
+  padding: 1%;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2)
+}
+
+.btn1:hover {
+  background-color: #F9F4FF;
+  color: #1F144A;
+}
+
+.btn2:hover {
+  background-color: #1F144A;
+  color: #fff;
+}
+
+.conta {
+  text-align: center;
+  margin-top: 9%;
+}
+
+/* placeholder */
+::-webkit-input-placeholder {
+  color: #0000005d;
+  font-family: 'Fira Code', monospace;
+}
+
+input {
+  outline: none;
+}
+
+
+#cadastro,
+#login {
   -webkit-box-align: 5px;
-  border-radius: 5px;
-   
+
   -webkit-animation-duration: 0.5s;
   -webkit-animation-timing-function: ease;
   -webkit-animation-fill-mode: both;
- 
+
   animation-duration: 0.5s;
   animation-timing-function: ease;
   animation-fill-mode: both;
 }
+
 /* Efeito ao clicar no botão ( Ir para Login ) */
-#paracadastro:target ~ .content #cadastro,
-#paralogin:target ~ .content #login{
+#paracadastro:target~.content #cadastro,
+#paralogin:target~.content #login {
   z-index: 2;
   -webkit-animation-name: fadeInLeft;
   animation-name: fadeInLeft;
- 
+
   -webkit-animation-delay: .1s;
   animation-delay: .1s;
 }
+
 /* Botão voltar tela de login */
 .botao-voltar {
   margin: 1%;
@@ -197,78 +173,86 @@
 }
 
 /* Efeito ao clicar no botão ( Cadastre-se ) */
-#registro:target ~ .content #login,
-#paralogin:target ~ .content #cadastro{
+#registro:target~.content #login,
+#paralogin:target~.content #cadastro {
   -webkit-animation-name: fadeOutLeft;
   animation-name: fadeOutLeft;
 }
+
 /*fadeInLeft*/
 @-webkit-keyframes fadeInLeft {
-    0% {
-      opacity: 0;
-      -webkit-transform: translateX(-20px);
-    }
-    100% {
-      opacity: 1;
-      -webkit-transform: translateX(0);
-    }
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-20px);
   }
-   
-  @keyframes fadeInLeft {
-    0% {
-      opacity: 0;
-      transform: translateX(-20px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
-   
-  /*fadeOutLeft*/
-  @-webkit-keyframes fadeOutLeft {
-    0% {
-      opacity: 1;
-      -webkit-transform: translateX(0);
-    }
-    100% {
-      opacity: 0;
-      -webkit-transform: translateX(-20px);
-    }
-  }
-   
-  @keyframes fadeOutLeft {
-    0% {
-      opacity: 1;
-      transform: translateX(0);
-    }
-    100% {
-      opacity: 0;
-      transform: translateX(-20px);
-    }
-  }
-  /*Responsividade do site */
 
-  @media (min-width: 1020px ) {
-    .navbar-toggler {
-         display: none;
-     }
- }
- 
- @media (min-width: 769px) and (max-width: 1019px) {
-     section .content{
-         display: none;
-     }
-     section div .content {
-         display: flex;
-     }    
- }
- 
- @media (max-width: 768px) {
-     section .content {
-         display: none;
-     }
-     section div .content {
-         display: flex;
-     }
- }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/*fadeOutLeft*/
+@-webkit-keyframes fadeOutLeft {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(-20px);
+  }
+}
+
+@keyframes fadeOutLeft {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+}
+
+/*Responsividade do site */
+
+@media (min-width: 1020px) {
+  .navbar-toggler {
+    display: none;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1019px) {
+  section .content {
+    display: none;
+  }
+
+  section div .content {
+    display: flex;
+  }
+}
+
+@media (max-width: 768px) {
+  section .content {
+    display: none;
+  }
+
+  section div .content {
+    display: flex;
+  }
+}
