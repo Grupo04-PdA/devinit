@@ -2,6 +2,7 @@
 
 <head>
   <%- include("../partials/head") %>
+    <link rel="stylesheet" type="text/css" href="../style/login.css" />
 </head>
 
 <body style="background-color: #190d49 ;">
@@ -31,14 +32,14 @@
 
             <div class="campo">
               <label for="email_login">E-mail</label><br>
-              <input class="input_all" id="email_login" name="email_login" required type="text" placeholder="E-mail" />
-              <span class="login__span">E-mail inválido</span>
+              <input id="email_login" name="email_login" required type="text" placeholder="E-mail" />
+              <span class="login_span"> Email inválido</span>
             </div>
 
             <div class="campo">
               <label for="senha_login">Senha</label><br>
-              <input class="input_all" id="senha_login" name="senha_login" required type="password" placeholder="Senha" />
-              <span class="login__span">Senha incorreta</span>
+              <input id="senha_login" name="senha_login" required type="password" placeholder="Senha" />
+              <span class="login_span"> Senha incorreta</span>
             </div>
 
             <div class="check">
@@ -46,7 +47,7 @@
               <label for="manterlogado">Manter-me logado</label>
             </div>
 
-            <button class="btn1" type="submit">Entrar</button>
+            <button id="btn-entrar" class="btn1" type="submit" disabled>Entrar</button>
           </fieldset>
 
           <div class="conta">
@@ -70,23 +71,23 @@
 
               <div class="campo">
                 <label for="nome_login">Nome de usuário</label><br>
-                <input class="input_all" id="input-username" name="nome_login" required type="text" placeholder="Nome de usuário" />
-                <span class="login__span">Digite, no mínimo, 3 caracteres</span>
+                <input id="nome_login" name="nome_login" required type="text" placeholder="Nome de usuário" />
+                <span class="login_span"> Seu nome de usuário precisa conter, no mínimo, 3 dígitos</span>
               </div>
 
               <div class="campo">
                 <label for="email_login">E-mail</label><br>
-                <input class="input_all" id="input_email" name="email_login" required type="text" placeholder="E-mail" />
-                <span class="login__span">E-mail inválido</span>
+                <input id="input_email" name="email_login" required type="text" placeholder="E-mail" />
+                <span class="login_span"> Email inválido</span>
               </div>
 
               <div class="campo">
                 <label for="senha_login">Senha</label><br>
-                <input class="input_all" id="input_password" name="senha_login" required type="password" placeholder="Senha" />
-                <span class="login__span">Sua senha precisa conter, no mínimo, 6 caracteres com letra maiúscula, minúscula e números</span>
+                <input id="input_password" name="senha_login" required type="password" placeholder="Senha" />
+                <span class="login_span"> Sua senha precisa conter, pelo menos, 6 caracteres com letra maiúscula, minúscula e números</span>
               </div>
 
-              <button class="btn1" type="submit">Cadastrar</button>
+              <button id="btn-cadastrar" class="btn1" type="submit" disabled>Cadastrar</button>
             </fieldset>
 
             <div class="conta1">
@@ -99,4 +100,4 @@
     </div>
   </div>
   <script src="../js/login.js"></script>
-</body>
+</body>  

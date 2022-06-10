@@ -1,6 +1,13 @@
 /* VALIDAÇÃO CADASTRO */
+
+var formCadastro = {
+    username: false,
+    emailC: false,
+    senhaC: false
+}
+
 function userCadastroForm() {
-    var user = document.getElementById('input-username');
+    var user = document.getElementById('nome_login');
     user.addEventListener('keyup', () => {
         var valorUser = user.value
         var spanAlertaUser = user.nextElementSibling
@@ -49,6 +56,11 @@ function senhaCadastroForm() {
 
 /* VALIDAÇÀO LOGIN */
 
+var formLogin = {
+    email: false,
+    senha: false
+}
+
 function emailLoginForm() {
     var email = document.getElementById('email_login');
     email.addEventListener('keyup', () => {
@@ -81,6 +93,26 @@ function senhaLoginForm() {
         }
     })
 }
+
+function btnCadastro() {
+    var btnCadastrar = document.getElementById('btn-cadastrar');
+
+    if (formCadastro.username == true && formCadastro.emailC == true && formCadastro.senhaC == true) {
+        btnCadastrar.removeAttribute('disabled');
+    } else {
+        btnCadastrar.setAttribute('disabled', true);
+    }
+}
+
+function btnLogin() {
+    var btnEntrar = document.getElementById('btn-entrar');
+
+    if (formLogin.email == true && formLogin.senha == true) {
+        btnCadastrar.removeAttribute('disabled');
+    } else {
+        btnCadastrar.setAttribute('disabled', true);
+    }
+} 
 
 document.addEventListener('DOMContentLoaded', () => {
     userCadastroForm()

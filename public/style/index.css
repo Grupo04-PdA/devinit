@@ -1,4 +1,3 @@
-/*CSS PAG INICIAL */
 .linha {
     display: flex;
     flex-direction: row;
@@ -39,6 +38,10 @@
 
 .bg-categorias {
     background-color: #3F3E74;
+}
+
+.categorias{
+
 }
 
 .item-cat {
@@ -159,580 +162,6 @@ footer{
     text-align: center;
 }
 
-.div-body{
-    text-align: center;
-    padding: 1rem;
-    background-color: #3a297e;
-}
-.slide-controller:nth-child(1):checked ~ .slide-show .slides-list{--selected-item: 0;}
-.slide-controller:nth-child(2):checked ~ .slide-show .slides-list{--selected-item: 1;}
-.slide-controller:nth-child(3):checked ~ .slide-show .slides-list{--selected-item: 2;}
-.slide-controller:nth-child(4):checked ~ .slide-show .slides-list{--selected-item: 3;}
-  
-.slide-show{
-    overflow: hidden;
-    margin-left: 2rem;
-    margin-right: 2rem;
-   
-}
-  
-.slides-list{
-    --selected-item: 0;
-    --total-items: 4;
-    list-style-type: none;
-    margin: 1rem 0;
-    padding: 0;
-    position: relative;
-    left: calc(var(--selected-item) * -100%);
-    width: calc(var(--total-items) * 100%);
-    transition: left 0.4s cubic-bezier(0.680, -0.550, 0.265, 1.550);
-    
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: 25fr;
-}
-
-h2{
-    color: #fff;
-    font-family: 'Fira Code', monospace;
-
-}
-.pergunta{
-  text-align: left;
-  background-color: #fff;
-  color: #000;
-  padding: 1.5rem;
-  border-radius: 2rem;
-  margin-left: 1rem;
-  margin-right: 1rem;
-  
-}
-.fundo-pergunta{
-    background-color: #1F144A;
-    border-radius: 2rem;
-    text-align: center;
-}
-.link-usuario{
-    text-decoration: none;
-    color:#000
-
-}
-.resposta{
-    padding: 1rem;
-    border-radius: 2rem;
-    background-color: rgb(233, 233, 233);
-
-}
-
-/* CSS PAG PERGUNTAR */
-
-.row{
-    max-width: 100%;
-    margin: 0;
-}
-
-.textarea-perguntar{
-    min-height: 40vh;
-    width: 90%;
-    padding: 4% 6%;
-}
-
-.fundo-nav {
-    background-color: #1F144A;
-    padding: 2%;
-}
-
-body {
-    background-color: #1B1142;
-}
-
-#texto-principal {
-    color: #E8A1BB;
-    display: block;
-    padding: 3% 0% 1% 7%;
-    font-size: 1.7rem;
-    font-weight: bolder;
-}
-
-.textarea-perguntar {
-    background-color: #60558E;
-    color: white;
-    border-radius: 40px;
-    margin-left: 4%;
-    padding: 1% 2%;
-    resize: none;
-    font-size: 1rem;
-    border: none;
-}
-
-.alerta-text {
-    color: brown;
-    display: none;
-    padding: 1% 0% 1% 4%;
-}
-
-.alerta-select {
-    color: brown;
-    display: none;
-    padding: 0% 0% 1% 4%;
-}
-
-.textarea-perguntar::-webkit-input-placeholder {
-    color: white;
- }
- 
- .textarea-perguntar:-ms-input-placeholder {  
-    color: white;  
- }
-
-#select-perguntar {
-    background-color: #60558E;
-    padding: 1%;
-    border-radius: 40px;
-    display: block;
-    margin: 2% 0% 2% 4%;
-    font-size: 1rem;
-    border: none;
-    color: white;
-}
-
-#select-perguntar:invalid {
-    color: white;
-}
-
-#btn-enviar {
-    background-color: #60558E;
-    color: white;
-    border-radius: 40px;
-    padding: 1%;
-    margin-left: 4%;
-    font-size: 1rem;
-    margin-bottom: 5%;
-}
-
-footer{
-    border-top: 1px solid #3F3E74;
-    background-color: #1F144A;
-    color: #fff;
-}
-
-.page-footer {
-    padding-top: 2%;
-    padding-bottom: 3%;
-    align-items: center;
-}
-
-.page-footer img{
-    padding-left: 3%;
-}
-
-.page-footer a{
-    text-decoration: none;
-    color:#fff;
-}
-
-.page-footer a:hover {
-    text-decoration: underline;
-    color:#fff;
-}
-
-.centralizar {
-    text-align: center;
-}
-
-/* CSS PAG PESQUISA */
-
-#divBusca{
-    background-color: #60558E;
-    border: none;
-    border-radius: 25px 20px;
-    width: 50%;
-    height: 50px;
-    color:#fff;
-    border-top: 1px;  
-    padding: 2px;
-    display:block;
-    resize: none;
-    font-size: 1rem;
-    margin: 2%;
-    margin-left: 25%;
-}
-
-
-
-#txtBusca{
-    float: left;
-    background-color: transparent;
-    padding-left: 30%;
-    font-size: 100%;
-    border: none;
-    height: 100%;
-    width: 90%;
-
-}
-
-#divBusca img{
-float: right;
-}
-::placeholder{
-    color:#fff
-}
-.textarea-pesquisa {
-    background-color: #60558E;
-    color: white;
-    border-radius: 40px;
-    margin-left: 20%;
-    padding: 1% 2%;
-    resize: none;
-    font-size: 1rem;
-    border: none;
-    color: #fff; 
-}
-
-.btn-flex {
-    border: none;
-    background: #E8A1BB;
-    padding: 0;
-    width: 5.5rem;
-    height: 5.5rem;
-    border-radius: 50%;
-    cursor: poiinter;
-    border: 1px solid rgba(0,0,0 .5);
-    position: fixed;
-    right: 24px;
-    bottom: 24px;
-    overflow: hidden;
-    display: flex;
-    gap: 8px;
-    align-items: center;
-    justify-content: center;
-    transition: 
-    background 350ms, color 350ms;
-}
-
-.btn-flex:hover {
-    color: #080808;
-    background: #60558E;
-    transition: 
-    background 350ms, color 350ms;
-}
-
-.txt-btn-pesquisar {
-    text-align: center;
-    font-size: 16px;
-    font-family: 'Fira Code', monospace;
-}
-
-
-/* CSS PAG LOGIN  */
-
-*,
-*:before,
-*:after {
-
-  margin: 0;
-  padding: 0;
-  font-family: 'Fira Code', monospace;
-
-}
-
-/* remove a linha dos links */
-a {
-  text-decoration: none;
-}
-
-/* esconde as ancoras da tela */
-a.links {
-  display: flex;
-}
-
-.content {
-  display: flex;
-  flex-direction: row;
-  background-color: #F9F4FF;
-  width: 700px;
-  height: 400px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  position: absolute;
-  border-radius: 40px;
-}
-
-.imagens {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 2%;
-}
-
-.logo-login {
-  width: 8rem;
-  padding: 2%;
-}
-
-.img-login {
-  width: 20rem;
-}
-
-.form-login {
-  background-color: #60558E;
-  border-radius: 0 40px 40px 0px;
-  color: #fff;
-  height: 100%;
-}
-
-.form-login h1 {
-  padding-top: 10%;
-  font-weight: bolder;
-  padding-left: 4%;
-}
-
-.form-cadastro {
-  background-color: #60558E;
-  border-radius: 0 40px 40px 0px;
-  color: #fff;
-  height: 100%;
-  margin-left: 2%;
-}
-
-.form-cadastro h1 {
-  padding-top: 4%;
-  font-weight: bolder;
-  padding-left: 4%;
-}
-
-.campo {
-  padding: 3%;
-}
-
-.campo input {
-  border-radius: 20px;
-  border: none;
-  padding: 2%;
-  width: 15rem;
-  background-color: #fff;
-  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2)
-}
-
-.campo input:focus {
-  background-color: #F9F4FF;
-}
-
-.login__span {
-  color: brown;
-  display: none;
-  font-weight: bolder;
-}
-
-.check {
-  margin-left: 3%;
-}
-
-.btn1 {
-  border-radius: 20px;
-  border: none;
-  background-color: #1F144A;
-  color: #fff;
-  padding: 2%;
-  margin: 3%;
-  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2)
-}
-
-.btn2 {
-  border-radius: 20px;
-  border: none;
-  background-color: #F9F4FF;
-  color: #1F144A;
-  padding: 1%;
-  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2)
-}
-
-.btn1:hover {
-  background-color: #F9F4FF;
-  color: #1F144A;
-}
-
-.btn2:hover {
-  background-color: #1F144A;
-  color: #fff;
-}
-
-.conta {
-  text-align: center;
-  margin-top: 9%;
-}
-
-.conta1 {
-  text-align: center;
-}
-
-/* placeholder */
-.input_all::-webkit-input-placeholder {
-  color: #0000005d;
-  font-family: 'Fira Code', monospace;
-}
-
-.input_all {
-  outline: none;
-}
-
-
-#cadastro,
-#login {
-  -webkit-box-align: 5px;
-
-  -webkit-animation-duration: 0.5s;
-  -webkit-animation-timing-function: ease;
-  -webkit-animation-fill-mode: both;
-
-  animation-duration: 0.5s;
-  animation-timing-function: ease;
-  animation-fill-mode: both;
-}
-
-/* Efeito ao clicar no botão ( Ir para Login ) */
-#paracadastro:target~.content #cadastro,
-#paralogin:target~.content #login {
-  z-index: 2;
-  -webkit-animation-name: fadeInLeft;
-  animation-name: fadeInLeft;
-
-  -webkit-animation-delay: .1s;
-  animation-delay: .1s;
-}
-
-/* Botão voltar tela de login */
-.botao-voltar {
-  margin: 1%;
-  padding: 1%;
-  background-color: #60558E;
-  border: none;
-  border-radius: 25px;
-  width: 140px;
-  display: flex;
-  flex-direction: row;
-  text-align: center;
-}
-
-.botao-voltar:hover {
-  background-color: #3F3E74;
-}
-
-.botao-voltar a {
-  color: #fff;
-}
-
-/* Efeito ao clicar no botão ( Cadastre-se ) */
-#registro:target~.content #login,
-#paralogin:target~.content #cadastro {
-  -webkit-animation-name: fadeOutLeft;
-  animation-name: fadeOutLeft;
-}
-
-/*fadeInLeft*/
-@-webkit-keyframes fadeInLeft {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateX(-20px);
-  }
-
-  100% {
-    opacity: 1;
-    -webkit-transform: translateX(0);
-  }
-}
-
-@keyframes fadeInLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(-20px);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-/*fadeOutLeft*/
-@-webkit-keyframes fadeOutLeft {
-  0% {
-    opacity: 1;
-    -webkit-transform: translateX(0);
-  }
-
-  100% {
-    opacity: 0;
-    -webkit-transform: translateX(-20px);
-  }
-}
-
-@keyframes fadeOutLeft {
-  0% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-
-  100% {
-    opacity: 0;
-    transform: translateX(-20px);
-  }
-}
-
-
-@media (min-width: 195px ) and (max-width: 693px) {
-
-    .slide-show{
-        overflow: hidden;
-        margin-left: 1rem;
-        margin-right: 1rem;
-        height: 20rem;
-    }
-
-    .pergunta{
-        text-align: left;
-        background-color: #fff;
-        color: #000;
-        padding: 0.5rem;
-        border-radius: 2rem;
-        margin-left: 1rem;
-        margin-right: 1rem;
-        margin-bottom: 2rem;
-      }
-
-      .link-usuario{
-        text-decoration: none;
-        color:#000;
-    }
-
-    .resposta{
-        padding: 1rem;
-        border-radius: 2rem;
-        background-color: rgb(233, 233, 233);
-        height: 8rem;
-    }
-
-    .fundo-pergunta{
-        background-color: #1F144A;
-        border-radius: 2rem;
-        text-align: center;
-        margin-bottom: 2rem;
-    }
-
-    h6 {
-        font-size: 7px;
-        margin-bottom: 1rem;
-    }
-} 
-
-@media (max-width: 275px) {
-    .div-body {
-        display: none;
-    }
-}
-
-
 @media (min-width: 1200px) {
     .navbar-toggler {
         display: none;
@@ -817,3 +246,145 @@ a.links {
         font-size: 88%;
     }
 }
+.div-body{
+    text-align: center;
+    padding: 1rem;
+    background-color: #3a297e;
+}
+.slide-controller:nth-child(1):checked ~ .slide-show .slides-list{--selected-item: 0;}
+.slide-controller:nth-child(2):checked ~ .slide-show .slides-list{--selected-item: 1;}
+.slide-controller:nth-child(3):checked ~ .slide-show .slides-list{--selected-item: 2;}
+.slide-controller:nth-child(4):checked ~ .slide-show .slides-list{--selected-item: 3;}
+  
+.slide-show{
+    overflow: hidden;
+    margin-left: 2rem;
+    margin-right: 2rem;
+   
+}
+  
+.slides-list{
+    --selected-item: 0;
+    --total-items: 4;
+    list-style-type: none;
+    margin: 1rem 0;
+    padding: 0;
+    position: relative;
+    left: calc(var(--selected-item) * -100%);
+    width: calc(var(--total-items) * 100%);
+    transition: left 0.4s cubic-bezier(0.680, -0.550, 0.265, 1.550);
+    
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 25fr;
+}
+
+h2{
+    color: #fff;
+    font-family: 'Fira Code', monospace;
+
+}
+.pergunta{
+  text-align: left;
+  background-color: #fff;
+  color: #000;
+  padding: 1.5rem;
+  border-radius: 2rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  
+}
+.fundo-pergunta{
+    background-color: #1F144A;
+    border-radius: 2rem;
+    text-align: center;
+}
+.link-usuario{
+    text-decoration: none;
+    color:#000
+
+}
+.resposta{
+    padding: 1rem;
+    border-radius: 2rem;
+    background-color: rgb(233, 233, 233);
+
+}
+
+@media (min-width: 195px ) and (max-width: 693px) {
+
+    .slide-show{
+        overflow: hidden;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        height: 20rem;
+    }
+
+    .pergunta{
+        text-align: left;
+        background-color: #fff;
+        color: #000;
+        padding: 0.5rem;
+        border-radius: 2rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        margin-bottom: 2rem;
+      }
+
+      .link-usuario{
+        text-decoration: none;
+        color:#000;
+    }
+
+    .resposta{
+        padding: 1rem;
+        border-radius: 2rem;
+        background-color: rgb(233, 233, 233);
+        height: 8rem;
+    }
+
+    .fundo-pergunta{
+        background-color: #1F144A;
+        border-radius: 2rem;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    h6 {
+        font-size: 7px;
+        margin-bottom: 1rem;
+    }
+} 
+
+@media (max-width: 275px) {
+    .div-body {
+        display: none;
+    }
+}
+
+
+
+/*
+@media (min-width: 1020px ) {
+   .navbar-toggler {
+        display: none;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1019px) {
+    section ul.menu li{
+        display: none;
+    }
+    section div ul.menu li {
+        display: flex;
+    }    
+}
+
+@media (max-width: 768px) {
+    section ul.menu li {
+        display: none;
+    }
+    section div ul.menu li {
+        display: flex;
+    }
+}*/
