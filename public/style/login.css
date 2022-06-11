@@ -30,6 +30,8 @@ a.links {
   transform: translate(-50%, -50%);
   position: absolute;
   border-radius: 40px;
+  max-width: 100%;
+  margin: 0;
 }
 
 .imagens {
