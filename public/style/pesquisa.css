@@ -97,7 +97,7 @@ float: right;
 ::placeholder{
     color:#fff
 }
-textarea {
+.textarea {
     background-color: #60558E;
     color: white;
     border-radius: 40px;

@@ -1,4 +1,5 @@
 .linha {
+    border: solid #3F3E74 1px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -75,9 +76,16 @@
 .img-bory {
     margin-left: 20%;
 }
+.titulo-pesq {
+    color: #e17fa3;
+    margin-left: 8%;
+    padding-top: 5%;
+    font-weight: bolder;
+}
+
 
 .titulo {
-    color: #E8A1BB;
+    color: #e17fa3;
     margin-left: 8%;
     padding-top: 5%;
     font-weight: bolder;
@@ -98,7 +106,7 @@
 }
 
 .pesquisar {
-    background-color: #60558E;
+    background-color: #3F3E74;
     border: none;
     border-radius: 25px 20px;
     width: 60%;
@@ -246,10 +254,14 @@ footer{
         font-size: 88%;
     }
 }
-.div-body{
+.div-perguntas-pesq{
+    size: 100rem;
+}
+.div-perguntas{
+    align-items: center;
     text-align: center;
     padding: 1rem;
-    background-color: #3a297e;
+    background-color: #3F3E74;
 }
 .slide-controller:nth-child(1):checked ~ .slide-show .slides-list{--selected-item: 0;}
 .slide-controller:nth-child(2):checked ~ .slide-show .slides-list{--selected-item: 1;}
@@ -284,6 +296,25 @@ h2{
     font-family: 'Fira Code', monospace;
 
 }
+.pergunta-pesq{
+    border: solid 0.01rem black;
+    font-size: 0.5rem;
+    text-align: left;
+    background-color: #fff;
+    color: #000;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+}  
+.h3-pesq{
+    font-size: 1rem;
+    margin-left: 0.7rem;
+    margin-right: 0.7rem;
+}
+.h6-pesq{
+    font-size: 1rem;
+}
 .pergunta{
   text-align: left;
   background-color: #fff;
@@ -293,6 +324,15 @@ h2{
   margin-left: 1rem;
   margin-right: 1rem;
   
+}
+.fundo-pergunta-pesq{
+    padding-bottom: 1.5rem;
+    border-radius: 2rem;
+    margin-left: 10rem;
+    margin-right: 10rem;
+    border: solid 0.01rem white;
+    background-color: #3F3E74;
+    text-align: center;
 }
 .fundo-pergunta{
     background-color: #1F144A;
@@ -319,7 +359,11 @@ h2{
         margin-right: 1rem;
         height: 20rem;
     }
-
+.titulo-pesq{
+    text-align: center;
+    color: #dc5888;
+    background-color: #3F3E74;
+}
     .pergunta{
         text-align: left;
         background-color: #fff;
@@ -337,6 +381,7 @@ h2{
     }
 
     .resposta{
+        font-size: 1rem;
         padding: 1rem;
         border-radius: 2rem;
         background-color: rgb(233, 233, 233);
@@ -350,10 +395,7 @@ h2{
         margin-bottom: 2rem;
     }
 
-    h6 {
-        font-size: 7px;
-        margin-bottom: 1rem;
-    }
+
 } 
 
 @media (max-width: 275px) {
