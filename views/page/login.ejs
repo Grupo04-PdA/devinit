@@ -8,21 +8,17 @@
 <body style="background-color: #190d49 ;">
   <header>
     <div class="col-12">
-    <button type="button" class="botao-voltar">
-      <a href="/">
-        <img style="width: 20%;" src="img/voltar.png">
-        Voltar
-      </a>
-    </button>
-  </div>
+      <button type="button" class="botao-voltar">
+        <a href="/">
+          <img style="width: 20%;" src="img/voltar.png">
+          Voltar
+        </a>
+      </button>
+    </div>
   </header>
-  <div class="col-12">
-  <div class="container">
-    <a class="links" id="paracadastro"></a>
-    <a class="links" id="paralogin"></a>
-  </div>
 
-    <div class="content row" ;>
+  <div class="col-12">
+    <div class="content" ;>
       <div class="imagens col-6">
         <img class="logo-login" src="img/logo-login.png">
         <img class="img-login" src="img/img-login.png">
@@ -55,52 +51,12 @@
 
           <div class="conta">
             Ainda não tem conta?
-            <a class="btn2" href="#paracadastro">Cadastre-se</a>
+            <a class="btn2" href="/cadastro">Cadastre-se</a>
           </div>
         </form>
       </div>
 
-      <!--FORMULÁRIO DE CADASTRO-->
-      <div class="content" ;>
-        <div class="imagens col-6">
-          <img class="logo-login" src="img/logo-login.png">
-          <img class="img-login" src="img/img-login.png">
-        </div>
-
-        <div id="cadastro" class="form-cadastro col-6">
-          <form method="post" action="">
-            <fieldset>
-              <h1>Cadastro</h1>
-
-              <div class="campo">
-                <label for="nome_login">Nome de usuário</label><br>
-                <input id="nome_login" name="nome_login" required type="text" placeholder="Nome de usuário" />
-                <span class="login_span"> Seu nome de usuário precisa conter, no mínimo, 3 dígitos</span>
-              </div>
-
-              <div class="campo">
-                <label for="email_login">E-mail</label><br>
-                <input id="input_email" name="email_login" required type="text" placeholder="E-mail" />
-                <span class="login_span"> Email inválido</span>
-              </div>
-
-              <div class="campo">
-                <label for="senha_login">Senha</label><br>
-                <input id="input_password" name="senha_login" required type="password" placeholder="Senha" />
-                <span class="login_span"> Sua senha precisa conter, pelo menos, 6 caracteres com letra maiúscula, minúscula e números</span>
-              </div>
-
-              <button id="btn-cadastrar" class="btn1" type="submit" disabled>Cadastrar</button>
-            </fieldset>
-
-            <div class="conta1">
-              Já possui conta?
-              <a class="btn2" href="#paralogin">Entrar</a>
-            </div>
-          </form>
-        </div>
-      </div>
+      </form>
     </div>
-  </div>
-  <script src="../js/login.js"></script>
-</body>  
+    <script src="../js/login.js"></script>
+</body>

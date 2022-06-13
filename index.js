@@ -30,7 +30,7 @@ app.get("/sobre", (req,res) => {
     res.render("page/sobre")
 });
 
-app.get('/paracadastro', function(req, res){
+app.get('/cadastro', (req, res) => {
      res.render("page/cadastro") 
 })
 

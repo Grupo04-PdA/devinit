@@ -68,7 +68,6 @@ a.links {
   border-radius: 0 40px 40px 0px;
   color: #fff;
   height: 400px;
-  margin-left: 2%;
 }
 
 .form-cadastro h1 {
@@ -154,8 +153,8 @@ input {
 }
 
 
-#cadastro,
-#login {
+#login,
+#cadastro {
   -webkit-box-align: 5px;
 
   -webkit-animation-duration: 0.5s;
@@ -168,8 +167,8 @@ input {
 }
 
 /* Efeito ao clicar no botão ( Ir para Login ) */
-#paracadastro:target~.content #cadastro,
-#paralogin:target~.content #login {
+#paralogin:target~.content #login,
+#paracadastro:target~.content #cadastro {
   z-index: 2;
   -webkit-animation-name: fadeInLeft;
   animation-name: fadeInLeft;
