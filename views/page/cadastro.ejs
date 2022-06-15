@@ -31,21 +31,22 @@
 
                         <div class="campo">
                             <label for="nome_login">Nome de usuário</label><br>
-                            <input id="nome_login" name="nome_login" required type="text"
+                            <input id="nome_form" name="nome_login" required type="text"
                                 placeholder="Nome de usuário" />
                             <span class="login_span"> Seu nome de usuário precisa conter, no mínimo, 3 dígitos</span>
                         </div>
 
                         <div class="campo">
                             <label for="email_login">E-mail</label><br>
-                            <input id="input_email" name="email_login" required type="text" placeholder="E-mail" />
+                            <input id="email_cadastro" name="email_login" required type="text" placeholder="E-mail" />
                             <span class="login_span"> Email inválido</span>
                         </div>
 
                         <div class="campo">
                             <label for="senha_login">Senha</label><br>
-                            <input id="input_password" name="senha_login" required type="password"
+                            <input class="input-senha" id="senha_cadastro" name="senha_login" required type="password"
                                 placeholder="Senha" />
+                                <img class="eye-password" id="eye-cadastro" src="../img/eye-open.svg" width="20px" onclick="clickEyeCad()">
                             <span class="login_span"> Sua senha precisa conter, pelo menos, 6 caracteres com letra
                                 maiúscula, minúscula e números</span>
                         </div>
@@ -61,5 +62,5 @@
             </div>
         </div>
     </div>
-    <script src="../js/login.js"></script>
+    <script src="../js/cadastro.js"></script>
 </body>
