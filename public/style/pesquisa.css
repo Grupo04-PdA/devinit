@@ -44,12 +44,12 @@ float: right;
 
 .btn-flex {
     border: none;
-    background: #E8A1BB;
+    background: #fdfdfd;
     padding: 0;
     width: 5.5rem;
     height: 5.5rem;
     border-radius: 50%;
-    cursor: poiinter;
+    cursor: pointer;
     border: 1px solid rgba(0,0,0 .5);
     position: fixed;
     right: 24px;
