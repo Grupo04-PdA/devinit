@@ -26,6 +26,8 @@ body {
 .menu li {
     display: flex;
     flex-direction: row;
+    transition: 
+    background 370ms, color 370ms;
 }
 
 .menu a:hover {
@@ -33,6 +35,8 @@ body {
     color: #000;
     border: 1px solid transparent;
     border-radius: 10px 0px;
+    transition: 
+    background 370ms, color 370ms;
 }
 
 .menu a {
@@ -47,7 +51,7 @@ body {
     background-color: #3F3E74;
 }
 
-.item-cat {
+.alinhar-cat {
     text-align: center;
     min-height: 60px;
     max-height: 300px;
@@ -55,13 +59,15 @@ body {
     align-items: center;
 }
 
-.item-cat img {
+.alinhar-cat img {
     transition: all 0.3s;
 }
 
-.item-cat img:hover {
-    transform: scale(1.2);
-}
+.alinhar-cat img:hover {
+    width: 5rem;
+    margin: 5px;
+    transform: margin 350ms, scale(1.2);
+} 
 
 .fundo-bory {
     padding-bottom: 10%;
@@ -77,6 +83,7 @@ body {
 .img-bory {
     margin-left: 20%;
 }
+
 .titulo-pesq {
     color: #e17fa3;
     margin-left: 8%;
@@ -84,12 +91,25 @@ body {
     font-weight: bolder;
 }
 
-
 .titulo {
     color: #e17fa3;
     margin-left: 8%;
     padding-top: 5%;
     font-weight: bolder;
+    cursor: pointer;
+    animation: changeColor 5s infinite;
+}
+
+@keyframes changeColor {
+    0% {
+        color: #e17fa3;
+    }
+    50% {
+        color: #fff
+    }
+    100% {
+        color: #e17fa3;
+    }
 }
 
 .parag {
@@ -264,10 +284,10 @@ footer{
     padding: 1rem;
     background-color: #3F3E74;
 }
-.slide-controller:nth-child(1):checked ~ .slide-show .slides-list{--selected-item: 0;}
-.slide-controller:nth-child(2):checked ~ .slide-show .slides-list{--selected-item: 1;}
-.slide-controller:nth-child(3):checked ~ .slide-show .slides-list{--selected-item: 2;}
-.slide-controller:nth-child(4):checked ~ .slide-show .slides-list{--selected-item: 3;}
+.slide-controller:nth-child(1):checked ~ .slide-show .slides-list{--selected-alinhar: 0;}
+.slide-controller:nth-child(2):checked ~ .slide-show .slides-list{--selected-alinhar: 1;}
+.slide-controller:nth-child(3):checked ~ .slide-show .slides-list{--selected-alinhar: 2;}
+.slide-controller:nth-child(4):checked ~ .slide-show .slides-list{--selected-alinhar: 3;}
   
 .slide-show{
     overflow: hidden;
@@ -277,13 +297,13 @@ footer{
 }
   
 .slides-list{
-    --selected-item: 0;
+    --selected-alinhar: 0;
     --total-items: 4;
     list-style-type: none;
     margin: 1rem 0;
     padding: 0;
     position: relative;
-    left: calc(var(--selected-item) * -100%);
+    left: calc(var(--selected-alinhar) * -100%);
     width: calc(var(--total-items) * 100%);
     transition: left 0.4s cubic-bezier(0.680, -0.550, 0.265, 1.550);
     
