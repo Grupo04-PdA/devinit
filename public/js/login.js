@@ -10,12 +10,16 @@ function emailLoginForm() {
         var regexEmail = /^[a-z0-9.]+@[a-z0-9]+\.[a-z]+/
         var spanAlertaEmail = emailLogin.nextElementSibling
 
+        btnLogin()
+        formLogin.email = false;
+
         if (valorEmail === '') {
             spanAlertaEmail.style.display = 'flex';
-        } else if (regexEmail.test(valorEmail) == false) {
+        } else if (!regexEmail.test(valorEmail)) {
             spanAlertaEmail.style.display = 'flex';
         } else {
             spanAlertaEmail.style.display = 'none';
+            formLogin.email = true;
         }
     })
 }
@@ -23,15 +27,21 @@ function emailLoginForm() {
 
 function senhaLoginForm() {
     senhaLogin.addEventListener('keyup', () => {
-        var valorSenha = senhaLogin.value
+        var valorSenha = senhaLogin.value.trim()
+        var regexSenha = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).{6,}$/
         var spanAlertaSenha = eyeLogin.nextElementSibling
 
-        if (valorSenha.length > 5 && valorSenha.match(/[A-Z]+/) && valorSenha.match(/[a-z]+/ && valorSenha.match(/[0-9]+/))) {
-            senhaLogin.style.borderColor = 'green';
-            spanAlertaSenha.style.display = 'none';
-        } else {
-            senhaLogin.style.borderColor = 'red';
+        btnLogin()
+
+        if (valorSenha === ''){
             spanAlertaSenha.style.display = 'flex';
+            formLogin.senha = false;
+        } else if  (!regexSenha.test(valorSenha)) {
+            spanAlertaSenha.style.display = 'flex';
+            formLogin.senha = false;
+        } else {
+            spanAlertaSenha.style.display = 'none';
+            formLogin.senha = true;
         }
     })
 }
@@ -39,10 +49,10 @@ function senhaLoginForm() {
 function btnLogin() {
     var btnEntrar = document.getElementById('btn-entrar');
 
-    if (formLogin.email == true && formLogin.senha == true) {
-        btnCadastrar.removeAttribute('disabled');
+    if (formLogin.email && formLogin.senha) {
+        btnEntrar.removeAttribute('disabled');
     } else {
-        btnCadastrar.setAttribute('disabled', true);
+        btnEntrar.setAttribute('disabled', true);
     }
 } 
 

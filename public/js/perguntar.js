@@ -16,13 +16,10 @@ function textareaForm() {
         btnEnviar()
 
         if (valorTextarea === '') {
-            textareaPerguntar.style.borderColor = 'brown';
             spanAlertaText.style.display = 'flex'
         } else if (valorTextarea.length < 7) {
-            textareaPerguntar.style.borderColor = 'brown';
             spanAlertaText.style.display = 'flex'
         } else {
-            textareaPerguntar.style.borderColor = 'green';
             spanAlertaText.style.display = 'none'
             form.textarea = true;
         }
