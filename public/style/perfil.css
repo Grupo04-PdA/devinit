@@ -1,13 +1,16 @@
 header {
-    background-color: #60558E;
+    background-color: #1F144A;
     height: 150px;
     width: 200;
-    border: #60558E;
     margin: -10px;
+    box-sizing: border-box;
 }
 
 .col-6 {
     display: flex;
     padding: 2%;
+    justify-content: space-between;
+    width: 50%;
+    flex: 0 0 auto;
     
 }
