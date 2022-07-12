@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const port = 4020;
 
+
 app.set("view engine","ejs");
 
 app.use(express.static(__dirname + "/public"));
@@ -37,3 +38,7 @@ app.get('/cadastro', (req, res) => {
 app.listen(port, () => {
     console.log(`Servidor iniciado: ${port}`);
 });
+
+app.post("/cadastro", (req, res)=> {
+    console.log(req.body)
+})

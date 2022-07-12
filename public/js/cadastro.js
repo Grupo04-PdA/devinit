@@ -1,4 +1,4 @@
-var formCadastro = {
+/*(var formCadastro = {
     username: false,
     emailC: false,
     senhaC: false
@@ -106,4 +106,15 @@ document.addEventListener('DOMContentLoaded', () => {
     userCadastroForm()
     emailCadastroForm()
     senhaCadastroForm()
+})*/
+
+function getcadastros() { fetch('http://localhost:4020/cadastro')
+.then(response => response.json())
+.then(json => {
+    console.log(json)
+})
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    console.log("qualquer coisa")
 })
