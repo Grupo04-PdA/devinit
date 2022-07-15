@@ -109,10 +109,10 @@ document.addEventListener('DOMContentLoaded', () => {
 })*/
 
 
-fetch("http://localhost:4020/cadastro")
-.then(function(response){
-    return (response.json);
+fetch("http://localhost:4020")
+.then(response => {
+    return response.json()
 })
-.then(function(data){
-    console.log(data)
+.then(jsonBody => {
+    console.log(jsonBody)
 })
