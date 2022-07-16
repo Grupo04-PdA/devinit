@@ -23,22 +23,15 @@ app.get("/login", (req,res) => {
     res.render("page/login")
 });
 
-app.get("/contato", (req,res) => {
-    res.render("page/contato")
-});
-
-app.get("/sobre", (req,res) => {
-    res.render("page/sobre")
-});
-
 app.get('/cadastro', (req, res) => {
      res.render("page/cadastro") 
+})
+
+app.post("/cadastro", (req, res)=> {
+    console.log(req.body)
 })
 
 app.listen(port, () => {
     console.log(`Servidor iniciado: ${port}`);
 });
 
-app.post("/cadastro", (req, res)=> {
-    console.log(req.body)
-})
