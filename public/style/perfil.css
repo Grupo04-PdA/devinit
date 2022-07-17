@@ -1,16 +1,17 @@
 header {
+    font-family: 'Fira Code', monospace;
     background-color: #1F144A;
     height: 150px;
     width: 200;
     margin: -10px;
-    box-sizing: border-box;
+    box-shadow: 0 0 1rem black;
 }
 
-.col-6 {
+.logo {
     display: flex;
     padding: 2%;
     justify-content: space-between;
     width: 50%;
     flex: 0 0 auto;
-    
+    margin: 10px;
 }
