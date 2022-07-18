@@ -189,6 +189,7 @@ footer{
 
 .sobre-contato{
     text-align: center;
+    cursor: pointer;
 }
 
 .modal-sobre {
@@ -398,9 +399,9 @@ footer{
         font-size: 88%;
     }
 }
-.div-perguntas-pesq{
+/* .div-perguntas-pesq{
     size: 100rem;
-}
+} */
 .div-perguntas{
     align-items: center;
     text-align: center;
