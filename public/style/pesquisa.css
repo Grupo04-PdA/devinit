@@ -7,21 +7,33 @@
     color:#fff;
     border-top: 1px;  
     padding: 2px;
-    display:block;
+    display:flex;
     resize: none;
     font-size: 1rem;
     margin: 2%;
     margin-left: 25%;
+    flex-direction: row-reverse;
+    align-items: center;
 }
+
+#divBusca img {
+    width: 5vh;
+    margin-right: 2%;
+}
+
 #txtBusca{
     float: left;
     background-color: transparent;
-    padding-left: 30%;
+    padding-left: 5%;
     font-size: 100%;
     border: none;
     height: 100%;
     width: 90%;
+    color: #fff;
+}
 
+#txtBusca:focus {
+    border: none;
 }
 
 #divBusca img{
@@ -30,6 +42,7 @@ float: right;
 ::placeholder{
     color:#fff
 }
+
 .textarea {
     background-color: #60558E;
     color: white;

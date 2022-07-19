@@ -23,6 +23,11 @@ body {
     padding: 2%;
 }
 
+.menu {
+    display: flex;
+    flex-direction: row;
+}
+
 .menu li {
     display: flex;
     flex-direction: row;
@@ -129,28 +134,36 @@ body {
 .pesquisar {
     background-color: #3F3E74;
     border: none;
-    border-radius: 25px 20px;
+    border-radius: 25px 25px;
     width: 60%;
     height: 59px;
     color:#fff;
     border-top: 1px;  
     padding: 2px;
-    display:block;
+    display:flex;
     resize: none;
     font-size: 1rem;
     margin: 2%;
     margin-left: 9%;
+    align-items: center;
+    flex-direction: row;
+}
+
+.img-lupa {
+
+    width: 5vh;
+    padding-right: 2%;
 }
 
 .txt-pesquisar {
     float: left;
     background-color: transparent;
-    padding-left: 2%;
+    padding-left: 5%;
     font-size: 100%;
     border: none;
     height: 100%;
     width: 90%;
-
+    color: #FFF;
 }
 ::placeholder{
     color:#fff
@@ -313,6 +326,43 @@ footer{
     padding-top: 15%;
     font-weight: bolder;
     text-align: center;
+}
+
+.img-header {
+    border-radius: 50%;
+    width: 10vh;
+    height: 10vh;
+}
+
+.menu-login {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10vh;
+}
+
+.menu-login a{
+    padding: 15px;
+    color: #fff;
+    text-decoration: none;
+    border: 1px solid transparent;
+    list-style: none;
+}
+
+.menu-login li {
+    text-decoration: none;
+    list-style: none;
+    cursor: pointer;
+}
+
+.menu-login a:hover {
+    background-color: #fff;
+    color: #000;
+    border: 1px solid transparent;
+    border-radius: 10px 0px;
+    transition: 
+    background 370ms, color 370ms;
 }
 
 @media (min-width: 1200px) {

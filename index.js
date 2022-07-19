@@ -31,6 +31,10 @@ app.post("/cadastro", (req, res)=> {
     console.log(req.body)
 })
 
+app.get("/homecadastrado", (req, res) => {
+    res.render("page/home")
+});
+
 app.listen(port, () => {
     console.log(`Servidor iniciado: ${port}`);
 });
