@@ -101,18 +101,25 @@ function ocultar() {
 senhaCadastro.setAttribute('type', 'password');
 eyeCadastro.setAttribute('src', '../img/eye-open.svg')
 }
-
+*/
 document.addEventListener('DOMContentLoaded', () => {
-    userCadastroForm()
-    emailCadastroForm()
-    senhaCadastroForm()
-})*/
-
-
-fetch("http://localhost:4020")
-.then(response => {
-    return response.json()
+    getUsuarios()
+    // userCadastroForm()
+    // emailCadastroForm()
+    // senhaCadastroForm()
 })
-.then(jsonBody => {
-    console.log(jsonBody)
+
+function getUsuarios(){
+    console.log('funcionando')
+    fetch ('http://localhost:4020/cadastro')
+.then( async response => {
+    var usuario = await response.text()
+    console.log(usuario)
 })
+}
+
+/*function getUsuarios(){
+    console.log('funcionando')
+    fetch ('http://localhost:4020/cadastro')
+    .then(response => {console.log(response.text())})
+}*/
