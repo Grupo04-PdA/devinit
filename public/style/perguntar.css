@@ -7,6 +7,7 @@
     min-height: 40vh;
     width: 90%;
     padding: 4% 6%;
+    
 }
 
 #texto-principal {
@@ -92,3 +93,6 @@ select:invalid {
 .centralizar {
     text-align: center;
 }
+
+
+ 

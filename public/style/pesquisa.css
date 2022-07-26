@@ -88,3 +88,40 @@ float: right;
     font-size: 16px;
     font-family: 'Fira Code', monospace;
 }
+
+@media (min-width: 195px ) and (max-width: 693px) {
+
+    selection.col{
+        display: flex;
+    }
+    
+    div.fundo-pergunta-pesq{
+    width: 350px;
+    height: auto;
+    margin: 20px;
+    display: flex;
+    flex-direction: column  ;
+    }
+
+    li{
+        width: 300px;
+        height: 500px;
+        margin: 15px;
+        left: 5px;
+        display: flex;
+       
+    }
+
+    btn-flex:hover{
+        
+        font-size: flex;
+        display: flex;
+    }
+
+    div.resposta{
+        width: 200px;
+        height: 350px; 
+        display: block;
+    }
+ 
+}
