@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <%- include("../partials/head") %>
+        <link rel="stylesheet" href="./style/splide.min.css">
+        <link rel="stylesheet" href="./style/themes/splide-sea-green.min.css">
+        <link rel="stylesheet" href="./style/splide-core.min.css">
+        <link rel="stylesheet" href="./style/perfil.css">
+  </head>
+
+<body>
+    <header>
+        <nav class="linha fundo-nav">
+            <div class="col-6">
+                <a href="/homecadastrado">
+                    <img src="./img/logo-header.png" alt="" width="50%">
+                </a>
+            </div>
+
+            <section class="col">
+                <ul class="menu-login">
+                    <li>
+                        <a href="/perguntar" title="Perguntar">Perguntar</a>
+                    </li>
+                    <li>
+                        <img class="img-header" src="https://cdn-icons-png.flaticon.com/512/5087/5087579.png" alt="Foto de perfil">
+                    </li>
+                </ul>
+        </nav>
+    </header>
+    <section class="area-perfil">
+        <div class="div-img">
+        <img id="img-perfil" src="https://cdn-icons-png.flaticon.com/512/5087/5087579.png" width="50%">
+        </div>
+        <div>
+            <h4 class="nome"> Nome do usuário </h4>
+        </div>
+        <div>
+            <h6 class="username"> user.name </h6>
+        </div>
+        <div class="divs">
+            <button class="config">
+                Editar perfil
+                <img src="./img/pencil.png" style="width: 15px;">
+            </button>
+        </div>
+    </section>
+</body>
+
+<footer>
+    <%- include("../partials/footer") %>
+  </footer>
+</html>

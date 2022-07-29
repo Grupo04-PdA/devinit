@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+#img-perfil {
+    border-radius: 50%;
+    width: 10vw;
+    height: 20vh;
+}
+
+.div-img {
+    margin: 15% 0% 5% 0%;
+}
+
+.divs{
+    margin: 3%;
+    display: inline;
+}
+
+.config {
+    border-radius: 20px;
+    background-color: rgb(228, 226, 226);
+    color: rgba(0, 0, 0, 0.6);
+    border: 5px solid rgb(228, 226, 226);
+}
+
+.nome {
+    color: white;
+}
+
+.username {
+    color: rgb(218, 214, 214)
+}
+
+
+.area-perfil {
+    width: 30vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #60558E;
+    border-radius: 25px;
+    margin: 3%;
+    align-items: center;
+}
