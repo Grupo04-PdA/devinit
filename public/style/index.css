@@ -365,6 +365,60 @@ footer{
     background 370ms, color 370ms;
 }
 
+.curtir {
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 8px;
+    padding: 8px;
+    font-size: 1.1rem;
+    color: #000;
+    cursor: pointer;
+    transition: all .25s ease-in-out;
+  }
+  .label {
+    display: flex;
+    align-items: center;
+    margin-right: 8px;
+  }
+  .label svg {
+    margin-right: 4px;
+  }
+  .label path {
+    fill: #8a8d9b;   
+    transition: all .25s ease-in-out;       
+  }
+  .number {
+    color: #8a8d9b;
+  }
+  .curtir:hover path{
+    fill: #ff00fd;
+  }
+  
+  /* Number depois da curtida*/
+  .number {
+    color: #ff00fd
+  }
+  .curtir svg {
+    animation: transitionLike 1s ease-in;
+  }
+  .curtir path {
+    fill: #ff00fd;
+  }
+  
+  @keyframes transitionLike {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.3);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
 @media (min-width: 1200px) {
     .navbar-toggler {
         display: none;

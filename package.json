@@ -18,6 +18,7 @@
   "homepage": "https://github.com/Grupo04-PdA/grupo4-pdi-frontend#readme",
   "dependencies": {
     "ejs": "^3.1.8",
-    "express": "^4.18.1"
+    "express": "^4.18.1",
+    "nodemon": "^2.0.19"
   }
 }
