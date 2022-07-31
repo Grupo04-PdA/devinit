@@ -5,10 +5,10 @@ const pegandoUsuarioController = async(req, res) => {
 }
 
 const pegandoUsuarioIdController = async(req, res) => {
-    const usuario = require("../../models/usuario")
-    const id = req.params.id
-    const usuarios = await usuario.findByPk(id) 
-    return res.json({id})  
+    const usuario = require("../../models/usuario");
+    const id = req.params.id;
+    const usuarios = await usuario.findByPk(id);
+    return res.json({Usuario: usuarios}); 
 }
 
 module.exports = {pegandoUsuarioController, pegandoUsuarioIdController}
