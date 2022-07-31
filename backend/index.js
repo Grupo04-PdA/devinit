@@ -4,8 +4,6 @@ const app = express()
 const port = 3020 
 require("dotenv/config")
 
-
-
 app.use(express.json())
 app.use(usuarioRouter)
 
