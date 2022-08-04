@@ -177,22 +177,15 @@ footer{
 
 .page-footer {
     padding-top: 3%;
-    padding-bottom: 3%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
 }
 
-.page-footer img{
+.logo-footer img{
+    width: 30vw;
     padding-left: 3%;
-}
-
-.page-footer a{
-    text-decoration: none;
-    color:#fff;
-}
-
-.page-footer a:hover {
-    text-decoration: underline;
-    color:#fff;
 }
 
 .copy-footer {
@@ -201,8 +194,29 @@ footer{
 }
 
 .sobre-contato{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 500px;
+}
+
+.contato{
     text-align: center;
     cursor: pointer;
+}
+
+.sobre{
+    text-align: center;
+    cursor: pointer;
+}
+
+.contato img {
+    width: 10vh;
+}
+
+.sobre img {
+    width: 10vh;
 }
 
 .modal-sobre {
@@ -451,13 +465,35 @@ footer{
     .fundo-bory {
         flex-direction: column-reverse;
     }
-    
+    .sobre-contato {
+        padding: 3% 0%;
+        text-align: center;
+        width: 100px;
+        flex-direction: column;
+        align-items: center;
+        padding: 1%;
+    }
+    .page-footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
     .img-bory {
         display: flex;
         justify-content: center;
         align-items: center;
         margin-right: 5%;
     }
+    .sobre img{
+        width: 10vw;
+        padding: 1%;
+    }
+    .contato img{
+        width: 10vw;
+        padding: 1%;
+    }
+    
 }
 
 @media (max-width: 600px) {
@@ -480,8 +516,16 @@ footer{
     .sobre-contato {
         padding: 3% 0%;
         text-align: center;
+        width: 100px;
+        flex-direction: column;
+        align-items: center;
+        padding: 1%;
     }
-    .sobre-contato img{
+    .sobre img{
+        width: 10vw;
+        padding: 1%;
+    }
+    .contato img{
         width: 10vw;
         padding: 1%;
     }
@@ -493,6 +537,8 @@ footer{
     .page-footer {
         display: flex;
         flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
     footer{
         text-align: center;
