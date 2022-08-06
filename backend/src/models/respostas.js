@@ -8,13 +8,13 @@ const Respostas = db.define("respostas", {
         autoIncrement: true,
         primaryKey: true
     },
-    pergunta: {
+    resposta: {
         type: Sequelize.DataTypes.STRING,
         allowNull: false,
     },
     data: {
         type: Sequelize.DataTypes.DATE,
-        allowNull: false,
+        allowNull: true,
     }
 });
 
