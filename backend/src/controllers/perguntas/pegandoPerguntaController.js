@@ -8,7 +8,7 @@ const pegandoPerguntaIdController = async(req, res) => {
     const perguntas = require("../../models/perguntas");
     const id = req.params.id;
     const pergunta = await perguntas.findByPk(id);
-    return res.json({pergunta: perguntas}); 
+    return res.json({pergunta: pergunta}); 
 }
 
 module.exports = {pegandoPerguntaController, pegandoPerguntaIdController}
