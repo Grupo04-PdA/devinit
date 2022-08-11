@@ -1,5 +1,6 @@
 const Sequelize = require("sequelize");
 const db = require("../connection/db");
+const Respostas = require("./respostas");
 
 const Perguntas = db.define("perguntas", {
     id: {
@@ -17,5 +18,16 @@ const Perguntas = db.define("perguntas", {
         allowNull: false,
     }
 });
+
+Perguntas.belongsTo(Usuario, {
+    foreignKey: "idUsuario"
+});
+
+Usuario.many(Perguntas, {
+    foreignKey: "perguntas"
+})
+
+
+
 
 module.exports = Perguntas;

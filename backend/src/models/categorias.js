@@ -13,5 +13,11 @@ const Categorias = db.define("categorias", {
         allowNull: false,
     },
 });
+    Perguntas.belongsTo(Categorias, {
+    foreignKey: "categorias"
+});
 
+Categorias.many(Perguntas, {
+    foreignKey: "perguntas"
+})
 module.exports = Categorias;
