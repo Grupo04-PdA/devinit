@@ -16,7 +16,7 @@ const deletandoUsuarioController = async (req, res) => {
 
         return res.json({ message: "Usuario deletado com sucesso!", usuario: user })
     } catch (error) {
-        res.json(error);
+        res.json({message: "Ocorreu um erro"});
     };
 }
 

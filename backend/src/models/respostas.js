@@ -24,14 +24,14 @@ Respostas.belongsTo(Usuario, {
     foreignKey: "idUsuario"
 });
 
-Usuario.many(Respostas, {
+Usuario.hasMany(Respostas, {
     foreignKey: "respostas"
 })
 
 Respostas.belongsTo(Perguntas, {
     foreignKey: "idPerguntas"
 })
-Perguntas.many(Respostas, {
+Perguntas.hasMany(Respostas, {
     foreignKey: "respostas"
 })
 
