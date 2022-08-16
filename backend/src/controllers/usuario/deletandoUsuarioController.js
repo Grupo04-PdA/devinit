@@ -1,13 +1,23 @@
 const deletandoUsuarioController = async (req, res) => {
-    let usuario = require("../../models/usuario");
-    const id = req.params.id;
-    const user = await usuario.findByPk(id);
-    await usuario.destroy({
-        where: {
-            id: id
+    try {
+        let usuario = require("../../models/usuario");
+        const id = req.params.id;
+        const user = await usuario.findByPk(id);
+
+        if (user) {
+            await usuario.destroy({
+                where: {
+                    id: id
+                }
+            })
+        } else {
+            return res.json({ message: "Usuario não encontrado!" });
         }
-    })
-    return res.json({message: "Usuario deletado com sucesso!", usuario: user})
+
+        return res.json({ message: "Usuario deletado com sucesso!", usuario: user })
+    } catch (error) {
+        res.json(error);
+    };
 }
 
 module.exports = deletandoUsuarioController;
