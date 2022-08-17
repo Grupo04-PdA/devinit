@@ -1,12 +1,26 @@
+const Categorias = require("../../models/categorias");
+
 const deletandoCategoriasController = async (req, res) => {
-    let categorias = require("../../models/categorias")
-    const id = req.params.id
-    const categoria = await categoria.findByPk(id)
-    await categorias.destroy({
-        where:{
-            id:id
+    try {
+        let categoria = require("../../models/categorias");
+        const id = req.params.id;
+        const user = await categoria.findByPk(id);
+
+        if (user) {
+            await categoria.destroy({
+                where: {
+                    id: id
+                }
+            })
+        } else {
+            return res.json({ message: "Categoria não encontrada!" });
         }
-    })
-    return res.json({message: "Categoria excluida com sucesso", categoria: categoria})
+
+        return res.json({ message: "Categoria deletado com sucesso!", categoria: user })
+    } catch (error) {
+        res.json({message: "Ocorreu um erro"});
+
+    };
 }
-module.exports = deletandoCategoriasController
+
+module.exports = deletandoCategoriasController;
