@@ -165,3 +165,14 @@ input {
 .botao-voltar a {
   color: #fff;
 }
+@media (max-width: 500px) {
+ .campo input {
+    width: 10rem;
+  
+  }
+  .conta{
+    display:flex;
+    flex-direction: column;
+    
+  }
+}
