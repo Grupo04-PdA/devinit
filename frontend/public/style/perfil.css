@@ -1,47 +1,219 @@
-* {
-    margin: 0;
-    padding: 0;
+.button:hover{cursor: pointer}
+    .button {
+        margin-top: 10%;
+      border-radius: 100px;
+      background: #fff; outline: none;
+      position: relative;
+      border:2px solid rgb(0, 0, 0);
+      padding: 1.5% 10%;
+      overflow: hidden;
+    }
 
-}
+    .button:hover:before{opacity: 1; transform: translate(0,0);}
+    .button:before{
+      padding: 0.5%;
+      content: attr(data-hover);
+      position: absolute;
+      top: 20%; left: 0;
+      width: 100%;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-weight: 80%;
+      font-size: 100%;
+      opacity: 0;
+      transform: translate(-100%,0);
+      transition: all .2s ease-in-out;
+    }
+      .button:hover .divButton{opacity: 0; transform: translate(100%,0)}
+      .button .divButton{
+        text-transform: uppercase;
+        letter-spacing: 1%;
+        font-weight: 100%;
+        font-size: 100%;
+        transition: all .2s ease-in-out;
+      }
+      .div-img{
+        padding: 1%;
+        margin-top: 5%;
+        background-color: #fff;
+        border-radius: 100%;
+      }
+      
+      .fundo{
+        margin: 1rem 2rem 1rem 2rem;
+        border-radius: 20px;
+        border: 1px solid white;
+        background-color: #25185a;
+      }
 
-#img-perfil {
-    border-radius: 50%;
-    width: 10vw;
-    height: 20vh;
-}
+      
+      .left {
+        padding: 0.5%;
+        background-color: #545387;
+        text-align: center;
+        margin: 4% 2% 4% 5%;
+        border-radius: 30px;
+        width: 20%;
+      }
+      
+     .perguntas {
+      border: #545387 2px solid;
+      background-color: #25185a;
+      width: 24.3rem;
+      font-size: 3rem;
+     }
 
-.div-img {
-    margin: 15% 0% 5% 0%;
-}
+      
+      .right {
+        overflow: scroll;
+        color: #fff;
+        border: 2px solid #fff;
+        margin: 3% 4% 3% 2%;
+        border-radius: 15px;
+        height: 30rem;
+        width: 66%;
+      }
+      
+      /* Clear floats after the columns */
+      .row:after {
+        content: "";
+        clear: both;
+      }
 
-.divs{
-    margin: 3%;
-    display: inline;
-}
+      .perguntaPerfil{
+        margin: 5rem 0 5rem 0  ;
+        overflow: hidden;
+        text-align: left;
+        background-color: #fff;
+        color: #000;
+        padding: 1.5rem;
+        border-radius: 2rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        margin-bottom: 2.5rem;   
 
-.config {
-    border-radius: 20px;
-    background-color: rgb(228, 226, 226);
-    color: rgba(0, 0, 0, 0.6);
-    border: 5px solid rgb(228, 226, 226);
-}
+      }
+      .respostaPerfil{
+        overflow: hidden;
+        color: #000;
+        padding: 1rem;
+        border-radius: 2rem;
+        background-color: rgb(233, 233, 233);
+      }
+      .slides-list-perfil{
 
-.nome {
-    color: white;
-}
+        list-style-type: none;
+        margin: 2.5rem 0 2.5rem 0  ;
+        padding: 0;
+        position: relative;
+        left: calc(var(--selected-alinhar) * -100%);
+        width: calc(var(--total-items) * 100%);
+        transition: left 0.4s cubic-bezier(0.680, -0.550, 0.265, 1.550);
+        overflow: hidden;
+        
+   
+    }
+    li{
+      margin-bottom: 1.5rem;
+    }
+    .div-img-edit{
+        margin-left: 25%;
+        padding: 1.5%;
+        width: 50%;
+        background-color: #fff;
+        border-radius: 100%;
+      }
+    .indicador{
+        display: block;
+        font-size: 1.5rem;
+    }
+    #input{
+        margin-top: 1%;
+    }
+    .input{
+        width: 21rem;
+        font-size: 1rem;
+        background-color: #7776b8;
+        border-radius: 10px;
+        padding: 0.5rem;
+        border: solid #fff 1px;
+    }
+    .name{
+        display: inline-flex;
+    }
+    .img-edit{
+        margin-top: 0.5rem;
+        padding: 0.3rem;
+        border-radius: 10%;
+        background-color: #fff;
+        margin-left: 10rem;
+        height: 2rem;
+        width: 2rem;
+    }
+    .img-edit-email{
+        margin-top: 0.2rem;
+        padding: 0.3rem;
+        border-radius: 10%;
+        background-color: #fff;
+        margin-left: 8.3rem;
+        height: 2rem;
+        width: 2rem;
+    }
+    .img-edit-senha{
+        margin-top: 0.1rem;
+        padding: 0.3rem;
+        border-radius: 10%;
+        background-color: #fff;
+        margin-left: 13rem;
+        height: 2rem;
+        width: 2rem;
+   
+    }
+    .editarPerfil{
+        padding-left: 1rem;
+        text-align: start;
 
-.username {
-    color: rgb(218, 214, 214)
-}
-
-
-.area-perfil {
-    width: 30vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    background-color: #60558E;
-    border-radius: 25px;
-    margin: 3%;
-    align-items: center;
-}
+    }
+    .editPerfil {
+        display: none; 
+        position: fixed;
+        z-index: 1;
+        padding-top: 2rem; 
+        padding-bottom: 1rem;
+        left: 0;
+        top: 0;
+        width: 100%; 
+        height: 100%; 
+        overflow: auto;
+        background-color: rgb(0,0,0); 
+        background-color: rgba(0,0,0,0.4); 
+      }
+      .modal-content {
+        border-radius: 2rem;
+        color: #fff;
+        background-color: #545387;
+        margin: auto;
+        padding: 20px;
+        border: 1px solid #25185a;
+        width: 25rem;
+      }
+      
+      .fechar {
+        text-align: end;
+        color: #000;
+        float: right;
+        font-size: 2rem;
+        font-weight: bold;
+      }
+      
+      .fechar:hover,
+      .fechar:focus {
+        color: #25185a;
+        text-decoration: none;
+        cursor: pointer;
+      }
+      .div-img-edit :hover {
+        display: none;
+        background-image: url(/img/lapis.png);
+      }
+    

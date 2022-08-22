@@ -12,22 +12,43 @@
     <header>
         <%- include("../partials/headercadastrado") %> 
     </header>
-    <section class="area-perfil">
-        <div class="div-img">
-        <img id="img-perfil" src="https://cdn-icons-png.flaticon.com/512/5087/5087579.png" width="50%">
-        </div>
-        <div>
-            <h4 class="nome"> Nome do usuário </h4>
-        </div>
-        <div>
-            <h6 class="username"> user.name </h6>
-        </div>
-        <div class="divs">
-            <button class="config">
-                Editar perfil
-                <img src="./img/pencil.png" style="width: 15px;">
-            </button>
-        </div>
+    <div class="fundo">
+        <div class="row">
+          <div class=" left">
+            <div class="perfil-parte-img">
+              <img class="div-img" src="https://icon-library.com/images/profile-png-icon/profile-png-icon-1.jpg" width="90%">
+              <p ><h3><Strong style="color: #fff;">Nome do usuário</Strong></h3>
+              <div style="color: #fff;"> username</div></p>
+              <section class="container">
+                <button id="button" class="button" data-hover="Editar perfil"><div class="divButton"><img src="/img/lapis.png" width="25%"></div></button>
+                <div id="editPerfil" class="editPerfil">
+               <div class="modal-content">    
+                  <div style="font-size: 2rem;"><b> Editar perfil</b><span class="fechar">&times;</span></div>
+                  
+                  <div id="foto" class="editarPerfil" >
+                      <img  class="div-img-edit" src="https://icon-library.com/images/profile-png-icon/profile-png-icon-1.jpg">
+      
+                  
+                     <b class="indicador">Nome</b>  <div class=" name input" id="input"><b id="b"> nome do usuario</b><img  id="img-edit" class="img-edit" src="/img/lapis.png"></div>
+                  </div>
+                  <div class="editarPerfil" >
+                      <b class="indicador">e-mail</b>  <div class=" name input" id="input"><b id="b">email@usuaro.com</b><img id="img-edit-email" class="img-edit-email" src="/img/lapis.png"></div>
+                   </div>
+                   <div class="editarPerfil" >
+                      <b class="indicador">senha</b>  <div class=" name input" id="input"><b id="b">rootroot</b><img class="img-edit-senha" id="img-edit-senha" src="/img/lapis.png"></div>
+                   </div>
+              </div> 
+              </section>
+            </div>
+          </div>
+          <div class=" right">
+      <button class="perguntas " style="color: #fff;" id="pergunta">Perguntas</button>
+              <button class="perguntas" style="color: #fff;" id="resposta">Respostas</button>
+              <spam class="div" id='a'></spam>
+              </div></div></div>
+              <script src="/js/perfil.js">
+              </script>
+
     </section>
 </body>
 
