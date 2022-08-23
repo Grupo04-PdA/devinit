@@ -16,6 +16,7 @@ if(process.env.ENVIRONMENT === 'production'){
 
 }else{
     console.log("STAGING");
+    console.log(process.env.DATABASE_PASSWORD_TESTE)
     const sequelize = new Sequelize(
         process.env.DATABASE_NAME_TESTE,
         process.env.DATABASE_USERNAME_TESTE,

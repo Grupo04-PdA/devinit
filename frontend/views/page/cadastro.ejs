@@ -25,7 +25,7 @@
             </div>
 
             <div id="cadastro" class="form-cadastro col-6">
-                <form method="POST" action="/cadastro">
+                <form method="POST">
                     <fieldset>
                         <h1>Cadastro</h1>
 
@@ -43,7 +43,7 @@
                         </div>
 
                         <div class="campo">
-                            <label for="senha_login">Senha</label><br>
+                            <label for="senha_cadastro">Senha</label><br>
                             <input class="input-senha" id="senha_cadastro" name="senha_cadastro" required type="password" placeholder="Senha" />
                                 <img class="eye-password" id="eye-cadastro" src="../img/eye-open.svg" width="17px" onclick="clickEyeCad()">
                             <span class="login_span"> Sua senha precisa conter, pelo menos, 6 caracteres com letra
@@ -52,13 +52,13 @@
 
                         
                         <div class="campo">
-                            <label for="senha_login">Confirmar Senha</label><br>
-                            <input class="input-senha" id="confirm_senha" name="senha_login" required type="password" placeholder="Confirmar Senha" />
+                            <label for="confirm_senha">Confirmar Senha</label><br>
+                            <input class="input-senha" id="confirm_senha" name="confirm_senha" required type="password" placeholder="Confirmar Senha" />
                                 <img class="eye-password" id="eye-cadastro-confirm" src="../img/eye-open.svg" width="17px" onclick="clickEyeConfirm()">
                             <span class="login_span"> As senhas não coincidem </span>
                         </div>
 
-                        <button id="btn-cadastrar" class="btn1" type="submit">Cadastrar</button>
+                        <button onclick="cadastrar()" id="btn-cadastrar" class="btn1" type="button">Cadastrar</button>
                     </fieldset>
 
                     <div class="conta">
@@ -70,4 +70,5 @@
         </div>
     </div>
     <script src="../js/cadastro.js"></script>
+    <script src="../js/fetch.js"></script>
 </body>

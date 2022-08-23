@@ -14,8 +14,8 @@ const criandoUsuarioController = async (req, res) => {
         });
         console.log(novoUsuario)
         return res.json({Usuario: novoUsuario})
-    } catch(err){
-        return res.json({message: "Ocorreu um erro no servidor!"})
+    } catch(error){
+        return console.log(error)
     }
 
 };
