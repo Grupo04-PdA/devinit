@@ -1,4 +1,4 @@
-/*var formCadastro = {
+var formCadastro = {
     username: false,
     emailC: false,
     senhaC: false
@@ -68,6 +68,29 @@ function senhaCadastroForm() {
     })
 }
 
+function senhaConfirmForm(){
+    var senhaCForm = document.getElementById('confirm_senha');
+    senhaCForm.addEventListener('keyup', ()=>{
+        var valorSenhaConfirm = senhaCForm.value.trim();
+        var valorSenhaC = senhaCadastro.value.trim();
+        var spanAlertaSenhaC = eyeCadastroConfirm.nextElementSibling
+
+        btnCadastro()
+
+        if (valorSenhaConfirm === ''){
+            spanAlertaSenhaC.style.display = 'flex';
+            formCadastro.senhaC = false;
+        } else if  (valorSenhaConfirm !== valorSenhaC) {
+            spanAlertaSenhaC.style.display = 'flex';
+            formCadastro.senhaC = false;
+        } else {
+            spanAlertaSenhaC.style.display = 'none';
+            formCadastro.senhaC = true;
+        }
+
+    })
+}
+
 
 function btnCadastro() {
     var btnCadastrar = document.getElementById('btn-cadastrar');
@@ -86,40 +109,34 @@ function clickEyeCad() {
     let btnCadastro = senhaCadastro.type == 'password';
 
     if (btnCadastro) {
-        mostrar()
+        senhaCadastro.setAttribute('type', 'text');
+        eyeCadastro.setAttribute('src', '../img/eye-closed.svg');
     } else {
-        ocultar()
+        senhaCadastro.setAttribute('type', 'password');
+        eyeCadastro.setAttribute('src', '../img/eye-open.svg');
     }
 }
 
-function mostrar() {
-senhaCadastro.setAttribute('type', 'text');
-eyeCadastro.setAttribute('src', '../img/eye-closed.svg')
+var eyeCadastroConfirm = document.getElementById('eye-cadastro-confirm');
+var senhaConfirmCadastro = document.getElementById('confirm_senha');
+
+function clickEyeConfirm() {
+    let btnConfirm = senhaConfirmCadastro.type == 'password';
+
+    if (btnConfirm) {
+        senhaConfirmCadastro.setAttribute('type', 'text');
+        eyeCadastroConfirm.setAttribute('src', '../img/eye-closed.svg');
+    } else {
+        senhaConfirmCadastro.setAttribute('type', 'password');
+        eyeCadastroConfirm.setAttribute('src', '../img/eye-open.svg');
+    }
 }
 
-function ocultar() {
-senhaCadastro.setAttribute('type', 'password');
-eyeCadastro.setAttribute('src', '../img/eye-open.svg')
-}
-*/
+
+
 document.addEventListener('DOMContentLoaded', () => {
-    getUsuarios()
-    // userCadastroForm()
-    // emailCadastroForm()
-    // senhaCadastroForm()
+    userCadastroForm()
+    emailCadastroForm()
+    senhaCadastroForm()
+    senhaConfirmForm()
 })
-
-function getUsuarios(){
-    console.log('funcionando')
-    fetch ('http://localhost:4020/cadastro')
-.then( async response => {
-    var usuario = await response.text()
-    console.log(usuario)
-})
-}
-
-/*function getUsuarios(){
-    console.log('funcionando')
-    fetch ('http://localhost:4020/cadastro')
-    .then(response => {console.log(response.text())})
-}*/
