@@ -13,7 +13,7 @@ usuarioRouter.get("/usuario", pegandoUsuarioController)
 
 usuarioRouter.get("/usuario/:id", pegandoUsuarioIdController)
 
-usuarioRouter.get("/login", loginUsuarioController);
+usuarioRouter.post("/login", loginUsuarioController);
 
 usuarioRouter.delete("/usuario/:id", deletandoUsuarioController);
 
