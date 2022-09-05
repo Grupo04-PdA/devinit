@@ -37,7 +37,8 @@
 
             <div class="campo">
               <label for="senha_login">Senha</label><br>
-              <input class="input-senha" id="senha_login" name="senha_login" required type="password" placeholder="Senha" />
+              <input class="input-senha" id="senha_login" name="senha_login" required type="password"
+                placeholder="Senha" />
               <img class="eye-password" id="eye-login" src="../img/eye-open.svg" width="17px" onclick="clickEyeLog()">
               <span class="login_span"> Senha incorreta</span>
             </div>
@@ -57,7 +58,12 @@
         </form>
       </div>
 
-      </form>
+      <div class="modal-login">
+        <button onclick="fecharModal()">X</button>
+        <h2>Email ou senha inválidos</h2>
+        <img src="/img/erro.png">
+      </div>
+
     </div>
     <script src="../js/login.js"></script>
     <script src="../js/fetch/loginUsuario.js"></script>

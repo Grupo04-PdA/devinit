@@ -11,15 +11,31 @@ async function login() {
             "Content-Type": "application/json"
         },
         body: JSON.stringify({
-            email: email, 
+            email: email,
             senha: senha
         })
     })
-    .then(res => res.json())
-    .then(res => {
-        console.log(res)
-        window.location.href = "http://localhost:4020/homecadastrado" 
-    });
+        .then(res => res.json())
+        .then(res => {
+            if (res.message) {
+                window.location.href = "http://localhost:4020/homecadastrado"
+            } else {
+                console.log("Ocorreu um erro")
+                abrirModal()
+            }
+        });
+}
+
+function abrirModal() {
+    const modalLogin = document.querySelector(".modal-login")
+
+    modalLogin.style.display = "block"
+}
+
+function fecharModal() {
+    const modalLogin = document.querySelector(".modal-login")
+
+    modalLogin.style.display = "none"
 }
 
 document.addEventListener("DOMContentLoaded", () => {

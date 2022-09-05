@@ -166,7 +166,7 @@ input {
   color: #fff;
 }
 
-.modal-cadastrado {
+.modal-cadastrado, .modal-login {
   width: 400px;
   height: 300px;
   background-color: #fff;
@@ -182,11 +182,11 @@ input {
   display: none;
 }
 
-.modal-cadastrado img {
+.modal-cadastrado img, .modal-login img{
   width: 150px;
 }
 
-.fechar-modal-cadastro {
+.fechar-modal-cadastro, .modal-login button {
   background-color: #60558E;
   color: #fff;
   font-weight: bold;
@@ -197,13 +197,13 @@ input {
   border: 2px solid #60558E;
 }
 
-.fechar-modal-cadastro:hover{
+.fechar-modal-cadastro:hover, .modal-login button:hover{
   background-color: #fff;
   color: #60558E;
   border: 2px solid #60558E;
 }
 
-.modal-cadastrado h2, .modal-cadastrado h3 {
+.modal-cadastrado h2, .modal-cadastrado h3, .modal-login h2 {
   color:#3F3E74;
   font-weight: bold;
 }
