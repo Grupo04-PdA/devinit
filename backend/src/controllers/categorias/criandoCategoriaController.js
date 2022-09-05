@@ -3,7 +3,7 @@ const criandoCategoriaController = async (req, res) => {
         const db = require("../../connection/db");
         const categoria = require("../../models/categorias")
     
-        await db.sync();
+        await db.sync({force: true});
     
         const { nome } = req.body
         const novaCategoria = await categoria.create({
@@ -11,7 +11,7 @@ const criandoCategoriaController = async (req, res) => {
         });
         return res.json({ Categoria: novaCategoria });
     } catch(err) {
-        return res.json({message: "Ocorreu um erro no servidor!"})
+        return res.json({message: err})
     }
 };
 

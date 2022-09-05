@@ -12,20 +12,16 @@ const Perguntas = db.define("perguntas", {
     pergunta: {
         type: Sequelize.DataTypes.STRING,
         allowNull: false,
-    },
-    data: {
-        type: Sequelize.DataTypes.DATE,
-        allowNull: false,
     }
 });
 
-Perguntas.belongsTo(Usuario, {
-    foreignKey: "idUsuario"
-});
+// Perguntas.belongsTo(Usuario, {
+//     foreignKey: "idUsuario"
+// });
 
-Usuario.hasMany(Perguntas, {
-    foreignKey: "perguntas"
-})
+// Usuario.hasMany(Perguntas, {
+//     foreignKey: "perguntas"
+// })
 
 
 

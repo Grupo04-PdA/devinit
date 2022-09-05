@@ -20,8 +20,17 @@ function cadastrar() {
             senha: senha
         })
     })
-        .then(res => console.log(res.json()))
-        .then();
+        .then(res => res.json())
+        .then(res => {
+            console.log(res)
+            if (res.Usuario) {
+                console.log("Cadastrou!")
+                window.alert("Cadastrou!")
+            } else {
+                console.log("ERRO")
+            }
+        });
+
 }
 
 document.addEventListener("DOMContentLoaded", () => {

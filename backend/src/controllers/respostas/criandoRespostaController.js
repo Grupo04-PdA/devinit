@@ -5,9 +5,9 @@ const criandoRespostaController = async (req, res) => {
     
         await db.sync();
     
-        const { resposta, data } = req.body;
+        const resposta = req.body;
         const novaResposta = await respostas.create({
-            resposta, data
+            resposta
         });
         return res.json({ "Message": "Resposta enviada com sucesso!",  Resposta: novaResposta });
     } catch(err){

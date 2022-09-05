@@ -2,12 +2,11 @@ const alterandoRespostaController = async(req, res) => {
     try{
     let respostas = require("../../models/respostas");
     const id = req.params.id;
-    const { resposta, data } = req.body;
+    const resposta = req.body;
     const respostaExistente = await respostas.findByPk(id);
     if(respostaExistente){
         await respostas.update({
-            resposta: resposta || respostaExistente.resposta,
-            data: data || respostaExistente.data
+            resposta: resposta || respostaExistente.resposta
         }, { where: { id: id } });
 
         const respostaAtualizada = await respostas.findByPk(id);

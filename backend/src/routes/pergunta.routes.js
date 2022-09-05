@@ -5,11 +5,14 @@ const criandoPerguntaController = require("../controllers/perguntas/criandoPergu
 const {pegandoPerguntaController, pegandoPerguntaIdController} = require("../controllers/perguntas/pegandoPerguntaController")
 const alterandoPerguntaController = require("../controllers/perguntas/alterandoPerguntaController");
 const deletandoPerguntasController = require("../controllers/perguntas/deletandoPerguntasController");
+const buscandoPerguntaController = require("../controllers/perguntas/buscandoperguntacontroller");
 
 perguntaRouter.post("/pergunta", criandoPerguntaController);
 
 perguntaRouter.get("/pergunta", pegandoPerguntaController);
 perguntaRouter.get("/pergunta/:id", pegandoPerguntaIdController);
+
+perguntaRouter.get("/busca", buscandoPerguntaController)
 
 perguntaRouter.put("/pergunta/:id", alterandoPerguntaController);
 

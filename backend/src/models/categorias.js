@@ -15,11 +15,11 @@ const Categorias = db.define("categorias", {
     },
 });
 
-Perguntas.belongsTo(Categorias, {
-    foreignKey: "categorias"
-});
+// Perguntas.belongsTo(Categorias, {
+//     foreignKey: "categorias"
+// });
 
-Categorias.hasMany(Perguntas, {
-    foreignKey: "perguntas"
-})
+// Categorias.hasMany(Perguntas, {
+//     foreignKey: "perguntas"
+// })
 module.exports = Categorias;
