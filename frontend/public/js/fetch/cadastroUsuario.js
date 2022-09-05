@@ -25,14 +25,25 @@ function cadastrar() {
             console.log(res)
             if (res.Usuario) {
                 console.log("Cadastrou!")
-                window.alert("Cadastrou!")
+                abrirModal()
             } else {
-                console.log("ERRO")
+                console.log("Ocorreu um erro!")
             }
         });
 
 }
 
+function abrirModal() {
+    const modal = document.querySelector(".modal-cadastrado")
+    const content = document.querySelector(".content")
+
+    content.style.display = "none";
+    modal.style.display = "block";
+}
+
+function fecharmodal() {
+    window.location.href = "http://localhost:4020/homecadastrado"
+}
 document.addEventListener("DOMContentLoaded", () => {
     console.log("esta funcionando")
 })

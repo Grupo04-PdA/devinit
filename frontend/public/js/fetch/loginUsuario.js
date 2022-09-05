@@ -5,16 +5,23 @@ async function login() {
     const inputSenha = document.getElementById("senha_login")
     const senha = inputSenha.value;
     const url = "http://localhost:3020/login"
-    fetch(url, {
+    await fetch(url, {
         method: "POST",
         headers: {
-            "ContentType": "application/json"
+            "Content-Type": "application/json"
         },
-        body: JSON.stringify(email, senha)
+        body: JSON.stringify({
+            email: email, 
+            senha: senha
+        })
     })
-        .then(res => console.log(res))
-        .then(res => window.alert("Login concluído"));
+    .then(res => res.json())
+    .then(res => {
+        console.log(res)
+        window.location.href = "http://localhost:4020/homecadastrado" 
+    });
 }
+
 document.addEventListener("DOMContentLoaded", () => {
     console.log("está funcionando")
 })
