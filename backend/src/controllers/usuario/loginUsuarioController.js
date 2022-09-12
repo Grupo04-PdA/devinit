@@ -15,7 +15,7 @@ const loginUsuarioController = async (req, res) => {
         }
         return res.json({ message: "Login efetuado com sucesso!", usuario: usuarioExistente });
     } catch (err) {
-        return res.json({ message: "Ocorreu um erro!" })
+        return res.json({ error: "Ocorreu um erro!" })
     }
 }
 
