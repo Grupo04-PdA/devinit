@@ -17,7 +17,7 @@ const buscandoPerguntaController = async (req, res) => {
     const Op = Sequelize.Op;
     const query = `%O que é java script%`
 
-    const busca = await perguntas.findAll({ where: { pergunta: { [Op.like]: query }}})
+    const busca = await perguntas.findAll({ where: { pergunta: res.body.pergunta}})
     console.log(busca)
     return res.json({perguntas: busca})
 };

@@ -1,7 +1,8 @@
 const Sequelize = require("sequelize");
 
-if(process.env.ENVIRONMENT === 'production'){
+if(process.env.ENVIRONMENT === "production"){
     console.log("PRODUCTION")
+    console.log("PRODUCTIONN")
     const sequelize = new Sequelize(
         process.env.DATABASE_NAME,
         process.env.DATABASE_USERNAME,

@@ -2,15 +2,13 @@ const criandoPerguntaController = async (req, res) => {
     try {
         const db = require("../../connection/db");
         const perguntas = require("../../models/perguntas");
-    
         await db.sync();
     
-        const pergunta = req.body;
+        const { pergunta, categoriaNome } = req.body;
         const novaPergunta = await perguntas.create({
-            id: 1,
-            pergunta
+            pergunta, categoriaNome
         });
-        return res.json({ message: "Pergunta concluida com sucesso!", Pergunta: novaPergunta });
+        return res.json({ message: "Pergunta feita com sucesso!", Pergunta: novaPergunta });
     } catch (err) {
         console.log(err)
         return res.json({ message: err });

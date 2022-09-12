@@ -1,6 +1,5 @@
 const Sequelize = require("sequelize");
 const db = require("../connection/db");
-const Usuario = require("./usuario");
 
 const Perguntas = db.define("perguntas", {
     id: {
@@ -10,6 +9,10 @@ const Perguntas = db.define("perguntas", {
         primaryKey: true
     },
     pergunta: {
+        type: Sequelize.DataTypes.STRING,
+        allowNull: false,
+    },
+    categoria: {
         type: Sequelize.DataTypes.STRING,
         allowNull: false,
     }
