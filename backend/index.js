@@ -7,8 +7,8 @@ const respostaRouter = require("./src/routes/resposta.routes");
 const app = express()
 const port = 3020 
 
-app.use(express.json())
 app.use(cors())
+app.use(express.json())
 app.use(usuarioRouter)
 app.use(perguntaRouter)
 app.use(respostaRouter)

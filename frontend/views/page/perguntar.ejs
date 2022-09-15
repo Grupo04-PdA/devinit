@@ -56,7 +56,7 @@
     </nav>
   </header>
 
-  <form method="post" class="row">
+  <form class="row">
     <div class="col-12 col-lg-8">
       <label id="texto-principal"> Tire sua dúvida</label>
       <textarea id="campo-perguntar" name="pergunta" class="textarea"
@@ -80,7 +80,7 @@
       <span class="alerta-select">Selecione uma categoria</span>
     </div>
     <div class="col-12 mb-4 ">
-    <button id="btn-enviar" type="submit" title="Enviar" disabled> Enviar</button>
+    <button id="btn-enviar" onclick="cadastroPerguntas()" type="button" title="Enviar" disabled> Enviar</button>
   </div>
   </form>
   
@@ -92,7 +92,7 @@
   integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
   crossorigin="anonymous"></script>
   <script src="../js/perguntar.js"></script>
-
+<script src="../js/fetch/perguntas/cadastroPerguntas.js"></script>
 </body>
 <footer>
   <%- include("../partials/footer") %> 

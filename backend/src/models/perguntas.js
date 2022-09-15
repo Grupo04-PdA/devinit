@@ -12,7 +12,7 @@ const Perguntas = db.define("perguntas", {
         type: Sequelize.DataTypes.STRING,
         allowNull: false,
     },
-    categoria: {
+    categoriaNome: {
         type: Sequelize.DataTypes.STRING,
         allowNull: false,
     }
