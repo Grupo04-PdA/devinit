@@ -23,7 +23,7 @@ function cadastroPerguntas() {
                 console.log("pergunta cadastrada com sucesso!")
 
             } else {
-                console.log("Ocorreu um erro")
+                console.log("Ocorreu um erro!")
             }
         })
 }
