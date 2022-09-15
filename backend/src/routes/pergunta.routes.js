@@ -12,7 +12,7 @@ perguntaRouter.post("/pergunta", criandoPerguntaController);
 perguntaRouter.get("/pergunta", pegandoPerguntaController);
 perguntaRouter.get("/pergunta/:id", pegandoPerguntaIdController);
 
-perguntaRouter.get("/busca", buscandoPerguntaController)
+perguntaRouter.post("/busca", buscandoPerguntaController)
 
 perguntaRouter.put("/pergunta/:id", alterandoPerguntaController);
 
