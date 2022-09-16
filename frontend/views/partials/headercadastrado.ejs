@@ -11,22 +11,30 @@
                 <a href="/perguntar" title="Perguntar">Perguntar</a>
             </li>
             <li class="dropdown">
-                <img class="img-header" src="https://cdn-icons-png.flaticon.com/512/5087/5087579.png" alt="Foto de perfil">
+                <img class="img-header" src="https://cdn-icons-png.flaticon.com/512/5087/5087579.png"
+                    alt="Foto de perfil">
                 <ul>
                     <li class="drop-perfil"><a href="/perfil">
-                        <img src="../img/meuperfil.png">
-                        <p>Meu perfil</p>
-                    </a></li>
+                            <img src="../img/meuperfil.png">
+                            <p>Meu perfil</p>
+                        </a></li>
                     <!-- <li class="drop-config"><a href="/configuracoes">
                         <img src="../img/configuracoes.png">
                         <p>Configurações</p>
                     </a></li> -->
-                    <li class="drop-sair"><a href="/">
-                        <img src="../img/sair.png">
-                        <p>Sair</p>
-                    </a></li>
+                    <li class="drop-sair" onclick="openModalSair()">
+                            <img src="../img/sair.png">
+                            <p>Sair</p>
+                    </li>
                 </ul>
             </li>
         </ul>
     </section>
 </nav>
+
+<div class="modal-sair">
+    <h1>Deseja fazer logout?</h1>
+    <button onclick="fecharModalSair()" class="btn-nao">NÃO, cancelar</button>
+    <a href="/"><button class="btn-sim">SIM</button></a>
+
+</div>
