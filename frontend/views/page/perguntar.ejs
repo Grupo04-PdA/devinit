@@ -3,7 +3,7 @@
 
 <head>
   <%- include("../partials/head") %>
-  <link rel="stylesheet" href="../style/perguntar.css">
+    <link rel="stylesheet" href="../style/perguntar.css">
 </head>
 
 <body>
@@ -62,7 +62,7 @@
       <textarea id="campo-perguntar" name="pergunta" class="textarea"
         placeholder="Digite sua pergunta aqui. (Para conseguir uma ótima resposta, descreva sua dúvida de forma simples e clara)"
         required> </textarea>
-        <span class="alerta-text">Digite, pelo menos, 7 caracteres</span>
+      <span class="alerta-text">Digite, pelo menos, 7 caracteres</span>
     </div>
     <div class="col-12">
       <select id="select-perguntar" name="categorias" required>
@@ -80,24 +80,47 @@
       <span class="alerta-select">Selecione uma categoria</span>
     </div>
     <div class="col-12 mb-4 ">
-    <button id="btn-enviar" onclick="cadastroPerguntas()" type="button" title="Enviar" disabled> Enviar</button>
-  </div>
+      <button id="btn-enviar" onclick="cadastroPerguntas()" type="button" title="Enviar" disabled> Enviar</button>
+    </div>
   </form>
-  
+
+  <div class="modal-perguntar">
+    <h2 class="txt-modal-perg">
+      Sua pergunta foi registrada!
+      <br>
+      Aguarde e em breve receberá sua resposta.
+    </h2>
+    <div class="botoes-perguntar">
+      <button class="btn-modal2">
+        <a href="/homecadastrado">Voltar para a Página Inicial</a>
+      </button>
+      <br>
+      <button class="btn-modal2">
+        <a href="/perguntar">Fazer outra pergunta</a>
+      </button>
+    </div>
+  </div>
+
+  <div class="modal-erro-pergunta">
+    <button onclick="fecharModalErro()">X</button>
+    <h1>Ocorreu um erro ao fazer sua pergunta!</h1>
+    <p>Tente novamente mais tarde.</p>
+  </div>
+
   <div>
     <%- include("../partials/modalfooter") %>
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-  integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-  crossorigin="anonymous"></script>
-  <script src="../js/perguntar.js"></script>
-<script src="../js/fetch/perguntas/cadastroPerguntas.js"></script>
-<script src="../js/fetch/perguntas/pegandoPerguntas.js"></script>
-
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+  <script src="../js/validacao/perguntar.js"></script>
+  <script src="../js/fetch/perguntas/cadastroPerguntas.js"></script>
+  <script src="../js/fetch/perguntas/pegandoPerguntas.js"></script>
 </body>
+
 <footer>
-  <%- include("../partials/footer") %> 
+  <%- include("../partials/footer") %>
 </footer>
 
 </html>
