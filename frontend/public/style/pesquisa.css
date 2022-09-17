@@ -1,3 +1,20 @@
+.lista-pesquisa li {
+  list-style-type: none;
+  padding: 2%;
+}
+
+.input-resp {
+  background-color: #9991bb;
+  border-radius: 40px;
+  width: 100%;
+  padding: 2%;
+  border: none;
+}
+
+.fundo-pergunta-pesq, .titulo-pesq {
+  display: none;
+}
+
 #divBusca{
     background-color: #60558E;
     border: none;
@@ -14,6 +31,23 @@
     margin-left: 25%;
     flex-direction: row-reverse;
     align-items: center;
+}
+
+footer {
+  bottom: 0;
+  position: fixed;
+  width: 100vw;
+}
+
+.msg-erro {
+  color: white;
+}
+
+#txt-busca {
+  width: 95%;
+  border: none;
+  background-color: #60558E;
+  padding-left: 2%;
 }
 
 #divBusca img {
