@@ -1,8 +1,7 @@
-var formCadastro = {
-    username: false,
-    emailC: false,
-    senhaC: false
-}
+var username = false;
+var userEmail = false;
+var userSenha = false;
+var userSenhaConfirm = false;
 
 function userCadastroForm() {
     var user = document.getElementById('nome_form');
@@ -14,13 +13,13 @@ function userCadastroForm() {
 
         if (valorUser === '') {
             spanAlertaUser.style.display = 'flex';
-            formCadastro.username = false;
+            username = false;
         } else if (valorUser.length < 3) {
             spanAlertaUser.style.display = 'flex';
-            formCadastro.username = false;
+            username = false;
         } else {
             spanAlertaUser.style.display = 'none';
-            formCadastro.username = true;
+            username = true;
         }
     })
 }
@@ -36,13 +35,13 @@ function emailCadastroForm() {
 
         if (valorEmail === '') {
             spanAlertaEmail.style.display = 'flex';
-            formCadastro.emailC = false;
+            userEmail = false;
         } else if (!regexEmail.test(valorEmail)) {
             spanAlertaEmail.style.display = 'flex';
-            formCadastro.emailC = false;
+            userEmail = false;
         } else {
             spanAlertaEmail.style.display = 'none';
-            formCadastro.emailC = true;
+            userEmail = true;
         }
     })
 }
@@ -53,17 +52,17 @@ function senhaCadastroForm() {
         var regexSenha = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).{6,}$/
         var spanAlertaSenha = eyeCadastro.nextElementSibling
 
-        btnCadastro()
+        //btnCadastro()
 
         if (valorSenha === ''){
             spanAlertaSenha.style.display = 'flex';
-            formCadastro.senhaC = false;
+            userSenha = false;
         } else if  (!regexSenha.test(valorSenha)) {
             spanAlertaSenha.style.display = 'flex';
-            formCadastro.senhaC = false;
+            userSenha = false;
         } else {
             spanAlertaSenha.style.display = 'none';
-            formCadastro.senhaC = true;
+            userSenha = true;
         }
     })
 }
@@ -79,13 +78,13 @@ function senhaConfirmForm(){
 
         if (valorSenhaConfirm === ''){
             spanAlertaSenhaC.style.display = 'flex';
-            formCadastro.senhaC = false;
+            userSenhaConfirm = false;
         } else if  (valorSenhaConfirm !== valorSenhaC) {
             spanAlertaSenhaC.style.display = 'flex';
-            formCadastro.senhaC = false;
+            userSenhaConfirm = false;
         } else {
             spanAlertaSenhaC.style.display = 'none';
-            formCadastro.senhaC = true;
+            userSenhaConfirm = true;
         }
 
     })
@@ -95,7 +94,7 @@ function senhaConfirmForm(){
 function btnCadastro() {
     var btnCadastrar = document.getElementById('btn-cadastrar');
 
-    if (formCadastro.username && formCadastro.emailC && formCadastro.senhaC) {
+    if (username && userEmail && userSenha && userSenhaConfirm) {
         btnCadastrar.removeAttribute('disabled');
     } else {
         btnCadastrar.setAttribute('disabled', true);
@@ -131,12 +130,3 @@ function clickEyeConfirm() {
         eyeCadastroConfirm.setAttribute('src', '../img/eye-open.svg');
     }
 }
-
-
-
-document.addEventListener('DOMContentLoaded', () => {
-    userCadastroForm()
-    emailCadastroForm()
-    senhaCadastroForm()
-    senhaConfirmForm()
-})
