@@ -3,14 +3,6 @@
   padding: 2%;
 }
 
-.input-resp {
-  background-color: #9991bb;
-  border-radius: 40px;
-  width: 100%;
-  padding: 2%;
-  border: none;
-}
-
 .fundo-pergunta-pesq, .titulo-pesq {
   display: none;
 }

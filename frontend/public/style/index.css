@@ -465,6 +465,14 @@ footer{
     border-radius: 0 0 20px 20px;
 }
 
+.input-resp {
+    background-color: #9991bb;
+    border-radius: 40px;
+    width: 100%;
+    padding: 2%;
+    border: none;
+  }
+
 .modal-sair {
     width: 500px;
     height: 250px;
