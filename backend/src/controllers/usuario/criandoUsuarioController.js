@@ -7,10 +7,10 @@ const criandoUsuarioController = async (req, res) => {
     
         await db.sync()
     
-        const { nome, email, senha,logado } = req.body
+        const { nome, email, senha } = req.body
         const senhaHash = await hash(senha, 8)
         const novoUsuario = await usuario.create({
-            nome, email, senha: senhaHash, logado
+            nome, email, senha: senhaHash, logado: 1
         });
         console.log(novoUsuario)
         return res.json({Usuario: novoUsuario})

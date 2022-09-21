@@ -1,3 +1,8 @@
+var usuario 
+export function retornandoUsuario() {
+    return usuario 
+}
+
 async function login() {
     const inputEmail = document.getElementById("email_login")
     const email = inputEmail.value;
@@ -17,6 +22,7 @@ async function login() {
     })
         .then(res => res.json())
         .then(res => {
+            usuario = res.usuario
             if (res.message) {
                 window.location.href = "http://localhost:4020/homecadastrado"
             } else {

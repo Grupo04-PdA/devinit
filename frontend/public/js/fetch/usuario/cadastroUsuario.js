@@ -18,7 +18,6 @@ function cadastrar() {
             nome: nome,
             email: email,
             senha: senha,
-            logado: 1
         })
     })
         .then(res => res.json())
