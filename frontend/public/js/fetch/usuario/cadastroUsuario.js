@@ -17,7 +17,8 @@ function cadastrar() {
         body: JSON.stringify({
             nome: nome,
             email: email,
-            senha: senha
+            senha: senha,
+            logado: 1
         })
     })
         .then(res => res.json())

@@ -23,6 +23,10 @@ const Usuario = db.define("usuario", {
     foto: {
         type: Sequelize.DataTypes.STRING,
         allowNull: true,
+    },
+    logado: {
+        type: Sequelize.DataTypes.TINYINT,
+        allowNull: false,
     }
 });
 
