@@ -6,6 +6,7 @@ export function retornandoUsuario() {
 async function login() {
     const inputEmail = document.getElementById("email_login")
     const email = inputEmail.value;
+    console.log(email)
 
     const inputSenha = document.getElementById("senha_login")
     const senha = inputSenha.value;
