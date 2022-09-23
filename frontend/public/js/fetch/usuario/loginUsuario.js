@@ -1,9 +1,10 @@
-var usuario 
-export function retornandoUsuario() {
-    return usuario 
-}
+//var usuario 
+//export function retornandoUsuario() {
+   // return usuario 
+//}
 
 async function login() {
+    console.log("qualquer")
     const inputEmail = document.getElementById("email_login")
     const email = inputEmail.value;
     console.log(email)
@@ -23,9 +24,10 @@ async function login() {
     })
         .then(res => res.json())
         .then(res => {
-            usuario = res.usuario
+            const usuario = res.usuario
             if (res.message) {
                 window.location.href = "http://localhost:4020/homecadastrado"
+                localStorage.setItem("user_id", usuario.id)
             } else {
                 console.log("Ocorreu um erro")
                 abrirModal()

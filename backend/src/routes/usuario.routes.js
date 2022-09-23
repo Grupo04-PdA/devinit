@@ -5,7 +5,7 @@ const criandoUsuarioController = require("../controllers/usuario/criandoUsuarioC
 const deletandoUsuarioController = require("../controllers/usuario/deletandoUsuarioController");
 const loginUsuarioController = require("../controllers/usuario/loginUsuarioController");
 const { pegandoUsuarioController, pegandoUsuarioIdController } = require("../controllers/usuario/pegandoUsuarioController");
-
+const logoutUsuarioController = require("../controllers/usuario/logoutUsuarioController");
 
 usuarioRouter.post("/usuario", criandoUsuarioController);
 
@@ -18,6 +18,8 @@ usuarioRouter.post("/login", loginUsuarioController);
 usuarioRouter.delete("/usuario/:id", deletandoUsuarioController);
 
 usuarioRouter.put("/usuario/:id", alterandoUsuarioController);
+
+usuarioRouter.put("/logout/:id", logoutUsuarioController); 
 
 module.exports = usuarioRouter;
 

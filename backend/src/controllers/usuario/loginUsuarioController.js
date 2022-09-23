@@ -1,17 +1,21 @@
-const { compare } = require("bcrypt")
-
+const bcrypt  = require("bcrypt")
+let usuario = require("../../models/usuario")
 const loginUsuarioController = async (req, res) => {
     try {
-        let usuario = require("../../models/usuario")
+
         const { email, senha } = req.body
         const usuarioExistente = await usuario.findOne({ where: { email: email } });
+        
         if (!usuarioExistente) {
             return res.json("Email invalido!")
         }
-
-        let senhaValida = await compare(senha, usuarioExistente.senha);
+        
+        let senhaValida = await bcrypt.compare(senha, usuarioExistente.dataValues.senha);
+        console.log(senhaValida)
         if (!senhaValida) {
+
             return res.json("Senha incorreta!")
+
         }
         await usuario.update({
             id: usuarioExistente.id,
