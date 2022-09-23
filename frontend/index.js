@@ -35,6 +35,14 @@ app.get("/homecadastrado", (req, res) => {
     res.render("page/home")
 });
 
+app.get("/pesquisacadastrado", (req, res) => {
+    res.render("page/pesquisaCadastrado")
+});
+
+app.get("/perguntarcadastrado", (req, res) => {
+    res.render("page/perguntaCadastrado")
+});
+
 app.listen(port, () => {
     console.log(`Servidor iniciado: ${port}`);
 });

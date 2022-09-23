@@ -121,10 +121,15 @@
         </p>
       </div>
       <div class="pesquisar">
-        <input type="text" class="txt-pesquisar" placeholder="Qual é a sua pergunta?">
+        <!-- <input type="text" class="txt-pesquisar" placeholder="Qual é a sua pergunta?">
         <a href="/pesquisa">
-          <img class="img-lupa" src="./img/lupa.png" alt="Buscar">
-        </a>
+          <img onclick="pesquisaPerguntaHome()" class="img-lupa" src="./img/lupa.png" alt="Buscar">
+        </a> -->
+        <a href="/pesquisa">
+        <button id="button-pesq" class="button-pesq" data-hover="Pesquisar">
+          <img class="img-lupa img-btn-pesq" src="./img/lupa.png" alt="Buscar">
+        </button>
+      </a>
       </div>
     </div>
 
@@ -146,20 +151,20 @@
     });
 
     splide.mount();
-function botaocurtir() { 
-const button = document.querySelector('#like');
-const number = document.querySelector('#number');
+// function botaocurtir() { 
+// const button = document.querySelector('#like');
+// const number = document.querySelector('#number');
 
-button.addEventListener('click', () => {
-  let likeValue = document.querySelector('#number').textContent;
-  let newValue = Number(likeValue) + 1;
-  button.classList.add('like');
-  number.innerHTML = newValue;
-});}
+// button.addEventListener('click', () => {
+//   let likeValue = document.querySelector('#number').textContent;
+//   let newValue = Number(likeValue) + 1;
+//   button.classList.add('like');
+//   number.innerHTML = newValue;
+// });}
 
-document.addEventListener("DOMContentLoaded", () => {
-botaocurtir()
-})
+// document.addEventListener("DOMContentLoaded", () => {
+// botaocurtir()
+// })
   </script>
   
 

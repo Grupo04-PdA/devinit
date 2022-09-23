@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <%- include("../partials/head") %>
+        <link rel="stylesheet" href="../style/pesquisa.css">
+</head>
+
+<body>
+    <header>
+        <%- include("../partials/headercadastrado") %>
+    </header>
+
+    <div id="divBusca">
+        <img src="../img/lupa.png" alt="Pesquise aqui..." onclick="pesquisaPergunta()" />
+        <input type="text" id="txt-busca" placeholder="Pesquise aqui..." />
+    </div>
+    </div>
+    <div class="div-perguntar-pesq">
+
+        <h1 class="titulo-pesq"><b>Principais resultados...</b></h1>
+        <div class="fundo-pergunta-pesq">
+            <ul class="lista-pesquisa">
+                <li>
+                    <!-- <div class="pergunta-pesq">
+          <img src="https://icon-library.com/images/profile-png-icon/profile-png-icon-1.jpg" height="16rem"
+            style="margin: 0.5rem;"><a herf="#" class="link-usuario">User412938</a>
+          <h3 class="h3-pesq">
+            <b>Qual a linguagem de programação mais usada?</b>
+          </h3>
+          <div class="resposta">
+            <img src="https://icon-library.com/images/profile-png-icon/profile-png-icon-1.jpg" height="13rem"
+              style="margin: 0.5rem;"><a href="#" class="link-usuario" style="font-size: 0.5rem;">User21123</a>
+            <h6 class="h6-pesq">JavaScript é uma linguagem de programação universal, multiplataforma e linguagem mais
+              popular no mundo inteiro nos últimos sete anos.</h6>
+            <button class="curtir" id="like">
+              <div class="label">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M8.4 5.25C5.61914 5.25 3.25 7.3293 3.25 10.0298C3.25 11.8927 4.12235 13.4612 5.27849 14.7604C6.43066 16.0552 7.91714 17.142 9.26097 18.0516L11.5796 19.6211C11.8335 19.793 12.1665 19.793 12.4204 19.6211L14.739 18.0516C16.0829 17.142 17.5693 16.0552 18.7215 14.7604C19.8777 13.4612 20.75 11.8927 20.75 10.0298C20.75 7.3293 18.3809 5.25 15.6 5.25C14.1665 5.25 12.9052 5.92214 12 6.79183C11.0948 5.92214 9.83347 5.25 8.4 5.25Z"
+                    fill="black" />
+                </svg>
+                Curtir
+              </div>
+              <div class="number" id="number">0</div>
+            </button>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="pergunta-pesq">
+          <img src="https://icon-library.com/images/profile-png-icon/profile-png-icon-1.jpg" height="16rem"
+            style="margin: 0.5rem;"><a herf="#" class="link-usuario">User412938</a>
+          <h3 class="h3-pesq">
+            <b>O que é Node.js</b>
+          </h3>
+          <div class="resposta">
+            <img src="https://icon-library.com/images/profile-png-icon/profile-png-icon-1.jpg" height="13rem"
+              style="margin: 0.5rem;"><a href="#" class="link-usuario" style="font-size: 0.5rem;">User21123</a>
+            <h6 class="h6-pesq">Node.js é um software de código aberto, multiplataforma, baseado no interpretador V8 do
+              Google e que permite a execução de códigos JavaScript fora de um navegador web.</h6>
+            <button class="curtir" id="like">
+              <div class="label">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M8.4 5.25C5.61914 5.25 3.25 7.3293 3.25 10.0298C3.25 11.8927 4.12235 13.4612 5.27849 14.7604C6.43066 16.0552 7.91714 17.142 9.26097 18.0516L11.5796 19.6211C11.8335 19.793 12.1665 19.793 12.4204 19.6211L14.739 18.0516C16.0829 17.142 17.5693 16.0552 18.7215 14.7604C19.8777 13.4612 20.75 11.8927 20.75 10.0298C20.75 7.3293 18.3809 5.25 15.6 5.25C14.1665 5.25 12.9052 5.92214 12 6.79183C11.0948 5.92214 9.83347 5.25 8.4 5.25Z"
+                    fill="black" />
+                </svg>
+                Curtir
+              </div>
+              <div class="number" id="number">0</div>
+            </button>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="pergunta-pesq">
+          <img src="https://icon-library.com/images/profile-png-icon/profile-png-icon-1.jpg" height="16rem"
+            style="margin: 0.5rem;"><a herf="#" class="link-usuario">User412938</a>
+          <h3 class="h3-pesq">
+            <b>O que é React?</b>
+          </h3>
+          <div class="resposta">
+            <img src="https://icon-library.com/images/profile-png-icon/profile-png-icon-1.jpg" height="13rem"
+              style="margin: 0.5rem;"><a href="#" class="link-usuario" style="font-size: 0.5rem;">User21123</a>
+            <h6 class="h6-pesq">O React é uma biblioteca JavaScript de código aberto com foco em criar interfaces de
+              usuário em páginas web.</h6>
+            <button class="curtir" id="like">
+              <div class="label">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M8.4 5.25C5.61914 5.25 3.25 7.3293 3.25 10.0298C3.25 11.8927 4.12235 13.4612 5.27849 14.7604C6.43066 16.0552 7.91714 17.142 9.26097 18.0516L11.5796 19.6211C11.8335 19.793 12.1665 19.793 12.4204 19.6211L14.739 18.0516C16.0829 17.142 17.5693 16.0552 18.7215 14.7604C19.8777 13.4612 20.75 11.8927 20.75 10.0298C20.75 7.3293 18.3809 5.25 15.6 5.25C14.1665 5.25 12.9052 5.92214 12 6.79183C11.0948 5.92214 9.83347 5.25 8.4 5.25Z"
+                    fill="black" />
+                </svg>
+                Curtir
+              </div>
+              <div class="number" id="number">0</div>
+            </button>
+          </div>
+        </div>
+      </li> -->
+            </ul>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <script src="../js/fetch/perguntas/pesquisaPergunta.js"></script>
+
+    <div>
+        <%- include("../partials/modalfooter") %>
+    </div>
+</body>
+
+<footer>
+    <%- include("../partials/footer") %>
+</footer>
+
+</html>
