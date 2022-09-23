@@ -11,8 +11,10 @@ async function logout(){
     })
     .then(res => res.json())
     .then(res => {
-   console.log(res)
-   window.location.href="http://localhost:4020/"
+    console.log(res)
+    window.location.href="http://localhost:4020/"
+    localStorage.removeItem("user_id")
+    localStorage.removeItem("user_nome")
     })
     .catch(res => console.log(res))
 }

@@ -1,16 +1,10 @@
-//var usuario 
-//export function retornandoUsuario() {
-   // return usuario 
-//}
-
 async function login() {
-    console.log("qualquer")
     const inputEmail = document.getElementById("email_login")
     const email = inputEmail.value;
-    console.log(email)
 
     const inputSenha = document.getElementById("senha_login")
     const senha = inputSenha.value;
+    
     const url = "http://localhost:3020/login"
     await fetch(url, {
         method: "POST",
@@ -28,6 +22,7 @@ async function login() {
             if (res.message) {
                 window.location.href = "http://localhost:4020/homecadastrado"
                 localStorage.setItem("user_id", usuario.id)
+                localStorage.setItem("user_nome", usuario.nome)
             } else {
                 console.log("Ocorreu um erro")
                 abrirModal()
