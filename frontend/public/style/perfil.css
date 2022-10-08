@@ -1,3 +1,9 @@
+input:focus {
+  box-shadow: 0 0 0 0;
+  border: none;
+  outline: 0;
+}
+
 .button:hover {
   cursor: pointer
 }
@@ -60,7 +66,6 @@
   background-color: #25185a;
 }
 
-
 .left {
   padding: 0.5%;
   background-color: #545387;
@@ -68,7 +73,6 @@
   margin: 4% 2% 4% 5%;
   border-radius: 30px;
   width: 20%;
-  
 }
 
 .perguntas {
@@ -77,7 +81,6 @@
   width: 47%;
   font-size: 4vw;
 }
-
 
 .right {
   text-align: center;
@@ -88,9 +91,7 @@
   border-radius: 15px;
   height: 350px;
   width: 67%;
-
 }
-
 
 .row:after {
   content: "";
@@ -108,7 +109,6 @@
   margin-left: 1rem;
   margin-right: 1rem;
   margin-bottom: 2.5rem;
-
 }
 
 .respostaPerfil {
@@ -120,7 +120,6 @@
 }
 
 .slides-list-perfil {
-
   list-style-type: none;
   margin: 2.5rem 0 2.5rem 0;
   padding: 0;
@@ -129,8 +128,6 @@
   width: calc(var(--total-items) * 100%);
   transition: left 0.4s cubic-bezier(0.680, -0.550, 0.265, 1.550);
   overflow: hidden;
-
-
 }
 
 .pergunta {
@@ -155,12 +152,32 @@
 }
 
 .input {
-  width: 21rem;
+  background-color: #7776b8;
+  border: none;
+  width: 18rem;
+}
+
+.edit-nome, .edit-email, .edit-senha{
+  width: 20rem;
   font-size: 1rem;
   background-color: #7776b8;
-  border-radius: 10px;
+  border-radius: 20px;
   padding: 0.5rem;
   border: solid #fff 1px;
+}
+
+.btn-edit-enviar {
+  background-color: #25185a;
+  color: #fff;
+  font-weight: 700;
+  border: none;
+  padding: 2%;
+  margin: 2%;
+  border-radius: 20px;
+}
+
+.btn-edit-enviar:hover{
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
 }
 
 .name {
@@ -172,7 +189,6 @@
   padding: 0.3rem;
   border-radius: 10%;
   background-color: #fff;
-  margin-left: 10rem;
   height: 2rem;
   width: 2rem;
 }
@@ -182,7 +198,6 @@
   padding: 0.3rem;
   border-radius: 10%;
   background-color: #fff;
-  margin-left: 8.3rem;
   height: 2rem;
   width: 2rem;
 }
@@ -192,16 +207,13 @@
   padding: 0.3rem;
   border-radius: 10%;
   background-color: #fff;
-  margin-left: 13rem;
   height: 2rem;
   width: 2rem;
-
 }
 
 .editarPerfil {
   padding-left: 1rem;
   text-align: start;
-
 }
 
 .editPerfil {
@@ -217,6 +229,11 @@
   overflow: auto;
   background-color: rgb(0, 0, 0);
   background-color: rgba(0, 0, 0, 0.4);
+}
+
+.editarPerfil div {
+  display: flex;
+  flex-direction: row;
 }
 
 .modal-content {

@@ -2,6 +2,7 @@ async function logout(){
     const id = localStorage.getItem("user_id")
     console.log(id)
     const url = `http://localhost:3020/logout/${id}`
+    
     await fetch(url, {
         method: "PUT",
         headers: {
@@ -15,6 +16,7 @@ async function logout(){
     window.location.href="http://localhost:4020/"
     localStorage.removeItem("user_id")
     localStorage.removeItem("user_nome")
+    localStorage.removeItem("user_email")
     })
     .catch(res => console.log(res))
 }

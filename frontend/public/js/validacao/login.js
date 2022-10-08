@@ -20,9 +20,3 @@ function ocultar() {
 senhaLogin.setAttribute('type', 'password');
 eyeLogin.setAttribute('src', '../img/eye-open.svg')
 }
-
-
-document.addEventListener('DOMContentLoaded', () => {
-    emailLoginForm()
-    senhaLoginForm()
-})

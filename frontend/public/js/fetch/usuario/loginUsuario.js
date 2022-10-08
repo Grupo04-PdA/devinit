@@ -4,7 +4,8 @@ async function login() {
 
     const inputSenha = document.getElementById("senha_login")
     const senha = inputSenha.value;
-    
+    console.log(senha)
+
     const url = "http://localhost:3020/login"
     await fetch(url, {
         method: "POST",
@@ -23,8 +24,9 @@ async function login() {
                 window.location.href = "http://localhost:4020/homecadastrado"
                 localStorage.setItem("user_id", usuario.id)
                 localStorage.setItem("user_nome", usuario.nome)
+                localStorage.setItem("user_email", usuario.email)
             } else {
-                console.log("Ocorreu um erro")
+                console.log("Ocorreu um erro!")
                 abrirModal()
             }
         });
