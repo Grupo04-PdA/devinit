@@ -24,7 +24,9 @@ function cadastrar() {
         .then(res => {
             console.log(res)
             if (res.Usuario) {
-                console.log("Cadastrou!")
+                localStorage.setItem("user_id", usuario.id)
+                localStorage.setItem("user_nome", usuario.nome)
+                localStorage.setItem("user_email", usuario.email)
                 abrirModal()
             } else {
                 console.log("Ocorreu um erro!")
@@ -42,7 +44,7 @@ function abrirModal() {
 }
 
 function fecharmodal() {
-    window.location.href = "http://localhost:4020/homecadastrado"
+    window.location.href = "http://localhost:4020/"
 }
 document.addEventListener("DOMContentLoaded", () => {
     console.log("esta funcionando")

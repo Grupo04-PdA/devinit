@@ -45,5 +45,4 @@ const nomeUsuario = document.querySelector(".nome-usuario");
 const usuario = localStorage.getItem("user_nome")
 const strong = document.createElement("strong")
 strong.innerHTML = usuario
-console.log(usuario)
 nomeUsuario.appendChild(strong)

@@ -15,7 +15,7 @@ const alterandoUsuarioController = async (req, res) => {
         const usuarioAtualizado = await usuario.findByPk(id);
         return res.json({ message: "Usuario atualizado com sucesso!", usuario: usuarioAtualizado })
     } catch (err) {
-        return res.json({ message: "Ocorreu um erro!" })
+        return res.json(err)
     }
 };
 

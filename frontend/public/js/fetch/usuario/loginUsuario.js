@@ -4,7 +4,6 @@ async function login() {
 
     const inputSenha = document.getElementById("senha_login")
     const senha = inputSenha.value;
-    console.log(senha)
 
     const url = "http://localhost:3020/login"
     await fetch(url, {
@@ -21,7 +20,7 @@ async function login() {
         .then(res => {
             const usuario = res.usuario
             if (res.message) {
-                window.location.href = "http://localhost:4020/homecadastrado"
+                window.location.href = "http://localhost:4020/"
                 localStorage.setItem("user_id", usuario.id)
                 localStorage.setItem("user_nome", usuario.nome)
                 localStorage.setItem("user_email", usuario.email)
