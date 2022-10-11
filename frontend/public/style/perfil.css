@@ -214,6 +214,13 @@ input:focus {
 .editarPerfil {
   padding-left: 1rem;
   text-align: start;
+  display: flex;
+  flex-direction: row;
+}
+
+.eye-password {
+  cursor: pointer;
+  display: flex;
 }
 
 .editPerfil {

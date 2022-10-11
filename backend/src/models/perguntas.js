@@ -1,8 +1,11 @@
 const Sequelize = require("sequelize");
 const db = require("../connection/db");
+const Usuario = require("./usuario");
+const { hasMany } = require('sequelize');
+
 
 const Perguntas = db.define("perguntas", {
-    id: {
+    idPergunta: {
         type: Sequelize.DataTypes.INTEGER,
         allowNull: false,
         autoIncrement: true,
@@ -18,13 +21,13 @@ const Perguntas = db.define("perguntas", {
     }
 });
 
-// Perguntas.belongsTo(Usuario, {
-//     foreignKey: "idUsuario"
-// });
+Perguntas.belongsTo(Usuario, {
+    foreignKey: "idUsuario"
+});
 
-// Usuario.hasMany(Perguntas, {
-//     foreignKey: "perguntas"
-// })
+Usuario.hasMany(Perguntas, {
+    foreignKey: "idPergunta"
+})
 
 
 

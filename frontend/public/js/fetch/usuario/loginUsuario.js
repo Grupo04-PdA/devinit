@@ -21,7 +21,7 @@ async function login() {
             const usuario = res.usuario
             if (res.message) {
                 window.location.href = "http://localhost:4020/"
-                localStorage.setItem("user_id", usuario.id)
+                localStorage.setItem("user_id", usuario.idUsuario)
                 localStorage.setItem("user_nome", usuario.nome)
                 localStorage.setItem("user_email", usuario.email)
             } else {

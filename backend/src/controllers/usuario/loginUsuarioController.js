@@ -16,12 +16,12 @@ const loginUsuarioController = async (req, res) => {
             return res.json("Senha incorreta!")
         }
         await usuario.update({
-            id: usuarioExistente.id,
+            idUsuario: usuarioExistente.idUsuario,
             nome: usuarioExistente.nome,
             email: usuarioExistente.email,
             senha: usuarioExistente.senha,
             logado: 1
-        }, { where: { id: usuarioExistente.id } });
+        }, { where: { idUsuario: usuarioExistente.idUsuario } });
         return res.json({ message: "Login efetuado com sucesso!", usuario: usuarioExistente });
     } catch (err) {
         return res.json({ error: "Ocorreu um erro!" })

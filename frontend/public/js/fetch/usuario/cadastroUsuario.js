@@ -22,9 +22,10 @@ function cadastrar() {
     })
         .then(res => res.json())
         .then(res => {
+            const usuario = res.Usuario;
             console.log(res)
-            if (res.Usuario) {
-                localStorage.setItem("user_id", usuario.id)
+            if (usuario) {
+                localStorage.setItem("user_id", usuario.idUsuario)
                 localStorage.setItem("user_nome", usuario.nome)
                 localStorage.setItem("user_email", usuario.email)
                 abrirModal()

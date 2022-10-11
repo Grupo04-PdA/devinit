@@ -14,7 +14,8 @@ function fecharModalErro() {
 }
 
 function cadastroPerguntas() {
-    const url = "http://localhost:3020/pergunta"
+    const idUsuario = localStorage.getItem("user_id");
+    const url = `http://localhost:3020/pergunta/${idUsuario}`
     const textarea = document.getElementById("campo-perguntar")
     const pergunta = textarea.value
 

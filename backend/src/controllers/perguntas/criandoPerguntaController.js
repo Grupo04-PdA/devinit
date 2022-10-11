@@ -4,9 +4,10 @@ const criandoPerguntaController = async (req, res) => {
         const perguntas = require("../../models/perguntas");
         await db.sync();
 
+        const idUsuario = req.params.idUsuario;
         const { pergunta, categoriaNome } = req.body;
         const novaPergunta = await perguntas.create({
-            pergunta, categoriaNome
+             pergunta, categoriaNome, idUsuario
         });
 
         return res.json({ message: "Pergunta feita com sucesso!", Pergunta: novaPergunta });
