@@ -36,15 +36,7 @@ body {
 .menu li {
     display: flex;
     flex-direction: row;
-    transition:
-        background 370ms, color 370ms;
-}
-
-.menu a:hover {
-    background-color: #fff;
-    color: #000;
-    border: 1px solid transparent;
-    border-radius: 10px 0px;
+    justify-content: center;
     transition:
         background 370ms, color 370ms;
 }
@@ -54,7 +46,20 @@ body {
     color: #fff;
     text-decoration: none;
     border: 1px solid transparent;
+    border-bottom: 5px solid #e5d6f7;
+    border-radius: 6%;
     list-style: none;
+    transition: 
+        all 400ms ease-in-out;
+}
+
+.menu a:hover {
+    background-color: #e5d6f7;
+    color: #000;
+    border: 1px solid transparent;
+    border-radius: 10px 0px;
+    transition:
+        background all 400ms ease-in-out;
 }
 
 .bg-categorias {
