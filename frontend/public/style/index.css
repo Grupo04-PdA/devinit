@@ -298,6 +298,7 @@ footer {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
     text-align: center;
     display: none;
+    border-radius: 30px;
 }
 
 .modal-sobre button {
@@ -348,6 +349,7 @@ footer {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
     text-align: center;
     display: none;
+    border-radius: 30px;
 }
 
 .link-contatos {
