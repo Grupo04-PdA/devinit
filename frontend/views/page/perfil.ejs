@@ -12,7 +12,7 @@
 <body>
   <header>
     <%- include("../partials/headersemcad") %>
-    <%- include("../partials/headercadastrado") %>
+      <%- include("../partials/headercadastrado") %>
   </header>
   <div class="fundo">
     <div class="row">
@@ -30,7 +30,8 @@
                 <div style="font-size: 2rem;"> Editar perfil<span class="fechar">&times;</span></div>
 
                 <div id="foto" class="editarPerfil">
-                  <img class="div-img-edit" src="https://icon-library.com/images/profile-png-icon/profile-png-icon-1.jpg">
+                  <img class="div-img-edit"
+                    src="https://icon-library.com/images/profile-png-icon/profile-png-icon-1.jpg">
                 </div>
 
                 <form>
@@ -52,13 +53,11 @@
 
                   <div class="editarPerfil">
                     <label class="indicador">Senha</label>
-                    <div class="edit-senha">
-                      <input type="password" class="name input" id="input-edit-senha" placeholder="Edite sua senha..." disabled>
-                      <img class="img-edit-senha" id="img-edit-senha" src="/img/lapis.png">
+                      <div class="edit-senha">
+                        <input type="password" class="name input" id="input-edit-senha" placeholder="Edite sua senha..."
+                          disabled>
+                        <img class="img-edit-senha" id="img-edit-senha" src="/img/lapis.png">
                     </div>
-                    <img class="eye-password" id="eye-edit-senha" src="../../img/eye-open.svg" width="17px"
-                                onclick="clickEyeConfirm()">
-
                     <button onclick="editandoUsuario()" type="button" class="btn-edit-enviar">Enviar</button>
                   </div>
                 </form>

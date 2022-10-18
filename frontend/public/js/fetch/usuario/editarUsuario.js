@@ -1,4 +1,4 @@
-function abrirModalEditado(){
+function abrirModalEditado() {
     const modal = document.querySelector(".modal-perfil-editado")
     modal.style.display = "block"
 
@@ -7,8 +7,8 @@ function abrirModalEditado(){
 }
 
 async function editandoUsuario() {
-    const id = localStorage.getItem("user_id");
-    const url = `http://localhost:3020/usuario/${id}`;
+    const idUsuario = localStorage.getItem("user_id");
+    const url = `http://localhost:3020/usuario/${idUsuario}`;
 
     const inputNome = document.getElementById("input-edit-nome");
     const nome = inputNome.value;
@@ -22,7 +22,7 @@ async function editandoUsuario() {
     fetch(url, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ 
+        body: JSON.stringify({
             nome,
             email,
             senha,
@@ -30,26 +30,36 @@ async function editandoUsuario() {
     })
         .then(res => res.json())
         .then(res => {
-            if(nome !== " "){
-                localStorage.removeItem("user_nome")
-                localStorage.setItem("user_nome", nome)
+            // if (nome !== " ") {
+            //     localStorage.removeItem("user_nome")
+            //     localStorage.setItem("user_nome", nome)
+            // }
+
+            // if (email !== " ") {
+            //     localStorage.removeItem("user_email")
+            //     localStorage.setItem("user_email", email)
+            // }
+
+            if (res.message) {
+
+                if (nome !== " ") {
+                    localStorage.removeItem("user_nome")
+                    localStorage.setItem("user_nome", nome)
                 }
     
-                if(email !== " "){
-                localStorage.removeItem("user_email")
-                localStorage.setItem("user_email", email)
+                if (email !== " ") {
+                    localStorage.removeItem("user_email")
+                    localStorage.setItem("user_email", email)
                 }
-            
-            if (res.message) {
                 console.log("Cadastrou!")
                 abrirModalEditado()
             } else {
-                console.log(res.error)
+                console.log(res)
             }
         })
 }
 
-function fecharModalEditado(){
+function fecharModalEditado() {
     window.location.href = "http://localhost:4020/perfil"
 }
 

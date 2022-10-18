@@ -17,7 +17,7 @@ usuarioRouter.post("/login", loginUsuarioController);
 
 usuarioRouter.delete("/usuario/:id", deletandoUsuarioController);
 
-usuarioRouter.put("/usuario/:id", alterandoUsuarioController);
+usuarioRouter.put("/usuario/:idUsuario", alterandoUsuarioController);
 
 usuarioRouter.put("/logout/:id", logoutUsuarioController); 
 
