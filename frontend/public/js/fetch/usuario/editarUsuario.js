@@ -30,18 +30,8 @@ async function editandoUsuario() {
     })
         .then(res => res.json())
         .then(res => {
-            // if (nome !== " ") {
-            //     localStorage.removeItem("user_nome")
-            //     localStorage.setItem("user_nome", nome)
-            // }
-
-            // if (email !== " ") {
-            //     localStorage.removeItem("user_email")
-            //     localStorage.setItem("user_email", email)
-            // }
 
             if (res.message) {
-
                 if (nome !== " ") {
                     localStorage.removeItem("user_nome")
                     localStorage.setItem("user_nome", nome)
@@ -64,8 +54,5 @@ function fecharModalEditado() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-    valorPlaceholder()
-    tirarDisabledNome()
-    tirarDisabledEmail()
-    tirarDisabledSenha()
+    console.log("Funcionou!")
 })

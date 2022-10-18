@@ -7,7 +7,7 @@ const alterandoPerguntaController = require("../controllers/perguntas/alterandoP
 const deletandoPerguntasController = require("../controllers/perguntas/deletandoPerguntasController");
 const buscandoPerguntaController = require("../controllers/perguntas/buscandoperguntacontroller");
 
-perguntaRouter.post("/pergunta/:id", criandoPerguntaController);
+perguntaRouter.post("/pergunta/:idUsuario", criandoPerguntaController);
 
 perguntaRouter.get("/pergunta", pegandoPerguntaController);
 perguntaRouter.get("/pergunta/:id", pegandoPerguntaIdController);
