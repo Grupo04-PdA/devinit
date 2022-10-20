@@ -319,3 +319,11 @@ input:focus {
   color: #60558E;
   border: 2px solid #60558E;
 }
+.perfil-parte-img{
+  align-items: center;
+  justify-content: center;
+}
+.img-perfil{
+  width: 110%;
+  padding-right: 10%;
+}

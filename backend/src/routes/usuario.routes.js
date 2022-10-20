@@ -19,7 +19,7 @@ usuarioRouter.delete("/usuario/:id", deletandoUsuarioController);
 
 usuarioRouter.put("/usuario/:idUsuario", alterandoUsuarioController);
 
-usuarioRouter.put("/logout/:id", logoutUsuarioController); 
+usuarioRouter.put("/logout/:idUsuario", logoutUsuarioController); 
 
 module.exports = usuarioRouter;
 
