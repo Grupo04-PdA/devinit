@@ -1,7 +1,7 @@
 async function logout(){
-    const id = localStorage.getItem("user_id")
-    console.log(id)
-    const url = `http://localhost:3020/logout/${id}`
+    const idUsuario = localStorage.getItem("user_id")
+    console.log(idUsuario)
+    const url = `http://localhost:3020/logout/${idUsuario}`
     
     await fetch(url, {
         method: "PUT",
