@@ -5,7 +5,7 @@ const criandoUsuarioController = async (req, res) => {
         const db = require("../../connection/db")
         const usuario = require("../../models/usuario")
     
-        await db.sync()
+        await db.sync({ force: true })
     
         const { nome, email, senha } = req.body
 

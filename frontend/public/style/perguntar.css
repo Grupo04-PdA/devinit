@@ -105,7 +105,8 @@ select:invalid {
     display: none;
     animation: animate;
     animation-duration: 1000ms ;
-    box-shadow: 6px 5px 5px 0px rgb(0 0 0 / 40%)
+    box-shadow: 6px 5px 5px 0px rgb(0 0 0 / 40%);
+    border-radius: 15px;  
 }
 
 @keyframes animate {
@@ -153,7 +154,9 @@ select:invalid {
     transform: translate(-50%,-50%);
     animation: animate;
     animation-duration: 1000ms ;
-    box-shadow: 6px 5px 5px 0px rgb(0 0 0 / 40%)
+    box-shadow: 6px 5px 5px 0px rgb(0 0 0 / 40%);
+    border-radius: 15px;
+    
 }
 
 @keyframes animate {
