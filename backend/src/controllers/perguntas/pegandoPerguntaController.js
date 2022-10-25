@@ -3,12 +3,12 @@ const pegandoPerguntaController = async(req, res) => {
         const pergunta = require("../../models/perguntas")
         const perguntas = await pergunta.findAll()
         if (perguntas != "") {
-            return res.json({ perguntas })
+            return res.json({ perguntas: perguntas})
         } else {
             return res.json({ message: "Nenhuma pergunta foi encontrada!" })
         }
     } catch (err) {
-        return res.json({ message: "Ocorreu um erro!" })
+        return res.json({ error: "Ocorreu um erro!" })
     }
 }
 
@@ -23,7 +23,7 @@ const pegandoPerguntaIdController = async(req, res) => {
             return res.json({ message: "Pergunta nao encontrada!" })
         }
     } catch (err) {
-        return res.json({ message: "Ocorreu um erro!" })
+        return res.json({ error: "Ocorreu um erro!" })
     }
 }
 

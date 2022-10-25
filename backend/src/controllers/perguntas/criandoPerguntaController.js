@@ -5,11 +5,11 @@ const criandoPerguntaController = async (req, res) => {
         await db.sync();
 
         const idUsuario = req.params.idUsuario;
-        const id = idUsuario.parse()
+        const id = parseInt(idUsuario)
 
         const { pergunta, categoriaNome } = req.body;
         const novaPergunta = await perguntas.create({
-            idPergunta: 2, pergunta, categoriaNome, idUsuario: id 
+            pergunta, categoriaNome, idUsuario: id 
         });
 
         return res.json({ message: "Pergunta feita com sucesso!", Pergunta: novaPergunta });
