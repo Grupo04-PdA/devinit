@@ -37,6 +37,13 @@
                         </div>
 
                         <div class="campo">
+                            <label for="nome_login">Nome de usuário</label><br>
+                            <input id="nome_form" name="nome_cadastro" required type="text"
+                                placeholder="Nome de usuário" oninput="userCadastroForm()"/>
+                            <span class="login_span"> Nome de usuário já existente! </span>
+                        </div>
+
+                        <div class="campo">
                             <label for="email_login">E-mail</label><br>
                             <input id="email_cadastro" name="email_cadastro" required type="text"
                                 placeholder="E-mail" oninput="emailCadastroForm()"/>
