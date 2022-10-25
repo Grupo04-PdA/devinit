@@ -5,9 +5,9 @@ const criandoUsuarioController = async (req, res) => {
         const db = require("../../connection/db")
         const usuario = require("../../models/usuario")
     
-        await db.sync({ force: true })
+        await db.sync()
     
-        const { nome, email, senha } = req.body
+        const { nome, nomeDeUsuario, email, senha } = req.body
 
         const usuarioExistente = await usuario.findOne({ where: { email: email } });
 
@@ -17,7 +17,7 @@ const criandoUsuarioController = async (req, res) => {
 
         const senhaHash = await hash(senha, 8)
         const novoUsuario = await usuario.create({
-            nome, email, senha: senhaHash, logado: 1
+            nome, nomeDeUsuario, email, senha: senhaHash, logado: 1
         });
         console.log(novoUsuario)
         return res.json({Usuario: novoUsuario})

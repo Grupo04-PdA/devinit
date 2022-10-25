@@ -4,9 +4,9 @@ const criandoCategoriaController = async (req, res) => {
         const categorias = require("../../models/categorias");
         await db.sync();
 
-        const { categoria } = req.body;
+        const { categoria, fotoCategoria } = req.body;
         const novaCategoria = await categorias.create({
-            categoria
+            categoria, fotoCategoria
         });
 
         return res.json({ message: "Categoria adicionada!", Categoria: novaCategoria });

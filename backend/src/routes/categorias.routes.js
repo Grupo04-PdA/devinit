@@ -1,10 +1,12 @@
 const express = require("express");
 const categoriaRouter = express.Router();
 const criandoCategoriaController = require("../controllers/categorias/criandoCategoriaController");
-const pegandoCategoriaController = require("../controllers/categorias/pegandoCategoriaController");
+const { pegandoCategoriaController, pegandoCategoriaIDController } = require("../controllers/categorias/pegandoCategoriaController");
 
 categoriaRouter.post("/categoria", criandoCategoriaController);
 
 categoriaRouter.get("/categoria", pegandoCategoriaController);
+
+categoriaRouter.get("/idCategoria", pegandoCategoriaIDController);
 
 module.exports = categoriaRouter;

@@ -8,6 +8,10 @@ const Categorias = db.define("categorias", {
         autoIncrement: true,
         primaryKey: true
     },
+    fotoCategoria: {
+        type: Sequelize.DataTypes.STRING,
+        allowNull: false,
+    },
     categoria: {
         type: Sequelize.DataTypes.STRING,
         allowNull: false,

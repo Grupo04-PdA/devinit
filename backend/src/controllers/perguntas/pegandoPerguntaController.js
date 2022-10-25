@@ -15,8 +15,9 @@ const pegandoPerguntaController = async(req, res) => {
 const pegandoPerguntaIdController = async(req, res) => {
     try {
         const pergunta = require("../../models/perguntas");
+        const usuario = require("../../models/usuario")
         const id = req.params.id;
-        const perguntas = await pergunta.findByPk(id);
+        const perguntas = await pergunta.findByPk(id, {include: usuario});
         if (perguntas) {
             return res.json({ pergunta: perguntas });
         } else {

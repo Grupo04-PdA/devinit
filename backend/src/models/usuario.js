@@ -12,6 +12,10 @@ const Usuario = db.define("usuario", {
         type: Sequelize.DataTypes.STRING,
         allowNull: false,
     },
+    nomeDeUsuario: {
+        type: Sequelize.DataTypes.STRING,
+        allowNull: false,
+    },
     email: {
         type: Sequelize.DataTypes.STRING,
         allowNull: false,

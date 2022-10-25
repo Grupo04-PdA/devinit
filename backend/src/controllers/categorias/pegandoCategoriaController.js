@@ -12,4 +12,16 @@ const pegandoCategoriaController = async(req, res) => {
     }
 }
 
-module.exports = pegandoCategoriaController;
+const pegandoCategoriaIDController = async(req, res) => {
+        const perguntas = require("../../models/perguntas")
+        const categoria = require("../../models/categorias")
+        const id = 2
+
+        const categorias = await categoria.findByPk(id, {include: [{model: perguntas}]})
+        console.log(categorias)
+            return res.json({ categorias })
+        //     return res.json({ message: "Nenhuma categoria foi encontrada!" })
+        // return res.json(err)
+}
+
+module.exports = { pegandoCategoriaController, pegandoCategoriaIDController};

@@ -3,7 +3,7 @@ const db = require("../connection/db");
 const Perguntas = require("./perguntas");
 
 const Respostas = db.define("respostas", {
-    id: {
+    idResposta: {
         type: Sequelize.DataTypes.INTEGER,
         allowNull: false,
         autoIncrement: true,
