@@ -6,7 +6,7 @@ const {pegandoRespostaController, pegandoRespostaIdController} = require("../con
 const alterandoRespostaController = require("../controllers/respostas/alterandoRespostaController");
 const deletandoRespostasController = require("../controllers/respostas/deletandoRespostasController");
 
-respostaRouter.post("/resposta/:idPergunta", criandoRespostaController);
+respostaRouter.post("/resposta/:idUsuario", criandoRespostaController);
 
 respostaRouter.get("/resposta", pegandoRespostaController);
 respostaRouter.get("/resposta/:id", pegandoRespostaIdController);

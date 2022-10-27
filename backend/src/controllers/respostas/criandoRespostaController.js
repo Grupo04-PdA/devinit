@@ -4,18 +4,16 @@ const criandoRespostaController = async (req, res) => {
         const respostas = require("../../models/respostas");
         await db.sync();
         
-        const idPergunta = req.params.idPergunta
-        const id = parseInt(idPergunta)
+        const idUsuario = req.params.idUsuario
+        const id = parseInt(idUsuario)
 
-        const resposta = req.body.resposta;
+        const { resposta , idPergunta} = req.body;
         const novaResposta = await respostas.create({
-            resposta, idPergunta: id
+            resposta, idPergunta, idUsuario: id
         });
         return res.json({ Message: "Resposta enviada com sucesso!",  Resposta: novaResposta });
     } catch(err){
-        console.log(err)
-        return res.json({ error: err });
-        //return res.json({message: "Ocorreu um erro no servidor!"})
+        return res.json({message: "Ocorreu um erro no servidor!"})
     }
 }; 
 
