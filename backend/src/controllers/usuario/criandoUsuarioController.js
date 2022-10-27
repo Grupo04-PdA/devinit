@@ -8,7 +8,7 @@ const criandoUsuarioController = async (req, res) => {
         await db.sync()
     
         const { nome, nomeDeUsuario, email, senha } = req.body
-
+console.log(nomeDeUsuario)
         const usuarioExistente = await usuario.findOne({ where: { email: email } });
 
         if(usuarioExistente) {
@@ -22,7 +22,7 @@ const criandoUsuarioController = async (req, res) => {
         console.log(novoUsuario)
         return res.json({Usuario: novoUsuario})
     } catch(err){
-        return res.json({error: "Ocorreu um erro!"})
+        return res.json({error: err})
     }
 
 };

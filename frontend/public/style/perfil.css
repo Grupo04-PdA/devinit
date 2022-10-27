@@ -75,12 +75,13 @@ input:focus {
   width: 20%;
 }
 
-.perguntas {
+.perguntas, .respostas{
   border-bottom: 1px solid #545387;
   display: inline-table;
   width: 47%;
   font-size: 4vw;
 }
+
 
 .right {
   text-align: center;
@@ -132,6 +133,7 @@ input:focus {
 
 .pergunta {
   margin-bottom: 1.5rem;
+  width: 775px;
 }
 
 .div-img-edit {
