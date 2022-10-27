@@ -7,6 +7,6 @@ categoriaRouter.post("/categoria", criandoCategoriaController);
 
 categoriaRouter.get("/categoria", pegandoCategoriaController);
 
-categoriaRouter.get("/idCategoria", pegandoCategoriaIDController);
+categoriaRouter.get("/categoria/:id", pegandoCategoriaIDController);
 
 module.exports = categoriaRouter;

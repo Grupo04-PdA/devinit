@@ -13,15 +13,20 @@ const pegandoCategoriaController = async(req, res) => {
 }
 
 const pegandoCategoriaIDController = async(req, res) => {
-        const perguntas = require("../../models/perguntas")
+    try { 
+    const perguntas = require("../../models/perguntas")
         const categoria = require("../../models/categorias")
-        const id = 2
+        const id = req.params.id
 
         const categorias = await categoria.findByPk(id, {include: [{model: perguntas}]})
-        console.log(categorias)
+        if (!categorias) {
+            return res.json({ message: "Nenhuma categoria foi encontrada!" })
+        } else {
             return res.json({ categorias })
-        //     return res.json({ message: "Nenhuma categoria foi encontrada!" })
-        // return res.json(err)
+        }
+    } catch (err) {
+        return res.json({ message: "Ocorreu um erro!" })
+    }
 }
 
 module.exports = { pegandoCategoriaController, pegandoCategoriaIDController};

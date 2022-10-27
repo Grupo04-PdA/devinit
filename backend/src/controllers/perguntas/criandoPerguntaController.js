@@ -7,9 +7,9 @@ const criandoPerguntaController = async (req, res) => {
         const idUsuario = req.params.idUsuario;
         const id = parseInt(idUsuario)
 
-        const { pergunta } = req.body;
+        const { pergunta, idCategoria } = req.body;
         const novaPergunta = await perguntas.create({
-            pergunta, idCategoria: 1
+            pergunta, idCategoria
         });
 
         return res.json({ message: "Pergunta feita com sucesso!", Pergunta: novaPergunta });

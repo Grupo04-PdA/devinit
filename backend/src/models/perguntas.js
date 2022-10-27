@@ -19,7 +19,9 @@ const Perguntas = db.define("perguntas", {
 
 // Usuario.hasMany(Perguntas);
 
-Categorias.hasMany(Perguntas)
+Categorias.hasMany(Perguntas, {
+    foreignKey: "idCategoria"
+})
 
 Perguntas.belongsTo(Categorias, {
     constraint: true,
