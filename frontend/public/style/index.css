@@ -305,6 +305,7 @@ footer {
     align-items: center;
     border: none;
     font-weight: bolder;
+    border-radius:50px
 }
 
 .modal-sobre button:hover {
@@ -551,6 +552,7 @@ footer {
     color: white;
     z-index: 10;
     display: none;
+    border-radius: 60px;
 }
 
 .btn-nao {
