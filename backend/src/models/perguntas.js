@@ -1,6 +1,7 @@
 const Sequelize = require("sequelize");
 const db = require("../connection/db");
 const Categorias = require("../models/categorias")
+const Usuario = require("../models/usuario")
 
 const Perguntas = db.define("perguntas", {
     idPergunta: {
@@ -15,9 +16,14 @@ const Perguntas = db.define("perguntas", {
     },
 });
 
-// Perguntas.belongsTo(Usuario);
+Usuario.hasMany(Perguntas, {
+    foreignKey: "idUsuario"
+});
 
-// Usuario.hasMany(Perguntas);
+Perguntas.belongsTo(Usuario, {
+    constraint: true,
+    foreignKey: "idUsuario"
+});
 
 Categorias.hasMany(Perguntas, {
     foreignKey: "idCategoria"

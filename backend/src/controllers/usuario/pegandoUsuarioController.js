@@ -27,5 +27,21 @@ const pegandoUsuarioIdController = async (req, res) => {
     }
 }
 
-module.exports = { pegandoUsuarioController, pegandoUsuarioIdController }
+const pegandoPerguntasUSuario = async (req, res) => {
+    try {
+        const perguntas = require("../../models/perguntas")
+        const usuario = require("../../models/usuario");
+        const idUsuario = req.params.id;
+        const usuariosPergunta = await usuario.findByPk(idUsuario, {include: [{model: perguntas}]});
+        if (usuariosPergunta) {
+            return res.json({ Perguntas: usuariosPergunta });
+        } else {
+            return res.json({ message: "Esse usuario não possui perguntas!" })
+        }
+    } catch (err) {
+        return res.json({ message: "Ocorreu um erro!" })
+    }
+}
+
+module.exports = { pegandoUsuarioController, pegandoUsuarioIdController, pegandoPerguntasUSuario }
 
