@@ -23,11 +23,13 @@ const Respostas = db.define("respostas", {
 //     foreignKey: "respostas"
 // })
 
-// Respostas.belongsTo(Perguntas, {
-//    foreignKey: "idPerguntas"
-//})
-//Perguntas.hasMany(Respostas, {
-  //  foreignKey: "respostas"
-//})
+Perguntas.hasMany(Respostas, {
+    foreignKey: "idPergunta"
+})
+
+Respostas.belongsTo(Perguntas, {
+    constraint: true,
+    foreignKey: "idPergunta"
+})
 
 module.exports = Respostas;

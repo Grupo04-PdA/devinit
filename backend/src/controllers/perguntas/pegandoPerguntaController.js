@@ -28,4 +28,20 @@ const pegandoPerguntaIdController = async(req, res) => {
     }
 }
 
-module.exports = {pegandoPerguntaController, pegandoPerguntaIdController}
+const pegandoRespostaPerguntaController = async(req, res) => {
+    try {
+        const pergunta = require("../../models/perguntas");
+        const respostas = require("../../models/respostas")
+        const idPergunta = req.params.idPergunta;
+        const perguntas = await pergunta.findByPk(idPergunta, {include: respostas});
+        if (perguntas) {
+            return res.json({ pergunta: perguntas });
+        } else {
+            return res.json({ message: "Pergunta nao encontrada!" })
+        }
+    } catch (err) {
+        return res.json({ error: "Ocorreu um erro!" })
+    }
+}
+
+module.exports = {pegandoPerguntaController, pegandoPerguntaIdController, pegandoRespostaPerguntaController}
