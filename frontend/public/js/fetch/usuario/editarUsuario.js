@@ -19,34 +19,41 @@ async function editandoUsuario() {
     const inputSenha = document.getElementById("input-edit-senha");
     const senha = inputSenha.value;
 
-    fetch(url, {
-        method: "PUT",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-            nome,
-            email,
-            senha,
+    if (nome == "" || email == "") {
+        return
+    } else {
+        fetch(url, {
+            method: "PUT",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+                nome,
+                email,
+                senha,
+            })
         })
-    })
-        .then(res => res.json())
-        .then(res => {
+            .then(res => res.json())
+            .then(res => {
 
-            if (res.message) {
-                if (nome !== " ") {
-                    localStorage.removeItem("user_nome")
-                    localStorage.setItem("user_nome", nome)
+                if (res.message) {
+                    if (nome !== " ") {
+                        localStorage.removeItem("user_nome")
+                        localStorage.setItem("user_nome", nome)
+                    }
+
+                    if (email !== " ") {
+                        localStorage.removeItem("user_email")
+                        localStorage.setItem("user_email", email)
+                    }
+                    console.log("Cadastrou!")
+                    abrirModalEditado()
+                } else {
+                    console.log(res)
                 }
-    
-                if (email !== " ") {
-                    localStorage.removeItem("user_email")
-                    localStorage.setItem("user_email", email)
-                }
-                console.log("Cadastrou!")
-                abrirModalEditado()
-            } else {
-                console.log(res)
-            }
-        })
+            })
+    }
+
+
+
 }
 
 function fecharModalEditado() {
@@ -54,5 +61,5 @@ function fecharModalEditado() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-    console.log("Funcionou!")
+
 })

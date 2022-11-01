@@ -41,3 +41,9 @@ function tirarDisabledSenha(){
         divInput.style.boxShadow = "0px 0px 21px -2px #25185a"
     })
 }
+document.addEventListener("DOMContentLoaded",()=>{
+    valorPlaceholder()
+    tirarDisabledEmail()
+    tirarDisabledSenha()
+    tirarDisabledNome()
+})
