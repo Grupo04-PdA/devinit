@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
+  
 <head>
   <%- include("../partials/head") %>
     <link rel="stylesheet" href="../style/pesquisa.css">
@@ -13,16 +13,17 @@
   </header>
 
   <div id="divBusca">
-    <img src="../img/lupa.png" alt="Pesquise aqui..." onclick="pesquisaPergunta()"/>
+    <img id="send" src="../img/lupa.png" alt="Pesquise aqui..." onclick="pesquisaPergunta()" />
     <input type="text" id="txt-busca" placeholder="Pesquise aqui..." />
   </div>
   </div>
   <div class="div-perguntar-pesq">
-
     <h1 class="titulo-pesq"><b>Principais resultados...</b></h1>
     <div class="fundo-pergunta-pesq">
       <ul class="lista-pesquisa">
       <li>
+
+        
         <!-- <div class="pergunta-pesq">
           <img src="https://icon-library.com/images/profile-png-icon/profile-png-icon-1.jpg" height="16rem"
             style="margin: 0.5rem;"><a herf="#" class="link-usuario">User412938</a>
@@ -103,12 +104,11 @@
     </ul>
     </div>
   </div>
-
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
   integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
   crossorigin="anonymous"></script>
   <script src="../js/fetch/perguntas/pesquisaPergunta.js"></script>
-
+<script src="../js/validacao/pesquisa.js"></script>
   <div>
     <%- include("../partials/modalfooter") %>
   </div>
