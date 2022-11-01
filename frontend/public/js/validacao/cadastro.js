@@ -1,24 +1,46 @@
+var user = false;
 var username = false;
 var userEmail = false;
 var userSenha = false;
 var userSenhaConfirm = false;
 
 function userCadastroForm() {
-    var user = document.getElementById('nome_form');
-    user.addEventListener('keyup', () => {
-        var valorUser = user.value.trim()
-        var spanAlertaUser = user.nextElementSibling
+    var userC = document.getElementById('nome_form');
+    userC.addEventListener('keyup', () => {
+        var valorUser = userC.value.trim();
+        var spanAlertaUser = userC.nextElementSibling
 
         btnCadastro()
 
         if (valorUser === '') {
             spanAlertaUser.style.display = 'flex';
-            username = false;
+            user = false;
         } else if (valorUser.length < 3) {
             spanAlertaUser.style.display = 'flex';
-            username = false;
+            user = false;
         } else {
             spanAlertaUser.style.display = 'none';
+            user = true;
+        }
+    })
+}
+
+function usernameCadastroForm() {
+    var usernameC = document.getElementById('nome_Usuario');
+    usernameC.addEventListener('keyup', () => {
+        var valorUsername = usernameC.value.trim();
+        var spanAlertaUsername = usernameC.nextElementSibling
+
+        btnCadastro()
+
+        if (valorUsername === '') {
+            spanAlertaUsername.style.display = 'flex';
+            username = false;
+        } else if (valorUsername.length < 3) {
+            spanAlertaUsername.style.display = 'flex';
+            username = false;
+        } else {
+            spanAlertaUsername.style.display = 'none';
             username = true;
         }
     })
@@ -52,7 +74,7 @@ function senhaCadastroForm() {
         var regexSenha = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).{6,}$/
         var spanAlertaSenha = eyeCadastro.nextElementSibling
 
-        //btnCadastro()
+        btnCadastro()
 
         if (valorSenha === ''){
             spanAlertaSenha.style.display = 'flex';
@@ -94,7 +116,7 @@ function senhaConfirmForm(){
 function btnCadastro() {
     var btnCadastrar = document.getElementById('btn-cadastrar');
 
-    if (username && userEmail && userSenha && userSenhaConfirm) {
+    if (user && username && userEmail && userSenha && userSenhaConfirm) {
         btnCadastrar.removeAttribute('disabled');
     } else {
         btnCadastrar.setAttribute('disabled', true);
