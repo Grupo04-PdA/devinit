@@ -37,19 +37,36 @@ function puxarPerguntas() {
                     const b = document.createElement("b")
                     b.innerHTML = perguntas[i].pergunta
 
+                    const divInput = document.createElement("div")
+                    divInput.classList.add("div-input-resp")
+
                     const input = document.createElement("input")
                     input.classList.add("input-resp")
                     input.setAttribute("placeholder", "Digite aqui a sua resposta...")
+                    
+                    const btnEnvResp = document.createElement("button")
+                    btnEnvResp.classList.add("btn-env-resp")
+                    btnEnvResp.innerHTML = "<img src='img/enviar.png'>"
+                    btnEnvResp.setAttribute("type", "submit")
 
+                    divInput.appendChild(input)
+                    divInput.appendChild(btnEnvResp)
                     divBtn.appendChild(buttonEditPerg)
                     divBtn.appendChild(buttonDeletePerg)
                     h3.appendChild(b)
                     div.appendChild(divBtn)
                     div.appendChild(a)
                     div.appendChild(h3)
-                    div.appendChild(input)
+                    div.appendChild(divInput)
                     li.appendChild(div)
                     ul.appendChild(li)
+
+                    li.setAttribute("name", perguntas[i].idPergunta)
+
+                    li.addEventListener("click", () => {
+                        const idDaPergunta = li.getAttribute("name");
+                        localStorage.setItem("id_pergunta", idDaPergunta)
+                    })
                 }
             } else {
                 const slide = document.querySelector(".div-perguntas")

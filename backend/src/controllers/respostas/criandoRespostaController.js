@@ -13,7 +13,8 @@ const criandoRespostaController = async (req, res) => {
         });
         return res.json({ Message: "Resposta enviada com sucesso!",  Resposta: novaResposta });
     } catch(err){
-        return res.json({message: "Ocorreu um erro no servidor!"})
+        console.log(err)
+        return res.json({ error: "Ocorreu um erro no servidor!"})
     }
 }; 
 

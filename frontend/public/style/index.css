@@ -532,12 +532,31 @@ footer {
     border-radius: 0 0 20px 20px;
 }
 
-.input-resp {
+.div-input-resp{
+    display: flex;
+    flex-direction: row;
     background-color: #9991bb;
     border-radius: 40px;
-    width: 100%;
     padding: 2%;
+}
+
+.btn-env-resp {
+    background-color: #9991bb;
+    border: none
+}
+
+.btn-env-resp img {
+    width: 30px;
+}
+
+.input-resp {
     border: none;
+    background-color: #9991bb;
+    width: 95%
+}
+
+.input-resp:focus{
+    outline: 0;
 }
 
 .modal-sair {
