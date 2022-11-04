@@ -1,7 +1,9 @@
-var perguntas = window.document.getElementById('pergunta')
-var respostas = window.document.getElementById('resposta')
-var resultados = window.document.getElementById('a')
-perguntas.addEventListener('click', clickPergunta)
+import { criarResposta } from "../respostas/cadastroResposta.js";
+
+var perguntas = document.getElementById('pergunta')
+var respostas = document.getElementById('resposta')
+var resultados = document.getElementById('a')
+perguntas.addEventListener('click', clickPergunta());
 //respostas.addEventListener('click', clickResposta)
 
 function clickPergunta() {
@@ -38,7 +40,7 @@ function clickPergunta() {
 
                     const a = document.createElement("a")
                     a.classList.add("link-usuario")
-                    a.innerHTML = "User412938"
+                    a.innerHTML = perguntas.nomeDeUsuario
 
                     const h3 = document.createElement("h3")
                     h3.classList.add("pergunta-titulo")
@@ -46,20 +48,39 @@ function clickPergunta() {
                     const b = document.createElement("b")
                     b.innerHTML = pergunta.pergunta
 
+                    const divInput = document.createElement("div")
+                    divInput.classList.add("div-input-resp")
+                    divInput.setAttribute("id", "div-input")
+
                     const input = document.createElement("input")
-                    input.classList.add("input-resp")
+                    input.classList.add(`input-resp${pergunta.idPergunta}`)
                     input.setAttribute("placeholder", "Digite aqui a sua resposta...")
 
+                    const btnEnvResp = document.createElement("button")
+                    btnEnvResp.classList.add("btn-env-resp")
+                    btnEnvResp.innerHTML = "<img src='img/enviar.png'>"
+                    btnEnvResp.setAttribute("type", "submit")
+                    btnEnvResp.addEventListener("click", () => { criarResposta() })
+
+                    divInput.appendChild(input)
+                    divInput.appendChild(btnEnvResp)
                     divBtn.appendChild(buttonEditPerg)
                     divBtn.appendChild(buttonDeletePerg)
                     h3.appendChild(b)
                     div.appendChild(divBtn)
                     div.appendChild(a)
                     div.appendChild(h3)
-                    div.appendChild(input)
+                    div.appendChild(divInput)
                     li.appendChild(div)
                     ul.appendChild(li)
                     resultados.appendChild(ul)
+
+                    li.setAttribute("name", pergunta.idPergunta)
+
+                    li.addEventListener("click", () => {
+                        const idDaPergunta = li.getAttribute("name");
+                        localStorage.setItem("id_pergunta", idDaPergunta)
+                    })
                 })
             } else {
                 const slide = document.querySelector(".div-perguntas")

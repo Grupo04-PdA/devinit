@@ -1,13 +1,16 @@
 const pegandoPerguntaController = async(req, res) => {
     try {
+        const usuario = require("../../models/usuario")
+        const respostas = require("../../models/respostas")
         const pergunta = require("../../models/perguntas")
-        const perguntas = await pergunta.findAll()
+        const perguntas = await pergunta.findAll({include: [{model: usuario}, {model: respostas}]})
         if (perguntas != "") {
             return res.json({ perguntas: perguntas})
         } else {
             return res.json({ message: "Nenhuma pergunta foi encontrada!" })
         }
     } catch (err) {
+        console.log(err)
         return res.json({ error: "Ocorreu um erro!" })
     }
 }

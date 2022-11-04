@@ -1,8 +1,6 @@
 function abrirHeader() {
     const headerCad = document.querySelector(".fundo-nav-cad");
-    const headerNoCad = document.querySelector(".fundo-nav-nocad")
-    // const usuario = localStorage.getItem("user_nome")
-
+    const headerNoCad = document.querySelector(".fundo-nav-nocad");
 
     if(localStorage.getItem("user_nome") === null){
         headerNoCad.style.display = "flex";
@@ -12,6 +10,5 @@ function abrirHeader() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-    console.log("ta pegando")
     abrirHeader()
 });

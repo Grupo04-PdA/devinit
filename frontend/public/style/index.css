@@ -549,13 +549,13 @@ footer {
     width: 30px;
 }
 
-.input-resp {
+.div-input-resp input{
     border: none;
     background-color: #9991bb;
     width: 95%
 }
 
-.input-resp:focus{
+.div-input-resp input:focus{
     outline: 0;
 }
 

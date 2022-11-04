@@ -1,11 +1,13 @@
-function puxarPerguntas() {
+import { criarResposta } from "../respostas/cadastroResposta.js";
+
+async function puxarPerguntas() {
     var url = "http://localhost:3020/pergunta"
 
-    fetch(url)
+    await fetch(url)
         .then(res => res.json())
         .then(res => {
             const perguntas = res.perguntas;
-
+            console.log(res)
             if (perguntas) {
                 for (let i = 0; i < 4; i++) {
                     const ul = document.querySelector(".slides-list")
@@ -29,7 +31,7 @@ function puxarPerguntas() {
 
                     const a = document.createElement("a")
                     a.classList.add("link-usuario")
-                    a.innerHTML = "User412938"
+                    a.innerHTML = perguntas[i].usuario.nomeDeUsuario
 
                     const h3 = document.createElement("h3")
                     h3.classList.add("pergunta-titulo")
@@ -39,15 +41,17 @@ function puxarPerguntas() {
 
                     const divInput = document.createElement("div")
                     divInput.classList.add("div-input-resp")
+                    divInput.setAttribute("id", "div-input")
 
                     const input = document.createElement("input")
-                    input.classList.add("input-resp")
+                    input.classList.add(`input-resp${perguntas[i].idPergunta}`)
                     input.setAttribute("placeholder", "Digite aqui a sua resposta...")
                     
                     const btnEnvResp = document.createElement("button")
                     btnEnvResp.classList.add("btn-env-resp")
                     btnEnvResp.innerHTML = "<img src='img/enviar.png'>"
                     btnEnvResp.setAttribute("type", "submit")
+                    btnEnvResp.addEventListener("click", () => {criarResposta()})
 
                     divInput.appendChild(input)
                     divInput.appendChild(btnEnvResp)
@@ -75,4 +79,7 @@ function puxarPerguntas() {
         })
 }
 
-document.addEventListener("DOMContentLoaded", puxarPerguntas())
+document.addEventListener("DOMContentLoaded", () => {
+    puxarPerguntas()
+    
+})

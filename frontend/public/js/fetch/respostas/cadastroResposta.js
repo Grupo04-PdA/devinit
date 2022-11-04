@@ -1,18 +1,12 @@
-// const btnEnvResp = document.getElementsByClassName("btn-env-resp")
-// btnEnvResp.addEventListener("click", criarResposta())
-
-function criarResposta() {
-    console.log("cliquei no botao enviar")
+export async function criarResposta() {
+    const idPergunta = localStorage.getItem("id_pergunta")
     const idUsuario = localStorage.getItem("user_id");
     const url = `http://localhost:3020/resposta/${idUsuario}`
 
-    const idPergunta = localStorage.getItem("id_pergunta")
-
-    const inputResp = document.getElementsByClassName("input-resp")
+    const inputResp = document.querySelector(`.input-resp${idPergunta}`)
     const resposta = inputResp.value
-    console.log(resposta)
     try {
-        fetch(url, {
+        await fetch(url, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -24,7 +18,7 @@ function criarResposta() {
             .then(res => res.json())
             .then(res => {
                 console.log(res)
-                if (res.message) {
+                if (res.Message) {
                     console.log("Resposta cadastrada com sucesso!")
                 } else {
                     console.log("Ocorreu um erro!")
