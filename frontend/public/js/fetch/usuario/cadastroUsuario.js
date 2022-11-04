@@ -31,9 +31,6 @@ function cadastrar() {
             console.log(res)
             if (usuario) {
                 localStorage.setItem("user_id", usuario.idUsuario)
-                localStorage.setItem("user_nome", usuario.nome)
-                localStorage.setItem("nomeUsuario",usuario.nomeDeUsuario)
-                localStorage.setItem("user_email", usuario.email)
                 abrirModal()
             } else {
                 console.log("Ocorreu um erro!")

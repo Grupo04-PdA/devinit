@@ -15,8 +15,6 @@ async function logout(){
     console.log(res)
     window.location.href="http://localhost:4020/"
     localStorage.removeItem("user_id")
-    localStorage.removeItem("user_nome")
-    localStorage.removeItem("user_email")
     })
     .catch(res => console.log(res))
 }

@@ -9,9 +9,9 @@ const loginUsuarioController = async (req, res) => {
         if(!usuarioExistente) {
             return res.json("Email invalido!")
         }
-
+        console.log(senha)
         let senhaValida = await bcrypt.compare(senha, usuarioExistente.dataValues.senha);
-
+        console.log(senhaValida)
         if(!senhaValida) {
             return res.json("Senha incorreta!")
         }

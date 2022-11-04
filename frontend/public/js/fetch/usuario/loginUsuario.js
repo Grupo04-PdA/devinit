@@ -19,11 +19,10 @@ async function login() {
         .then(res => res.json())
         .then(res => {
             const usuario = res.usuario
-            if (res.message) {
+            console.log(res)
+            if (usuario) {
                 window.location.href = "http://localhost:4020/"
                 localStorage.setItem("user_id", usuario.idUsuario)
-                localStorage.setItem("user_nome", usuario.nome)
-                localStorage.setItem("user_email", usuario.email)
             } else {
                 console.log("Ocorreu um erro!")
                 abrirModal()

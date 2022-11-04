@@ -21,10 +21,3 @@ window.onclick = function (event) {
     modal.style.display = "none";
   }
 }
-
-// Puxando nome do banco de dados 
-const nomeUsuario = document.querySelector(".nome-usuario");
-const usuario = localStorage.getItem("user_nome")
-const strong = document.createElement("strong")
-strong.innerHTML = usuario
-nomeUsuario.appendChild(strong)

@@ -16,10 +16,13 @@ async function editandoUsuario() {
     const inputEmail = document.getElementById("input-edit-email");
     const email = inputEmail.value;
 
+    const inputUserName = document.getElementById("input-edit-nomeusuario");
+    const nomeDeUsuario = inputUserName.value;
+
     const inputSenha = document.getElementById("input-edit-senha");
     const senha = inputSenha.value;
 
-    if (nome == "" || email == "") {
+    if (nome == "" || email == "" || nomeDeUsuario == "") {
         return
     } else {
         fetch(url, {
@@ -27,6 +30,7 @@ async function editandoUsuario() {
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
                 nome,
+                nomeDeUsuario,
                 email,
                 senha,
             })
@@ -35,15 +39,6 @@ async function editandoUsuario() {
             .then(res => {
 
                 if (res.message) {
-                    if (nome !== " ") {
-                        localStorage.removeItem("user_nome")
-                        localStorage.setItem("user_nome", nome)
-                    }
-
-                    if (email !== " ") {
-                        localStorage.removeItem("user_email")
-                        localStorage.setItem("user_email", email)
-                    }
                     console.log("Cadastrou!")
                     abrirModalEditado()
                 } else {
@@ -51,9 +46,6 @@ async function editandoUsuario() {
                 }
             })
     }
-
-
-
 }
 
 function fecharModalEditado() {

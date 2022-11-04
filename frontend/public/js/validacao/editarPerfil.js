@@ -1,18 +1,18 @@
-function valorPlaceholder(){
-    const nome = localStorage.getItem("user_nome")
-    const email = localStorage.getItem("user_email")
-
-    const placeNome = document.getElementById("input-edit-nome")
-    placeNome.setAttribute("value", nome)
-
-    const placeEmail = document.getElementById("input-edit-email")
-    placeEmail.setAttribute("value", email)
-}
-
 function tirarDisabledNome(){
     const btn = document.getElementById("img-edit")
     const editNome = document.getElementById("input-edit-nome")
     const divInput = document.querySelector(".edit-nome")
+
+    btn.addEventListener("click", () => {
+        editNome.removeAttribute("disabled");
+        divInput.style.boxShadow = "0px 0px 21px -2px #25185a"
+    });
+}
+
+function tirarDisabledUserNome(){
+    const btn = document.getElementById("img-edit-nomeusuario")
+    const editNome = document.getElementById("input-edit-nomeusuario")
+    const divInput = document.querySelector(".edit-nomeusuario")
 
     btn.addEventListener("click", () => {
         editNome.removeAttribute("disabled");
@@ -42,8 +42,8 @@ function tirarDisabledSenha(){
     })
 }
 document.addEventListener("DOMContentLoaded",()=>{
-    valorPlaceholder()
     tirarDisabledEmail()
     tirarDisabledSenha()
     tirarDisabledNome()
+    tirarDisabledUserNome()
 })
