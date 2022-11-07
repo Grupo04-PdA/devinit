@@ -8,7 +8,7 @@ const deletandoRespostasController = require("../controllers/respostas/deletando
 
 respostaRouter.post("/resposta/:idUsuario", criandoRespostaController);
 
-respostaRouter.get("/resposta", pegandoRespostaController);
+respostaRouter.get("/respostas/:idPergunta", pegandoRespostaController);
 respostaRouter.get("/resposta/:id", pegandoRespostaIdController);
 
 respostaRouter.put("/resposta/:id", alterandoRespostaController);

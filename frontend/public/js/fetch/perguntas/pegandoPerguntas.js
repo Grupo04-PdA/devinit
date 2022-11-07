@@ -1,4 +1,5 @@
 import { criarResposta } from "../respostas/cadastroResposta.js";
+import { pegandoRespostas } from "../respostas/pegandoRespostas.js";
 
 async function puxarPerguntas() {
     var url = "http://localhost:3020/pergunta"
@@ -7,7 +8,6 @@ async function puxarPerguntas() {
         .then(res => res.json())
         .then(res => {
             const perguntas = res.perguntas;
-            console.log(res)
             if (perguntas) {
                 for (let i = 0; i < 4; i++) {
                     const ul = document.querySelector(".slides-list")
@@ -46,31 +46,33 @@ async function puxarPerguntas() {
                     const input = document.createElement("input")
                     input.classList.add(`input-resp${perguntas[i].idPergunta}`)
                     input.setAttribute("placeholder", "Digite aqui a sua resposta...")
-                    
+
                     const btnEnvResp = document.createElement("button")
                     btnEnvResp.classList.add("btn-env-resp")
                     btnEnvResp.innerHTML = "<img src='img/enviar.png'>"
                     btnEnvResp.setAttribute("type", "submit")
-                    btnEnvResp.addEventListener("click", () => {criarResposta()})
+                    btnEnvResp.addEventListener("click", () => { criarResposta() })
 
-                    divInput.appendChild(input)
-                    divInput.appendChild(btnEnvResp)
-                    divBtn.appendChild(buttonEditPerg)
-                    divBtn.appendChild(buttonDeletePerg)
-                    h3.appendChild(b)
-                    div.appendChild(divBtn)
-                    div.appendChild(a)
-                    div.appendChild(h3)
-                    div.appendChild(divInput)
-                    li.appendChild(div)
-                    ul.appendChild(li)
+                        divInput.appendChild(input)
+                        divInput.appendChild(btnEnvResp)
+                        divBtn.appendChild(buttonEditPerg)
+                        divBtn.appendChild(buttonDeletePerg)
+                        h3.appendChild(b)
+                        div.appendChild(divBtn)
+                        div.appendChild(a)
+                        div.appendChild(h3)
+                        div.appendChild(divInput)
+                        li.appendChild(div)
+                        ul.appendChild(li)
 
-                    li.setAttribute("name", perguntas[i].idPergunta)
+                        li.setAttribute("name", perguntas[i].idPergunta)
 
-                    li.addEventListener("click", () => {
-                        const idDaPergunta = li.getAttribute("name");
-                        localStorage.setItem("id_pergunta", idDaPergunta)
-                    })
+                        li.addEventListener("click", () => {
+                            const idDaPergunta = li.getAttribute("name");
+                            localStorage.setItem("id_pergunta", idDaPergunta)
+                        })
+                        pegandoRespostas(perguntas[i].idPergunta)
+                    // })
                 }
             } else {
                 const slide = document.querySelector(".div-perguntas")
@@ -81,5 +83,5 @@ async function puxarPerguntas() {
 
 document.addEventListener("DOMContentLoaded", () => {
     puxarPerguntas()
-    
+
 })

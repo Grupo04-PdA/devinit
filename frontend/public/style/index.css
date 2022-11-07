@@ -782,12 +782,9 @@ footer {
     margin-right: 2rem;
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
     background-color: #1F144A;
     border-radius: 2rem;
-    text-align: center;
-    width: 90vw;
+    width: 86vw;
 }
 
 .bnt-mudar-slide{
@@ -864,6 +861,7 @@ h2 {
     padding: 1.5rem;
     border-radius: 2rem;
     width: 85vw;
+    margin: 4px;
 }
 
 .pergunta-titulo {
@@ -891,10 +889,10 @@ h2 {
 }
 
 .resposta {
+    margin-top: 10px;
     padding: 1rem;
     border-radius: 2rem;
     background-color: rgb(233, 233, 233);
-
 }
 
 @media (min-width: 195px) and (max-width: 693px) {

@@ -1,7 +1,9 @@
-const pegandoRespostaController = async(req, res) => {
+const pegandoRespostaController = async (req, res) => {
     try {
+        const idPergunta = req.params.idPergunta
         const resposta = require("../../models/respostas")
-        const respostas = await resposta.findAll()
+        const usuario = require("../../models/usuario")
+        const respostas = await resposta.findAll({ where: { idPergunta:  idPergunta }})
         if (respostas != "") {
             return res.json({ respostas })
         } else {
@@ -12,7 +14,7 @@ const pegandoRespostaController = async(req, res) => {
     }
 }
 
-const pegandoRespostaIdController = async(req, res) => {
+const pegandoRespostaIdController = async (req, res) => {
     try {
         const resposta = require("../../models/respostas");
         const id = req.params.id;
@@ -27,4 +29,4 @@ const pegandoRespostaIdController = async(req, res) => {
     }
 }
 
-module.exports = {pegandoRespostaController, pegandoRespostaIdController}
+module.exports = { pegandoRespostaController, pegandoRespostaIdController }
