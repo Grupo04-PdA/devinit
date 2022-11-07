@@ -20,7 +20,7 @@ function cadastroPerguntas() {
     const pergunta = textarea.value
 
     const select = document.getElementById("select-perguntar")
-    const categoriaNome = select.value
+    const idCategoria = select.value;
 
     try {
     fetch(url, {
@@ -29,7 +29,7 @@ function cadastroPerguntas() {
             "Content-Type": "application/json"
         },
         body: JSON.stringify({
-            pergunta, categoriaNome
+            pergunta, idCategoria
         })
     })
         .then(res => res.json())
