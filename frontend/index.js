@@ -23,7 +23,7 @@ app.get("/login", (req,res) => {
     res.render("page/login")
 });
 
-app.get('/perfil/:nomedeusuario', (req, res) =>{
+app.get('/perfil', (req, res) =>{
     res.render("page/perfil")
 });
 

@@ -8,6 +8,7 @@ async function puxarPerguntas() {
         .then(res => {
             const perguntas = res.perguntas;
             if (perguntas) {
+                console.log(perguntas)
                 for (let i = 0; i < 4; i++) {
                     const ul = document.querySelector(".slides-list")
                     const li = document.createElement("li");
@@ -20,6 +21,7 @@ async function puxarPerguntas() {
                     const btnEnvPerg = document.createElement("button")
                     btnEnvPerg.innerHTML = "Enviar"
                     btnEnvPerg.classList.add("btn-env-edit-perg")
+
 
                     const buttonEditPerg = document.createElement("button");
                     buttonEditPerg.classList.add("btn-edit-perg")
@@ -86,8 +88,11 @@ async function puxarPerguntas() {
                         divPerg.appendChild(btnEnvPerg)
                         divInput.appendChild(input)
                         divInput.appendChild(btnEnvResp)
-                        divBtn.appendChild(buttonEditPerg)
-                        divBtn.appendChild(buttonDeletePerg)
+                        const idUsuario = localStorage.getItem("user_id")
+                        if (perguntas[i].usuario.idUsuario == idUsuario) {
+                            divBtn.appendChild(buttonEditPerg)
+                            divBtn.appendChild(buttonDeletePerg)
+                        }
                         div.appendChild(divBtn)
                         divName.appendChild(a)
                         div.appendChild(divName)
