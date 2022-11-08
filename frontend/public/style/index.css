@@ -797,6 +797,20 @@ footer {
     padding: 10px;
     border-radius: 50%;
     border: none;
+    margin-bottom: 10px
+}
+
+.btn-env-edit-perg {
+    background-color: #9991bb;
+    display: flex;
+    padding: 10px;
+    font-size: 0.6rem;
+    color: #000;
+    border: none;
+    border-radius: 10px;
+    float: right;
+    box-shadow: 0 0 10px rgb(0 0 0 / 40%);
+    display: none;
 }
 
 .btn-delete-perg img, .btn-edit-perg img {
@@ -868,9 +882,24 @@ h2 {
     text-align: left;
     background-color: #fff;
     padding: 1.5rem;
-    color: #000;
+    color: #60558e;
     margin-left: 1rem;
     margin-right: 1rem;
+    border: none;
+    font-weight: 700;
+    font-size: 1.5rem;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    width: 77vw;
+}
+
+.pergunta-titulo:disabled{
+    color: rgb(65, 65, 65);
+    box-shadow: none;
+}
+
+.pergunta-titulo:focus{
+    outline: none;
 }
 
 .fundo-pergunta-pesq {
@@ -889,7 +918,7 @@ h2 {
 }
 
 .resposta {
-    margin-top: 10px;
+    margin: 10px 0;
     padding: 1rem;
     border-radius: 2rem;
     background-color: rgb(233, 233, 233);

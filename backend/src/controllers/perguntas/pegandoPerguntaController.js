@@ -3,7 +3,7 @@ const pegandoPerguntaController = async(req, res) => {
         const usuario = require("../../models/usuario")
         const respostas = require("../../models/respostas")
         const pergunta = require("../../models/perguntas")
-        const perguntas = await pergunta.findAll({include: [{model: usuario}]})
+        const perguntas = await pergunta.findAll({include: [{model: usuario}, {model: respostas}]})
         if (perguntas != "") {
             return res.json({ perguntas: perguntas})
         } else {
