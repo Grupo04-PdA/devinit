@@ -23,9 +23,9 @@ app.get("/login", (req,res) => {
     res.render("page/login")
 });
 
-app.get('/perfil', (req, res) =>{
+app.get('/perfil/:nomedeusuario', (req, res) =>{
     res.render("page/perfil")
-})
+});
 
 app.get('/cadastro', (req, res) => {
      res.render("page/cadastro") 
