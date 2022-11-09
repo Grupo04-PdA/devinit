@@ -1,5 +1,6 @@
 import { criarResposta } from "../respostas/cadastroResposta.js";
 import { editarPerguntas } from "./editarPerguntas.js";
+import { excluirPergunta } from "./excluirPergunta.js";
 
 async function puxarPerguntas() {
     var url = "http://localhost:3020/pergunta"
@@ -9,7 +10,6 @@ async function puxarPerguntas() {
         .then(res => {
             const perguntas = res.perguntas;
             if (perguntas) {
-                console.log(perguntas)
                 for (let i = 0; i < 10; i++) {
                     const ul = document.querySelector(".slides-list")
                     const li = document.createElement("li");
@@ -29,7 +29,6 @@ async function puxarPerguntas() {
                     buttonEditPerg.addEventListener("click", () => {
                         inputPerg.removeAttribute("disabled");
                         btnEnvPerg.style.display = "block"
-                        console.log("deu certo!!")
                         // editarPerguntas()
                     })
 
@@ -82,8 +81,6 @@ async function puxarPerguntas() {
                         const divRespJunto = document.createElement("div")
                         divRespJunto.classList.add("divRespJunto")
 
-                        console.log(resposta.resposta)
-
                         divPerg.appendChild(inputPerg)
                         divPerg.appendChild(btnEnvPerg)
                         divInput.appendChild(input)
@@ -113,8 +110,12 @@ async function puxarPerguntas() {
                         localStorage.setItem("id_pergunta", idDaPergunta)
                     })
 
+                    const idPergunta = localStorage.getItem("id_pergunta")
+                    buttonDeletePerg.addEventListener("click", () => {
+                        excluirPergunta(idPergunta)
+                    })
+
                     btnEnvPerg.addEventListener("click", () => {
-                        const idPergunta = localStorage.getItem("id_pergunta")
                         const pergunta = inputPerg.value
                         editarPerguntas(pergunta, idPergunta)
                     })
@@ -128,5 +129,4 @@ async function puxarPerguntas() {
 
 document.addEventListener("DOMContentLoaded", () => {
     puxarPerguntas()
-
 })
