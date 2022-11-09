@@ -1,5 +1,5 @@
 const express = require("express");
-const verificaLoginMidleware = require("./js/middlewares/verificaLogin");
+const verificaLoginMidleware = require("./public/js/middlewares/verificaLogin");
 const app = express();
 const port = 4020;
 
@@ -24,7 +24,7 @@ app.get("/login", (req,res) => {
     res.render("page/login")
 });
 
-app.get("/perfil/:nomeDeUsuario", verificaLoginMidleware, (req, res) => {
+app.get('/perfil/:nomeDeUsuario', verificaLoginMidleware, (req, res) =>{
     res.render("page/perfil")
 });
 
