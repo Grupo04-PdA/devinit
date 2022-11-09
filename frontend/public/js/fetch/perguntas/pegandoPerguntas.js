@@ -1,4 +1,5 @@
 import { criarResposta } from "../respostas/cadastroResposta.js";
+import { editarPerguntas } from "./editarPerguntas.js";
 
 async function puxarPerguntas() {
     var url = "http://localhost:3020/pergunta"
@@ -9,7 +10,7 @@ async function puxarPerguntas() {
             const perguntas = res.perguntas;
             if (perguntas) {
                 console.log(perguntas)
-                for (let i = 0; i < 4; i++) {
+                for (let i = 0; i < 10; i++) {
                     const ul = document.querySelector(".slides-list")
                     const li = document.createElement("li");
                     li.classList.add("slide")
@@ -21,7 +22,6 @@ async function puxarPerguntas() {
                     const btnEnvPerg = document.createElement("button")
                     btnEnvPerg.innerHTML = "Enviar"
                     btnEnvPerg.classList.add("btn-env-edit-perg")
-
 
                     const buttonEditPerg = document.createElement("button");
                     buttonEditPerg.classList.add("btn-edit-perg")
@@ -111,6 +111,12 @@ async function puxarPerguntas() {
                     li.addEventListener("click", () => {
                         const idDaPergunta = li.getAttribute("name");
                         localStorage.setItem("id_pergunta", idDaPergunta)
+                    })
+
+                    btnEnvPerg.addEventListener("click", () => {
+                        const idPergunta = localStorage.getItem("id_pergunta")
+                        const pergunta = inputPerg.value
+                        editarPerguntas(pergunta, idPergunta)
                     })
                 }
             } else {
