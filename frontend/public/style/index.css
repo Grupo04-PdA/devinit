@@ -446,25 +446,18 @@ footer {
     transition: all .25s ease-in-out;
 }
 
-.number {
-    color: #8a8d9b;
+.div-name-perg, .div-name-resp {
+    display: flex;
+    flex-direction: row;
+    height: 25px;
 }
 
-.curtir:hover path {
-    fill: #ff00fd;
+.div-name-perg h5, .div-name-resp h5 {
+    font-weight: 600;
 }
 
-/* Number depois da curtida*/
-.number {
-    color: #ff00fd
-}
-
-.curtir svg {
-    animation: transitionLike 1s ease-in;
-}
-
-.curtir path {
-    fill: #ff00fd;
+.div-name-perg img, .div-name-resp img {
+    width: 25px;
 }
 
 .dropdown {
@@ -922,6 +915,10 @@ h2 {
     padding: 1rem;
     border-radius: 2rem;
     background-color: rgb(233, 233, 233);
+}
+
+.resposta img {
+    width: 30px;
 }
 
 @media (min-width: 195px) and (max-width: 693px) {

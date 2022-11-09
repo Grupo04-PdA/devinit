@@ -40,11 +40,12 @@ async function puxarPerguntas() {
                     div.classList.add("pergunta")
 
                     const divName = document.createElement("div")
-                    divName.innerHTML = "<img src='https://icon-library.com/images/profile-png-icon/profile-png-icon-1.jpg' height='13rem' style='margin: 0.5rem;'>"
+                    divName.innerHTML = "<img src='https://cdn-icons-png.flaticon.com/512/5087/5087579.png'>"
+                    divName.classList.add("div-name-perg")
 
-                    const a = document.createElement("a")
-                    a.classList.add("link-usuario")
-                    a.innerHTML = perguntas[i].usuario.nomeDeUsuario
+                    const h5 = document.createElement("h5")
+                    h5.classList.add("link-usuario")
+                    h5.innerHTML = perguntas[i].usuario.nomeDeUsuario
 
                     const inputPerg = document.createElement("textarea")
                     inputPerg.classList.add("pergunta-titulo")
@@ -68,12 +69,16 @@ async function puxarPerguntas() {
 
                     perguntas[i].respostas.map(resposta => {
                         const divResposta = document.createElement("div")
-                        divResposta.classList.add("resposta")
-                        divResposta.innerHTML = "<img src='https://icon-library.com/images/profile-png-icon/profile-png-icon-1.jpg' height='13rem' style='margin: 0.5rem;'>"
 
-                        const aResp = document.createElement("a")
-                        aResp.classList.add("link-usuario")
-                        aResp.innerHTML = "teste"
+                        const divNameResp = document.createElement("div")
+                        divNameResp.classList.add("div-name-resp")
+
+                        divResposta.classList.add("resposta")
+                        divNameResp.innerHTML = "<img src='https://cdn-icons-png.flaticon.com/512/5087/5087579.png'>"
+
+                        const h5Resp = document.createElement("h5")
+                        h5Resp.classList.add("link-usuario")
+                        h5Resp.innerHTML = "teste"
 
                         const h6 = document.createElement("h6")
                         h6.innerHTML = resposta.resposta
@@ -91,10 +96,11 @@ async function puxarPerguntas() {
                             divBtn.appendChild(buttonDeletePerg)
                         }
                         div.appendChild(divBtn)
-                        divName.appendChild(a)
+                        divName.appendChild(h5)
                         div.appendChild(divName)
                         div.appendChild(divPerg)
-                        divResposta.appendChild(aResp)
+                        divNameResp.appendChild(h5Resp)
+                        divResposta.appendChild(divNameResp)
                         divResposta.appendChild(h6)
                         divRespJunto.appendChild(divResposta)
                         div.appendChild(divRespJunto)

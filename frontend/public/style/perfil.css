@@ -80,6 +80,7 @@ input:focus {
   display: inline-table;
   width: 47%;
   font-size: 4vw;
+  cursor: pointer;
 }
 
 
