@@ -1,7 +1,7 @@
-function getUser() {
+async function getUser() {
     const idUsuario = localStorage.getItem("user_id")
     const url = `http://localhost:3020/usuario/${idUsuario}`
-    fetch(url)
+    await fetch(url)
         .then(res => res.json())
         .then(res => {
             const usuario = res.Usuario
@@ -27,4 +27,6 @@ function valorPlaceholder(nome, usernome, email){
     placeEmail.setAttribute("value", email)
 }
 
-document.addEventListener("DOMContentLoaded", getUser())
+document.addEventListener("DOMContentLoaded", () => {
+    getUser()
+})

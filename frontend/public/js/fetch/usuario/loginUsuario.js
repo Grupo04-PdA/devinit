@@ -21,8 +21,9 @@ async function login() {
             const usuario = res.usuario
             console.log(res)
             if (usuario) {
-                window.location.href = "http://localhost:4020/"
+                window.location.href = `http://localhost:4020/perfil/${usuario.nomeDeUsuario}`
                 localStorage.setItem("user_id", usuario.idUsuario)
+                localStorage.setItem("user_name", usuario.nomeDeUsuario)
             } else {
                 console.log("Ocorreu um erro!")
                 abrirModal()
