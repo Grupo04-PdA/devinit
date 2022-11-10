@@ -1,4 +1,6 @@
 import { criarResposta } from "../respostas/cadastroResposta.js";
+import { editarResposta } from "../respostas/editarRespostas.js";
+import { excluirResposta } from "../respostas/excluirRespostas.js";
 import { editarPerguntas } from "./editarPerguntas.js";
 import { excluirPergunta } from "./excluirPergunta.js";
 
@@ -14,6 +16,14 @@ async function puxarPerguntas() {
                     const ul = document.querySelector(".slides-list")
                     const li = document.createElement("li");
                     li.classList.add("slide")
+
+                    const divContainer = document.createElement("div")
+                    divContainer.classList.add("container-perg-resp")
+
+                    const divPergunta = document.createElement("div")
+                    divPergunta.classList.add("pergunta")
+
+                    const divResposta = document.createElement("div")
 
                     const divBtn = document.createElement("div")
                     divBtn.classList.add("btn-edit-delete")
@@ -36,9 +46,6 @@ async function puxarPerguntas() {
                     buttonDeletePerg.classList.add("btn-delete-perg")
                     buttonDeletePerg.innerHTML = "<img src='img/lixeira.png'>"
 
-                    const div = document.createElement("div")
-                    div.classList.add("pergunta")
-
                     const divName = document.createElement("div")
                     divName.innerHTML = "<img src='https://cdn-icons-png.flaticon.com/512/5087/5087579.png'>"
                     divName.classList.add("div-name-perg")
@@ -49,7 +56,6 @@ async function puxarPerguntas() {
 
                     const inputPerg = document.createElement("textarea")
                     inputPerg.classList.add("pergunta-titulo")
-                    //inputPerg.setAttribute("value", perguntas[i].pergunta)
                     inputPerg.innerHTML = perguntas[i].pergunta
                     inputPerg.disabled = true
 
@@ -68,10 +74,22 @@ async function puxarPerguntas() {
                     btnEnvResp.addEventListener("click", () => { criarResposta() })
 
                     perguntas[i].respostas.map(resposta => {
-                        const divResposta = document.createElement("div")
+                        const divRespostaUnica = document.createElement("div")
+                        divRespostaUnica.classList.add("resposta-individual")
+
+                        const buttonEditResp = document.createElement("button");
+                        buttonEditResp.classList.add("btn-edit-resp")
+                        buttonEditResp.innerHTML = "<img src='img/lapis.png'>"
+
+                        const buttonDeleteResp = document.createElement("button");
+                        buttonDeleteResp.classList.add("btn-delete-resp")
+                        buttonDeleteResp.innerHTML = "<img src='img/lixeira.png'>"
 
                         const divNameResp = document.createElement("div")
                         divNameResp.classList.add("div-name-resp")
+
+                        const divBtnResp = document.createElement("div")
+                        divBtnResp.classList.add("btn-edit-delete-resp")
 
                         divResposta.classList.add("resposta")
                         divNameResp.innerHTML = "<img src='https://cdn-icons-png.flaticon.com/512/5087/5087579.png'>"
@@ -80,11 +98,14 @@ async function puxarPerguntas() {
                         h5Resp.classList.add("link-usuario")
                         h5Resp.innerHTML = "teste"
 
-                        const h6 = document.createElement("h6")
-                        h6.innerHTML = resposta.resposta
+                        const inputResp = document.createElement("textarea")
+                        inputResp.innerHTML = resposta.resposta
+                        inputResp.classList.add("resposta-titulo")
+                        inputResp.disabled = true
 
-                        const divRespJunto = document.createElement("div")
-                        divRespJunto.classList.add("divRespJunto")
+                        const btnEnvEditResp = document.createElement("button")
+                        btnEnvEditResp.innerHTML = "Enviar"
+                        btnEnvEditResp.classList.add("btn-env-edit-resp")
 
                         divPerg.appendChild(inputPerg)
                         divPerg.appendChild(btnEnvPerg)
@@ -95,24 +116,55 @@ async function puxarPerguntas() {
                             divBtn.appendChild(buttonEditPerg)
                             divBtn.appendChild(buttonDeletePerg)
                         }
-                        div.appendChild(divBtn)
+                        divPergunta.appendChild(divBtn)
                         divName.appendChild(h5)
-                        div.appendChild(divName)
-                        div.appendChild(divPerg)
+                        divPergunta.appendChild(divName)
+                        divPergunta.appendChild(divPerg)
                         divNameResp.appendChild(h5Resp)
-                        divResposta.appendChild(divNameResp)
-                        divResposta.appendChild(h6)
-                        divRespJunto.appendChild(divResposta)
-                        div.appendChild(divRespJunto)
-                        div.appendChild(divInput)
-                        li.appendChild(div)
+                        divBtnResp.appendChild(buttonEditResp)
+                        divBtnResp.appendChild(buttonDeleteResp)
+                        if (idUsuario == resposta.idUsuario) {
+                            divResposta.appendChild(divBtnResp)
+                        }
+                        divRespostaUnica.appendChild(divNameResp)
+                        divRespostaUnica.appendChild(inputResp)
+                        divRespostaUnica.appendChild(btnEnvEditResp)
+                        divResposta.appendChild(divRespostaUnica)
+                        divResposta.appendChild(divInput)
+                        divContainer.appendChild(divPergunta)
+                        divContainer.appendChild(divResposta)
+
+                        li.appendChild(divContainer)
                         ul.appendChild(li)
+
+                        divRespostaUnica.name = resposta.idResposta
+
+                        const idResposta = localStorage.getItem("id_resposta")
+
+                        divRespostaUnica.addEventListener("click", () => {
+                            const idDaResposta = divRespostaUnica.name
+                            localStorage.setItem("id_resposta", idDaResposta)
+                        })
+
+                        buttonDeleteResp.addEventListener("click", () => {
+                            excluirResposta(idResposta)
+                        })
+
+                        buttonEditResp.addEventListener("click", () => {
+                            inputResp.removeAttribute("disabled");
+                            btnEnvEditResp.style.display = "block"
+                        })
+
+                        btnEnvEditResp.addEventListener("click", () => {
+                            const resposta = inputResp.value
+                            editarResposta(resposta, idResposta)
+                        })
                     })
 
-                    li.setAttribute("name", perguntas[i].idPergunta)
+                    divPergunta.setAttribute("name", perguntas[i].idPergunta)
 
-                    li.addEventListener("click", () => {
-                        const idDaPergunta = li.getAttribute("name");
+                    divPergunta.addEventListener("click", () => {
+                        const idDaPergunta = divPergunta.getAttribute("name");
                         localStorage.setItem("id_pergunta", idDaPergunta)
                     })
 

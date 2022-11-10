@@ -785,15 +785,15 @@ footer {
     background-color: #1F144A;
 }
 
-.btn-edit-perg, .btn-delete-perg {
+.btn-edit-perg, .btn-delete-perg, .btn-delete-resp, .btn-edit-resp {
     background-color: #9991bb;
-    padding: 10px;
+    padding: 5px;
     border-radius: 50%;
     border: none;
     margin-bottom: 10px
 }
 
-.btn-env-edit-perg {
+.btn-env-edit-perg, .btn-env-edit-resp {
     background-color: #9991bb;
     display: flex;
     padding: 10px;
@@ -806,11 +806,12 @@ footer {
     display: none;
 }
 
-.btn-delete-perg img, .btn-edit-perg img {
+.btn-delete-perg img, .btn-edit-perg img, .btn-delete-resp img, .btn-edit-resp img {
     width: 25px;
 }
 
-.btn-edit-delete {
+.btn-edit-delete, .btn-edit-delete-resp {
+    margin: 10px;
     display: flex;
     flex-direction: row;
     float: right;
@@ -867,8 +868,7 @@ h2 {
     color: #000;
     padding: 1.5rem;
     border-radius: 2rem;
-    width: 85vw;
-    margin: 4px;
+    width: 80vw;
 }
 
 .pergunta-titulo {
@@ -883,15 +883,30 @@ h2 {
     font-size: 1.5rem;
     border-radius: 20px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-    width: 77vw;
+    width: 78vw;
 }
 
-.pergunta-titulo:disabled{
+.resposta-titulo {
+    text-align: left;
+    background-color: rgb(233, 233, 233);
+    padding: 1.5rem;
+    color: #60558e;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    border: none;
+    font-weight: 700;
+    font-size: 1.5rem;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    width: 74vw;
+}
+
+.pergunta-titulo:disabled, .resposta-titulo:disabled{
     color: rgb(65, 65, 65);
     box-shadow: none;
 }
 
-.pergunta-titulo:focus{
+.pergunta-titulo:focus, .resposta-titulo:focus{
     outline: none;
 }
 
@@ -910,15 +925,27 @@ h2 {
     color: #000
 }
 
+.container-perg-resp {
+    background-color: #FFF;
+    border-radius: 25px;
+    padding: 20px;
+    width: 85vw;
+    margin: 4px;
+}
+
 .resposta {
+    width: 80vw;
+}
+
+.resposta-individual {
+    background-color: rgb(233, 233, 233);
     margin: 10px 0;
     padding: 1rem;
     border-radius: 2rem;
-    background-color: rgb(233, 233, 233);
 }
 
 .resposta img {
-    width: 30px;
+    width: 25px;
 }
 
 @media (min-width: 195px) and (max-width: 693px) {

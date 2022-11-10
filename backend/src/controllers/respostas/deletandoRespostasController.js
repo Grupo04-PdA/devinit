@@ -3,22 +3,22 @@ const Respostas = require("../../models/respostas");
 const deletandoRespostasController = async (req, res) => {
     try {
         let resposta = require("../../models/respostas");
-        const id = req.params.id;
-        const user = await Respostas.findByPk(id);
+        const idResposta = req.params.id;
+        const user = await Respostas.findByPk(idResposta);
 
         if (user) {
             await resposta.destroy({
                 where: {
-                    id: id
+                    idResposta: idResposta
                 }
             })
         } else {
             return res.json({ message: "Resposta não encontrada!" });
         }
 
-        return res.json({ message: "Resposta deletado com sucesso!", resposta: user })
+        return res.json({ error: "Resposta deletado com sucesso!", resposta: user })
     } catch (error) {
-        res.json({message: "Ocorreu um erro"});
+        res.json({error: "Ocorreu um erro"});
     };
 }
 
