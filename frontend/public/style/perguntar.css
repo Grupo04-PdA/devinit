@@ -1,3 +1,83 @@
+body{
+    margin: 0;
+    padding: 0;
+    width: 100%; 
+}
+
+.container-perg{
+    display: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nao-cadastrado{
+    width: 500px;
+    height: 400px;
+    padding: 30px;
+    background-color: #FFF;
+    color: #1B1142;
+    border-radius: 25px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    align-items: center;
+    text-align: center;
+    font-weight: 800;
+}
+
+.nao-cadastrado button {
+    border-radius: 20px;
+    background-color: #60558E;
+    width: 350px;
+    text-align: center;
+    padding: 2%;
+    border: none;
+    margin-top: 30px;
+}
+
+.nao-cadastrado div {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.nao-cadastrado button a {
+    color: #FFF;
+    text-decoration: none;
+}
+
+.nao-cadastrado h1 {
+    margin-top: 30px;
+}
+
+.nao-cadastrado button:hover {
+    background-color: #1B1142;
+}
+
+.botao-voltar-perg {
+    margin: 1%;
+    padding: 1%;
+    background-color: #60558E;
+    border: none;
+    border-radius: 25px;
+    width: 140px;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    display: none;
+  }
+  
+  .botao-voltar-perg:hover {
+    background-color: #3F3E74;
+  }
+  
+  .botao-voltar-perg a {
+    color: #fff;
+    text-decoration: none;
+  }
+
 .row {
     max-width: 100%;
     margin: 0;
