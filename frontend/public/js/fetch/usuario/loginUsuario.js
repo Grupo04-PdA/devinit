@@ -21,7 +21,8 @@ async function login() {
             const usuario = res.usuario
             console.log(res)
             if (usuario) {
-                window.location.href = `http://localhost:4020/perfil/${usuario.nomeDeUsuario}`
+                window.location.href = `http://localhost:4020/perfil/${usuario.idUsuario}`
+                console.log("Qualquer coisa");
                 localStorage.setItem("user_id", usuario.idUsuario)
                 localStorage.setItem("user_name", usuario.nomeDeUsuario)
             } else {

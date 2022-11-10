@@ -11,7 +11,7 @@ usuarioRouter.post("/usuario", criandoUsuarioController);
 
 usuarioRouter.get("/usuario", pegandoUsuarioController)
 
-usuarioRouter.get("/usuario/:id", pegandoUsuarioIdController)
+usuarioRouter.get("/usuario/:idUsuario", pegandoUsuarioIdController)
 
 usuarioRouter.post("/login", loginUsuarioController);
 

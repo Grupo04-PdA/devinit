@@ -24,7 +24,7 @@ app.get("/login", (req,res) => {
     res.render("page/login")
 });
 
-app.get('/perfil/:nomeDeUsuario', verificaLoginMidleware, (req, res) =>{
+app.get('/perfil/:idUsuario', verificaLoginMidleware, (req, res) =>{
     res.render("page/perfil")
 });
 

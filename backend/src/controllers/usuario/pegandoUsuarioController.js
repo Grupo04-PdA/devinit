@@ -15,8 +15,8 @@ const pegandoUsuarioController = async (req, res) => {
 const pegandoUsuarioIdController = async (req, res) => {
     try {
         const usuario = require("../../models/usuario");
-        const id = req.params.id;
-        const usuarios = await usuario.findByPk(id);
+        const idUsuario = req.params.idUsuario;
+        const usuarios = await usuario.findByPk(idUsuario);
         if (usuarios) {
             return res.json({ Usuario: usuarios });
         } else {
